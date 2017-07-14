@@ -20,6 +20,7 @@ router.post('/authenticate', accounts.authenticate);
 //router.post('/updateprofile', profile.updateprofile);
 
 router.get('/dashboard', dashboard.index);
+router.post('/dashboard/addassessment', dashboard.addAssessment);
 //router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
 //router.post('/dashboard/addplaylist', dashboard.addPlaylist);
 

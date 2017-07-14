@@ -6,7 +6,7 @@
 const uuid = require('uuid');
 const logger = require('../utils/logger');
 //const playlistStore = require('../models/playlist-store');
-const userStore = require('../models/user-store');
+const userstore = require('../models/user-store');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 
@@ -37,20 +37,24 @@ const dashboard = {
     logger.debug(`Deleting Playlist ${playlistId}`);
     playlistStore.removePlaylist(playlistId);
     response.redirect('/dashboard');
-  },
+  },*/
 
-  addPlaylist(request, response) {
+  addAssessment(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    const newPlayList = {
+    const newAssessment = {
       id: uuid(),
       userid: loggedInUser.id,
-      title: request.body.title,
-      songs: [],
+      weight: request.body.weight,
+      chest: request.body.chest,
+      thigh: request.body.thigh,
+      upperArm: request.body.upperArm,
+      waist: request.body.waist,
+      hips: request.body.hips,
     };
-    logger.debug('Creating a new Playlist', newPlayList);
-    playlistStore.addPlaylist(newPlayList);
+    logger.debug('Creating a new Assessment', newAssessment);
+    userstore.addAssessment(newAssessment);
     response.redirect('/dashboard');
-  },*/
+  },
 };
 
 module.exports = dashboard;

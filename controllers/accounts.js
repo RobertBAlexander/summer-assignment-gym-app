@@ -2,7 +2,7 @@
  * Created by Robert Alexander on 12/07/2017.
  */
 'use strict';
-const userStore = require('../models/user-store');
+const userstore = require('../models/user-store');
 const logger = require('../utils/logger');
 const uuid = require('uuid');
 
@@ -37,13 +37,13 @@ const accounts = {
   register(request, response) {
     const user = request.body;
     user.id = uuid();
-    userStore.addMember(user);
+    userstore.addUser(user);
     logger.info(`registering ${user.email}`);
     response.redirect('/');
   },
 
   authenticate(request, response) {
-    const user = userStore.getUserByEmail(request.body.email);
+    const user = userstore.getUserByEmail(request.body.email);
     if (user) {
       response.cookie('playlist', user.email);
       logger.info(`logging in ${user.email}`);
@@ -55,8 +55,8 @@ const accounts = {
 
   getCurrentUser(request) {
     const userId = request.cookies.playlist;
-    return userStore.getUserById(userId);
-  }
-}
+    return userstore.getUserById(userId);
+  },
+};
 
 module.exports = accounts;

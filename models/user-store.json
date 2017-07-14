@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "firstname": "homer",
+      "lastname": "simpson",
+      "trainer": false,
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "gender": "M",
+      "height": 2.2,
+      "startingWeight": 138,
+      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
+    },
+    {
+      "firstname": "marge",
+      "lastname": "simpson",
+      "trainer": true,
+      "email": "marge@simpson.com",
+      "password": "secret",
+      "gender": "F",
+      "height": 2,
+      "startingWeight": 80,
+      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+    },
+    {
+      "firstname": "Robert",
+      "lastname": "Alexander",
+      "email": "robert.b.alexander@gmail.com",
+      "password": "secret",
+      "address": "24 Meledon Grove, Farmleigh, Dunmore Road",
+      "gender": "M",
+      "height": "1.9",
+      "startingWeight": "84",
+      "id": "6ebe4e71-5942-4c46-bae8-ccf18276dfc2"
+    }
+  ]
+}

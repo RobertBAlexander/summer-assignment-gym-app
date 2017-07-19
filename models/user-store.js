@@ -65,7 +65,7 @@ const userStore = {
   removeAssessment(id, assessmentId)
   {
     const user = this.getUserById(id);
-    _.remove(member.assessments, { assessmentId})
+    _.remove(user.assessments, { assessmentId: assessmentId });
     //const assessment = this.getAssessment(id);
     //this.store.remove(this.collection, assessment);
     this.store.save();

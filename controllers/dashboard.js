@@ -61,9 +61,11 @@ const dashboard = {
 
   deleteAssessment(request, response)
   {
+    const loggedInUser = accounts.getCurrentUser(request);
     const assessmentId = request.params.id;
+    const userId = loggedInUser.id;
     logger.debug(`Deleting Assessment ${assessmentId}`);
-    userStore.removeAssessment(assessmentId);
+    userStore.removeAssessment(userId, assessmentId);
     response.redirect('/dashboard');
   },
 

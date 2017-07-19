@@ -1,0 +1,47 @@
+
+{{#each user.bookings}}
+<table class="ui center aligned raised celled table segment">
+    <thead>
+    <tr>
+
+        <th>Trainer</th>
+        <th>Date</th>
+        <th>Assessment</th>
+        <th>Remove Booking</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <div class="ui raised list">
+
+
+
+            <tr>
+
+                <td> {{trainer}} </td>
+                <td> {{date}} </td>
+                <td> {{assessment}} </td>
+                <td><a href="/bookings/deletebooking/{{id}}" class="ui big grey
+               icon button">
+                    <i class="icon trash"></i></a></td>
+            </tr>
+        </div>
+        </tbody>
+            </table>
+            <form class="ui form" action="/user/bookings/{{member.id}}/updatebooking/{{booking.id}}" method="POST">
+                <div class="three fields">
+                    <div class="field">
+                        <label>Trainer</label>
+                        <input placeholder="{{booking.trainer}}" type="text" name="trainer">
+                    </div>
+                    <div class="field">
+                        <label>Date</label>
+                        <input placeholder="{{booking.date}}" type="text" name="date">
+                    </div>
+                    <div class="field">
+                        <hr style="height:10px; visibility:hidden;" />
+                        <button class="ui blue submit button">Update</button>
+                    </div>
+                </div>
+            </form>
+        {{/each}}

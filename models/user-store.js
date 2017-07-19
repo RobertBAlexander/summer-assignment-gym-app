@@ -5,6 +5,7 @@
 
 const _ = require('lodash');
 const JsonStore = require('./json-store');
+const analytics = require('../utils/analytics');
 
 const userStore = {
 
@@ -43,6 +44,33 @@ const userStore = {
 //getTrainerByEmail(email) {
 //  return this.store.findOneBy(this.collection, { email: email });
 //},
+
+  getAssessment(id)
+  {
+    return this.store.findOneBy(this.collection, { id: id });
+  },
+
+  getUserAssessments(userid)
+  {
+    return this.store.findBy(this.collection, { userid: userid });
+  },
+
+  addAssessment(id, assessment) {
+    const user = this.getUserById(id);
+    user.assessments.unshift(assessment);
+    //this.store.add(this.collection, assessment);
+    this.store.save();
+  },
+
+  removeAssessment(id, assessmentId)
+  {
+    const user = this.getUserById(id);
+    _.remove(member.assessments, { assessmentId})
+    //const assessment = this.getAssessment(id);
+    //this.store.remove(this.collection, assessment);
+    this.store.save();
+  },
+
 };
 
 module.exports = userStore;

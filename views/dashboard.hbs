@@ -1,28 +1,9 @@
 {{> menu id="dashboard"}}
 
-
+{{> memberactions}}
 <section class="ui raised segment">
-    <header class="ui four column center aligned middle aligned grid segment">
-        <div class="ui column">
-            <p class="ui user icon header">
-                <i class="ui yellow user icon"></i>Hname{{user.firstname}} {{user.lastname}}
-            </p>
-        </div>
-        <div class="ui column">
-            <p class="ui dashboard icon header">
-                <i class="ui {{idealBodyWeight}} dashboard icon"></i>IDEAL WEIGHT INDICATOR
-            </p>
-        </div>
-        <div class="ui column">
-            <p class="ui heartbeat icon header">
-                <i class="ui red heartbeat icon">{{calculateBMI}}</i> BMI
-            </p>
-        </div>
-        <div class="ui column">
-            <p class="ui doctor icon header">
-                <i class="ui black doctor icon"></i>{{determineBMICategory}}
-            </p>
-        </div>
-    </header>
+
+    {{> memberstatus}}
     {{> addassessment}}
+    {{> listassessments}}
 </section>

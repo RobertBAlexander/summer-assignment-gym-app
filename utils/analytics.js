@@ -3,48 +3,51 @@
  */
 'use strict';
 
+//const accounts = require('../controllers/accounts');
+
 const analytics = {
 
-  calculateBMI (height, weight)
+
+  calculateBMI(user)
   {
-    if (height <= 0)
+    if (user.height <= 0)
     {
       return 0;
     }
     else
     {
-      return (weight / (height * height)).toFixed(2);
+      return (user.startingWeight / (user.height * user.height)).toFixed(2);
     }
 
   },
 
-  determineBMICategory(bmiValue)
+  determineBMICategory(calculateBMI)
   {
-    if (bmiValue < 15)
+    if (calculateBMI < 15)
     {
       return "\"VERY SEVERELY UNDERWEIGHT\"";
     }
-    else if (bmiValue < 16)
+    else if (calculateBMI < 16)
     {
       return "\"SEVERELY UNDERWEIGHT\"";
     }
-    else if (bmiValue < 18.5)
+    else if (calculateBMI < 18.5)
     {
       return "\"UNDERWEIGHT\"";
     }
-    else if (bmiValue < 25)
+    else if (calculateBMI < 25)
     {
       return "\"NORMAL\"";
     }
-    else if (bmiValue < 30)
+    else if (calculateBMI < 30)
     {
       return "\"OVERWEIGHT\"";
     }
-    else if (bmiValue < 35)
+    else if (calculateBMI < 35)
     {
       return "\"MODERATELY OBESE\"";
     }
-    else if (bmiValue < 40)
+    else if (calculateBMI < 40)
     {
       return "\"SEVERELY OBESE\"";
     }
@@ -91,7 +94,15 @@ const analytics = {
         idealBodyWeight = 45.5 + ((inches - fiveFeet) * 2.3);
       }
     }
-    return ( (idealBodyWeight <= weight + 2.0) && (idealBodyWeight >= weight - 2.0));
+    if ( (idealBodyWeight <= weight + 2.0) && (idealBodyWeight >= weight - 2.0))
+    {
+      return "green";
+    }
+    else
+    {
+      return "red";
+    }
+
   }
 
 }

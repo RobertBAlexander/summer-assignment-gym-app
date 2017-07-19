@@ -6,7 +6,7 @@
 const uuid = require('uuid');
 const logger = require('../utils/logger');
 //const playlistStore = require('../models/playlist-store');
-const userstore = require('../models/user-store');
+const userStore = require('../models/user-store');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 
@@ -41,9 +41,12 @@ const dashboard = {
 
   addAssessment(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    const newAssessment = {
+    const userId = loggedInUser.id;
+    //const user = userStore.getUserById(userId);
+    const newAssessment =
+        {
       id: uuid(),
-      userid: loggedInUser.id,
+      //userid: loggedInUser.id,
       weight: request.body.weight,
       chest: request.body.chest,
       thigh: request.body.thigh,
@@ -51,10 +54,19 @@ const dashboard = {
       waist: request.body.waist,
       hips: request.body.hips,
     };
-    logger.debug('Creating a new Assessment', newAssessment);
-    userstore.addAssessment(newAssessment);
+    logger.debug('New Assessment =', newAssessment);
+    userStore.addAssessment(userId, newAssessment);
+    response.redirect('/dashboard/');  //removed 'userId'
+  },
+
+  deleteAssessment(request, response)
+  {
+    const assessmentId = request.params.id;
+    logger.debug(`Deleting Assessment ${assessmentId}`);
+    userStore.removeAssessment(assessmentId);
     response.redirect('/dashboard');
   },
+
 };
 
 module.exports = dashboard;

@@ -8,14 +8,16 @@
     {{/each}}
         </select>
     </div>
+    </div>
         <div class="two fields">
-            <label>Date </label><div class="field">
-            <select name="date">
+            <label>Date</label>
+            <div class="field">
+              <select name="date">
                 {{#each user.bookings}}
                     <option name="{{date}}" value="unspecified"> {{date}}</option><br>
                 {{/each}}
-            </select>
-        </div>
+              </select>
+            </div>
 
     </div>
     <button class="ui blue submit button">Add Assessment</button>

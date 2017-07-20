@@ -1,0 +1,29 @@
+<form class="ui stacked segment form" action="/dashboard/addassessment " method="POST">
+    <h3 class="ui header">Add Goal</h3>
+    <div class="field">
+        <label>Goal Date</label>
+        <input placeholder="Enter Date" type="text" name="goaldate">
+    </div>
+    <div class="two fields">
+        <div class="field">
+            <label>Weight</label>
+            <input placeholder="00.00kg" type="text" name="weight">
+        </div>
+        <div class="field">
+            <label>Above or Below stated weight</label>
+            <div class="field">
+                <select name="aboveorbelow">
+                    <option name="below" value="unspecified"> This weight or less</option><br>
+                        <option name="above" value="unspecified"> This weight or more</option><br>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="field">
+        <label>Description</label>
+        <input placeholder="I'm going to get fitter!" type="text" name="description">
+    </div>
+    <button class="ui blue submit button">Add Goal</button>
+</form>

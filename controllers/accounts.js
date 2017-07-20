@@ -3,6 +3,7 @@
  */
 'use strict';
 const userStore = require('../models/user-store');
+const trainerStore = require('../models/trainer-store');
 const logger = require('../utils/logger');
 const uuid = require('uuid');
 
@@ -45,11 +46,18 @@ const accounts = {
 
   authenticate(request, response) {
     const user = userStore.getUserByEmail(request.body.email);
+    const trainer = trainerStore.getTrainerByEmail(request.body.email);
     if (user && user.password === request.body.password) {
       response.cookie('user', user.email);
       logger.info(`logging in ${user.email}`);
       response.redirect('/dashboard');
-    } else {
+    }
+    else if (trainer && trainer.password === request.body.password) {
+      response.cookie('trainer', trainer.email);
+      logger.info(`logging in ${trainer.email}`);
+      response.redirect('/trainerdashboard');
+    }
+    else {
       response.redirect('/login');
     }
   },
@@ -57,6 +65,11 @@ const accounts = {
   getCurrentUser(request) {
     const userEmail = request.cookies.user;
     return userStore.getUserByEmail(userEmail);
+  },
+
+  getCurrentTrainer(request) {
+    const trainerEmail = request.cookies.trainer;
+    return trainerStore.getTrainerByEmail(trainerEmail);
   },
 
 

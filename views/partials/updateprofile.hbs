@@ -1,0 +1,112 @@
+<section class="ui two column middle aligned grid basic segment">
+    <div class="ui column middle aligned segment">
+        <div class="column">
+            <h1>
+                Your member details:
+            </h1>
+
+            <form class="ui segment form" action="/profile/updatefname" method="POST">
+                <div class="two fields">
+                    <div class="field">
+                        <label>First Name</label>
+                        <input placeholder="{{member.firstname}}" type="text" name="firstname">
+                    </div>
+                    <div class="field">
+                        <hr style="height:10px; visibility:hidden;" />
+                        <button class="ui small blue submit button">Update First Name</button>
+                    </div>
+                </div>
+            </form>
+
+            <form class="ui segment form" action="/profile/updatelname" method="POST">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Last Name</label>
+                        <input placeholder="{{member.lastname}}" type="text" name="lastname">
+                    </div>
+                    <div class="field">
+                        <hr style="height:10px; visibility:hidden;" />
+                        <button class="ui blue submit button">Update Last Name</button>
+                    </div>
+                </div>
+            </form>
+
+            <form class="ui segment form" action="/profile/updateemail" method="POST">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Email Address</label>
+                        <input placeholder="{{member.email}}" type="text" name="email">
+                    </div>
+                    <div class="field">
+                        <hr style="height:10px; visibility:hidden;" />
+                        <button class="ui blue submit button">Update Email Address</button>
+                    </div>
+                </div>
+            </form>
+
+            <form class="ui segment form" action="/profile/updateaddress" method="POST">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Address</label>
+                        <input placeholder="{{member.address}}" type="text" name="address">
+                    </div>
+                    <div class="field">
+                        <hr style="height:10px; visibility:hidden;" />
+                        <button class="ui blue submit button">New Address</button>
+                    </div>
+                </div>
+            </form>
+
+            <form class="ui segment form" action="/profile/updategender" method="POST">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Gender </label><div class="field">
+                        <select name="gender">
+                            <option name="gender" value="unspecified"> Unspecified</option><br>
+                            <option name="gender" value="male">Male</option><br>
+                            <option name="gender" value="female">Female</option><br>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="field">
+                        <hr style="height:10px; visibility:hidden;" />
+                        <button class="ui blue submit button">Change Gender from '{{member.gender}}'</button>
+                    </div>
+                </div>
+            </form>
+
+            <form class="ui segment form" action="/profile/updateheight" method="POST">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Height</label>
+                        <input placeholder="{{member.height}} meters" type="number" step=".01" min="1" max="3" name="height">
+                    </div>
+                    <div class="field">
+                        <hr style="height:10px; visibility:hidden;" />
+                        <button class="ui blue submit button">New Height</button>
+                    </div>
+                </div>
+            </form>
+
+            <form class="ui segment form" action="/profile/updatestartingweight" method="POST">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Starting Weight*</label>
+                        <input placeholder="{{member.startingWeight}} kg" type="number" step=".01" min="35" max="250" name="startingWeight">
+                    </div>
+                    <div class="field">
+                        <hr style="height:10px; visibility:hidden;" />
+                        <button class="ui blue submit button">Alter Starting Weight</button>
+                    </div>
+
+                </div>
+                <p>*Please consult your Trainer before changing your Starting Weight</p>
+            </form>
+        </div>
+    </div>
+
+    <div class="column">
+        <img class="ui image" src="/public/images/eeveelotuion.jpg">
+    </div>
+
+</section>

@@ -1,0 +1,36 @@
+
+{{#each user.goals}}
+    <table class="ui center aligned raised celled table segment">
+        <thead>
+        <tr>
+
+            <th>Goal Date</th>
+            <th>Goal Status</th>
+            <th>Weight</th>
+            <th>Above or Below</th>
+            <th>Description</th>
+            <th>Remove Goal</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <div class="ui raised list">
+
+
+
+            <tr>
+
+                <td> {{goaldate}} </td>
+                <td> {{goalstatus}} </td>
+                <td> {{weight}} </td>
+                <td> {{aboveorbelow}} </td>
+                <td> {{description}} </td>
+                <td><a href="/bookings/deletegoal/{{id}}" class="ui big grey
+               icon button">
+                    <i class="icon trash"></i></a></td>
+            </tr>
+        </div>
+        </tbody>
+    </table>
+
+{{/each}}

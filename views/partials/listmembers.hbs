@@ -1,0 +1,24 @@
+<table class="ui fixed table">
+    <tbody>
+    <div class="ui bulleted list">
+    {{#each user}} <!--supposed to get the stuff from EVERY member in a list order.-->
+        <tr>
+            <td>
+                <div class="column">
+                    <p class="ui wechat icon">
+                        <a href="/trainer/dashboard/viewmember/${member.id}"><h3><i class="ui blue wechat icon"></i>{{user.firstname}}
+        {{user.lastname}}</h3></a></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{user.assessments.size}} assessments</p>
+                </div>
+            </td>
+            <td>
+                <div class="column right aligned">
+                    <a href="/trainer/dashboard/${trainer.id}/deletetmember/${member.id}" class="ui red
+               icon button"><i class="icon trash"></i></a>
+                </div>
+            </td>
+    {{/each}}
+    </div>
+    </tbody>
+</table>
+<p>Some words to know its there</p>

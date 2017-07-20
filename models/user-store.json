@@ -12,6 +12,15 @@
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "assessments": [
         {
+          "id": "367f76ed-9265-4903-8fbe-723a39a20c65",
+          "weight": "80",
+          "chest": "32",
+          "thigh": "32",
+          "upperArm": "32",
+          "waist": "32",
+          "hips": "32"
+        },
+        {
           "id": "fa179bc7-ddd7-472d-9a55-66533a3c6cfe",
           "weight": "122",
           "chest": "43",
@@ -34,18 +43,6 @@
           "trend": ""
         }
       ]
-    },
-    {
-      "firstname": "marge",
-      "lastname": "simpson",
-      "trainer": true,
-      "email": "marge@simpson.com",
-      "password": "secret",
-      "gender": "F",
-      "height": 2,
-      "startingWeight": 80,
-      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "assessments": []
     },
     {
       "firstname": "Robert",

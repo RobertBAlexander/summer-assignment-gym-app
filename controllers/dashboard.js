@@ -6,7 +6,7 @@
 const uuid = require('uuid');
 const logger = require('../utils/logger');
 //const playlistStore = require('../models/playlist-store');
-const userStore = require('../models/user-store');
+const userStore = require('../models/user-store.js');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 
@@ -45,7 +45,7 @@ const dashboard = {
     //const user = userStore.getUserById(userId);
     const newAssessment =
         {
-      id: uuid(),
+      assessmentId: uuid(),
       //userid: loggedInUser.id,
       weight: request.body.weight,
       chest: request.body.chest,
@@ -61,12 +61,15 @@ const dashboard = {
 
   deleteAssessment(request, response)
   {
+    //const loggedInUser = accounts.getCurrentUser(request);
+
+    //const userId = request.params.id;
+    const assessmentId = request.params.assessmentId;
     const loggedInUser = accounts.getCurrentUser(request);
-    const assessmentId = request.params.id;
-    const userId = loggedInUser.id;
-    logger.debug(`Deleting Assessment ${assessmentId}`);
-    userStore.removeAssessment(userId, assessmentId);
-    response.redirect('/dashboard');
+    userStore.deleteAssessment(loggedInUser.id, assessmentId);
+    logger.debug(`Deleting Assessment ${assessmentId}  for ${loggedInUser.firstname}`);
+    //userStore.removeAssessment(userId, assessmentId);
+    response.redirect('/dashboard/');
   },
 
 };

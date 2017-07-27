@@ -16,14 +16,6 @@ const userStore = {
     return this.store.findAll(this.collection);
   },
 
-  getAllMembers() {
-    return this.store.findBy(this.collection, { trainer: false });
-  },
-
-  getAllTrainers() {
-    return this.store.findBy(this.collection, { trainer: true });
-  },
-
   addUser(user) {
     this.store.add(this.collection, user);
     this.store.save();
@@ -37,22 +29,23 @@ const userStore = {
     return this.store.findOneBy(this.collection, { email: email });
   },
 
-//getMemberByEmail(email) {
-//  return this.store.findOneBy(this.collection, { email: email });
-//},
 
-//getTrainerByEmail(email) {
-//  return this.store.findOneBy(this.collection, { email: email });
-//},
-
-  getAssessment(id)
+  getAssessment(userId, assessmentId)
   {
-    return this.store.findOneBy(this.collection, { id: id });
+    const user = this.getUserById(userId);
+    for (let i = 0; i < user.assessments.length; i++)
+    {
+      if (user.assessments[i].assessmentId === assessmentId)
+      {
+        return user.assessments[i];
+      }
+    }
+    //return this.store.findOneBy(this.collection, { id: id });
   },
 
-  getUserAssessments(userid)
+  getUserAssessments(userId)
   {
-    return this.store.findBy(this.collection, { userid: userid });
+    return this.store.findBy(this.collection, { userId: userId });
   },
 
   addAssessment(id, assessment) {
@@ -62,12 +55,13 @@ const userStore = {
     this.store.save();
   },
 
-  removeAssessment(id, assessmentId)
+  deleteAssessment(id, assessmentId)
   {
-    const user = this.getUserById(id);
-    _.remove(user.assessments, { assessmentId: assessmentId });
-    //const assessment = this.getAssessment(id);
-    //this.store.remove(this.collection, assessment);
+   const user = this.getUserById(id);
+   // _.remove(user.assessments, { assessmentId: assessmentId });
+    //const assessments = this.getAssessment(user, assessmentId);
+    _.remove(user.assessments, { id: assessmentId});
+    // this.store.remove(this.collection, user.assessments[id]);
     this.store.save();
   },
 

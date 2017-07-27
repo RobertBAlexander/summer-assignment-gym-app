@@ -10,13 +10,26 @@ const analytics = {
 
   calculateBMI(user)
   {
+    let memberWeight = 0;
+
+    if (user.assessments.length > 0)
+    {
+      memberWeight = user.assessments[0].weight;
+    }
+    else
+    {
+      memberWeight = user.startingWeight;
+    }
+
+
+
     if (user.height <= 0)
     {
       return 0;
     }
     else
     {
-      return (user.startingWeight / (user.height * user.height)).toFixed(2);
+      return (memberWeight / (user.height * user.height)).toFixed(2);
     }
 
   },

@@ -12,7 +12,25 @@
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "assessments": [
         {
-          "id": "367f76ed-9265-4903-8fbe-723a39a20c65",
+          "assessmentId": "4646349f-e82d-4553-951c-1fff756e7587",
+          "weight": "79",
+          "chest": "65",
+          "thigh": "65",
+          "upperArm": "65",
+          "waist": "65",
+          "hips": "45"
+        },
+        {
+          "assessmentId": "a3d0dcd0-5044-481c-8ceb-629fcfbff31d",
+          "weight": "60",
+          "chest": "45",
+          "thigh": "45",
+          "upperArm": "45",
+          "waist": "45",
+          "hips": "45"
+        },
+        {
+          "assessmentId": "367f76ed-9265-4903-8fbe-723a39a20c65",
           "weight": "80",
           "chest": "32",
           "thigh": "32",
@@ -21,7 +39,7 @@
           "hips": "32"
         },
         {
-          "id": "fa179bc7-ddd7-472d-9a55-66533a3c6cfe",
+          "assessmentId": "fa179bc7-ddd7-472d-9a55-66533a3c6cfe",
           "weight": "122",
           "chest": "43",
           "thigh": "34",
@@ -32,7 +50,7 @@
           "trend": ""
         },
         {
-          "id": "33173b59-9502-4057-81b2-a2191a9655f3",
+          "assessmentId": "33173b59-9502-4057-81b2-a2191a9655f3",
           "weight": "122",
           "chest": "43",
           "thigh": "43",

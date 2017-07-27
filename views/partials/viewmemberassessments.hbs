@@ -1,0 +1,58 @@
+
+<section class="ui raised segment">
+{{#each user.assessments}} <!--supposed to get the stuff from EVERY assessment in a list order.-->
+    <div class="ui column">
+        <table class="ui center aligned raised celled table segment">
+
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Weight</th>
+                <th>Chest</th>
+                <th>Thigh</th>
+                <th>Upper Arm</th>
+                <th>Waist</th>
+                <th>Hips</th>
+                <th>Comment</th>
+                <th>Trend</th>
+                <th>Remove Assessment</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <div class="ui raised list">
+                <tr>
+                    <td> {{assessment.date}} </td>
+                    <td> {{assessment.weight}} </td>
+                    <td> {{assessment.chest}} </td>
+                    <td> {{assessment.thigh}} </td>
+                    <td> {{assessment.upperArm}} </td>
+                    <td> {{assessment.waist}} </td>
+                    <td> {{assessment.hips}} </td>
+                    <td> {{assessment.comment}} </td>
+                    <td> <img class="ui image" src="/public/images/{{member.trend}}"></td>
+                    <td><a href="/trainer/dashboard/viewmember/${member.id}/deleteassessment/{{assessment.id}}" class="ui big grey
+               icon button">
+                        <i class="icon trash"></i></a></td>
+                </tr>
+            </div>
+            </tbody>
+        </table>
+
+        <form class="ui form" action="/trainer/dashboard/viewmember/{{member.id}}/updatecomment/{{assessment.id}}" method="POST">
+            <div class="two fields">
+                <div class="field">
+                    <label>Comments</label>
+                    <input placeholder="{{assessment.comment}}" type="text" name="comment">
+                </div>
+                <div class="field">
+                    <hr style="height:10px; visibility:hidden;" />
+                    <button class="ui blue submit button">Update</button>
+                </div>
+            </div>
+        </form>
+
+        <br><br>
+    </div>
+{{/each}}
+</section>

@@ -28,8 +28,9 @@ router.post('/authenticate', accounts.authenticate);
 
 
 router.get('/dashboard', dashboard.index);
-router.post('/dashboard/addassessment', dashboard.addAssessment);
-router.get('/dashboard/deleteassessment/:id', dashboard.deleteAssessment);
+router.post('/dashboard/addAssessment', dashboard.addAssessment);
+router.get('/dashboard/deleteAssessment/:assessmentId', dashboard.deleteAssessment);
+
 router.get('/memberprofile', memberprofile.index);
 
 router.get('/bookings', bookings.index);

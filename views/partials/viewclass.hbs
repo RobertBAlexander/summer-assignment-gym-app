@@ -1,0 +1,67 @@
+
+<section class="ui raised segment">
+    {{#each trainer.class}} <!--supposed to get the stuff from EVERY assessment in a list order.-->
+        <div class="ui column">
+            <table class="ui center aligned raised celled table segment">
+
+                <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Start Date</th>
+                    <th>Number of Lessons</th>
+                    <th>Total Capacity</th>
+                    <th>Difficulty Level</th>
+                    <th>Remove Class</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <div class="ui raised list">
+                    <tr>
+                        <td> {{class.name}} </td>
+                        <td> {{class.startdate}} </td>
+                        <td> {{class.classnumber}} </td>
+                        <td> {{capacity}} </td>
+                        <td> {{difficulty}} </td>
+                        <td><a href="/trainer/dashboard/viewmember/${member.id}/deleteassessment/{{class.id}}" class="ui big grey
+               icon button">
+                            <i class="icon trash"></i></a></td>
+                    </tr>
+                </div>
+                </tbody>
+            </table>
+    {{#each trainer.class.lesson}}
+            <table class="ui center aligned raised celled table segment">
+
+                <thead>
+                <tr>
+                    <th>Lesson Number</th>
+                    <th>Date</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>spaces remaining</th>
+                    <th>Remove Lesson</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <div class="ui raised list">
+                    <tr>
+                        <td> {{class.lesson}} </td>
+                        <td> {{class.lesson.date}} </td>
+                        <td> {{class.lesson.starttime}} </td>
+                        <td> {{class.lesson.endtime}} </td>
+                        <td> {{class.lesson.spaces}} </td>
+                        <td><a href="/trainer/dashboard/viewmember/${member.id}/deleteassessment/{{lesson.id}}" class="ui big grey
+               icon button">
+                            <i class="icon trash"></i></a></td>
+                    </tr>
+                </div>
+                </tbody>
+            </table>
+    {{/each}}
+
+            <br><br>
+        </div>
+    {{/each}}
+</section>

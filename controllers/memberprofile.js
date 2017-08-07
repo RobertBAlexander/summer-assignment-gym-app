@@ -6,7 +6,7 @@
 const uuid = require('uuid');
 const logger = require('../utils/logger');
 //const playlistStore = require('../models/playlist-store');
-const userStore = require('../models/user-store');
+const userStore = require('../models/user-store.js');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 
@@ -30,14 +30,66 @@ const memberprofile = {
     response.render('memberprofile', viewData);
   },
 
+  updatefname(request, response)
+  {
+    logger.info('rendering update of first name');
+    const loggedInUser = accounts.getCurrentUser(request);
+    loggedInUser.firstname = request.body.firstname;
 
+    userStore.store.save();
+    response.redirect('/memberprofile');
+  },
 
-  /*deletePlaylist(request, response) {
-   const playlistId = request.params.id;
-   logger.debug(`Deleting Playlist ${playlistId}`);
-   playlistStore.removePlaylist(playlistId);
-   response.redirect('/dashboard');
-   },*/
+  updatelname(request, response)
+  {
+    logger.info('rendering update of first name');
+    const loggedInUser = accounts.getCurrentUser(request);
+    loggedInUser.lastname = request.body.lastname;
+
+    userStore.store.save();
+    response.redirect('/memberprofile');
+  },
+
+  updateemail(request, response)
+  {
+    logger.info('rendering update of first name');
+    const loggedInUser = accounts.getCurrentUser(request);
+    loggedInUser.email = request.body.email;
+
+    userStore.store.save();
+    response.redirect('/memberprofile');
+  },
+
+  updategender(request, response)
+  {
+    logger.info('rendering update of first name');
+    const loggedInUser = accounts.getCurrentUser(request);
+    loggedInUser.gender = request.body.gender;
+
+    userStore.store.save();
+    response.redirect('/memberprofile');
+  },
+
+  updateheight(request, response)
+  {
+    logger.info('rendering update of first name');
+    const loggedInUser = accounts.getCurrentUser(request);
+    loggedInUser.height = request.body.height;
+
+    userStore.store.save();
+    response.redirect('/memberprofile');
+  },
+
+  updatestartingweight(request, response)
+  {
+    logger.info('rendering update of first name');
+    const loggedInUser = accounts.getCurrentUser(request);
+    loggedInUser.startingWeight = request.body.startingWeight;
+
+    userStore.store.save();
+    response.redirect('/memberprofile');
+  },
+
 
 
 };

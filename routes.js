@@ -32,6 +32,12 @@ router.post('/dashboard/addAssessment', dashboard.addAssessment);
 router.get('/dashboard/deleteAssessment/:assessmentId', dashboard.deleteAssessment);
 
 router.get('/memberprofile', memberprofile.index);
+router.post('/memberprofile/updatefname', memberprofile.updatefname);
+router.post('/memberprofile/updatelname', memberprofile.updatelname);
+router.post('/memberprofile/updateemail', memberprofile.updateemail);
+router.post('/memberprofile/updategender', memberprofile.updategender);
+router.post('//memberprofile/updateheight', memberprofile.updateheight);
+router.post('/memberprofile/updatestartingweight', memberprofile.updatestartingweight);
 
 router.get('/bookings', bookings.index);
 //router.get('/classes', classes.index);

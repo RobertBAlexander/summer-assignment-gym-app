@@ -9,7 +9,7 @@ const about = {
   index(request, response) {
     logger.info('about rendering');
     const viewData = {
-      title: 'About Playlist 1',
+      title: 'About Gym App in JS',
     };
     response.render('about', viewData);
   },

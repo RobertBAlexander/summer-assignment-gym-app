@@ -6,59 +6,76 @@
       "trainer": false,
       "email": "homer@simpson.com",
       "password": "secret",
-      "gender": "M",
+      "gender": "male",
       "height": 2.2,
       "startingWeight": 138,
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "assessments": [
         {
-          "assessmentId": "4646349f-e82d-4553-951c-1fff756e7587",
-          "weight": "79",
-          "chest": "65",
-          "thigh": "65",
-          "upperArm": "65",
-          "waist": "65",
-          "hips": "45"
-        },
-        {
-          "assessmentId": "a3d0dcd0-5044-481c-8ceb-629fcfbff31d",
-          "weight": "60",
-          "chest": "45",
-          "thigh": "45",
-          "upperArm": "45",
-          "waist": "45",
-          "hips": "45"
-        },
-        {
-          "assessmentId": "367f76ed-9265-4903-8fbe-723a39a20c65",
-          "weight": "80",
+          "assessmentId": "5dde61ba-6b13-42e7-86ec-25c778f21255",
+          "weight": "111",
           "chest": "32",
           "thigh": "32",
           "upperArm": "32",
           "waist": "32",
-          "hips": "32"
+          "hips": "32",
+          "trend": "",
+          "comment": ""
         },
         {
-          "assessmentId": "fa179bc7-ddd7-472d-9a55-66533a3c6cfe",
-          "weight": "122",
-          "chest": "43",
+          "assessmentId": "2dc7c179-e29a-4732-8d52-5f92eb62acf4",
+          "weight": "111",
+          "chest": "44",
+          "thigh": "44",
+          "upperArm": "44",
+          "waist": "44",
+          "hips": "44",
+          "trend": "angry_pika.jpg",
+          "comment": ""
+        },
+        {
+          "assessmentId": "fa263bc2-f4fc-4254-b3dc-9542959a5434",
+          "weight": "110",
+          "chest": "44",
+          "thigh": "44",
+          "upperArm": "44",
+          "waist": "44",
+          "hips": "44",
+          "trend": "",
+          "comment": ""
+        },
+        {
+          "assessmentId": "7032db4c-038f-4241-8585-5be15942c06c",
+          "weight": "100",
+          "chest": "33",
+          "thigh": "33",
+          "upperArm": "33",
+          "waist": "33",
+          "hips": "33",
+          "trend": "angry_pika.jpg",
+          "comment": ""
+        },
+        {
+          "assessmentId": "a35dfd1d-6891-4051-ba3b-13ffa6ff4fa7",
+          "weight": "90",
+          "chest": "34",
           "thigh": "34",
           "upperArm": "34",
           "waist": "34",
           "hips": "34",
-          "comment": "",
-          "trend": ""
+          "trend": "angry_pika.jpg",
+          "comment": ""
         },
         {
-          "assessmentId": "33173b59-9502-4057-81b2-a2191a9655f3",
+          "assessmentId": "674682f2-655e-449e-8bb9-8172c6a9722b",
           "weight": "122",
-          "chest": "43",
-          "thigh": "43",
-          "upperArm": "43",
-          "waist": "43",
-          "hips": "43",
-          "comment": "",
-          "trend": ""
+          "chest": "45",
+          "thigh": "45",
+          "upperArm": "45",
+          "waist": "45",
+          "hips": "45",
+          "trend": "happyhealth_pika.png",
+          "comment": ""
         }
       ]
     },

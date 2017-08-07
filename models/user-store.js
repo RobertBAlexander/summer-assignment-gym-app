@@ -55,13 +55,9 @@ const userStore = {
     this.store.save();
   },
 
-  deleteAssessment(id, assessmentId)
-  {
-   const user = this.getUserById(id);
-   // _.remove(user.assessments, { assessmentId: assessmentId });
-    //const assessments = this.getAssessment(user, assessmentId);
-    _.remove(user.assessments, { id: assessmentId});
-    // this.store.remove(this.collection, user.assessments[id]);
+  deleteAssessment(id, assessmentId) {
+    const user = this.getUserById(id);
+    _.remove(user.assessments, { assessmentId: assessmentId });
     this.store.save();
   },
 

@@ -79,15 +79,25 @@ const analytics = {
     return (convertedWeight.toFixed(2));
   },
 
-  isIdealBodyWeight(gender, height, weight)
+  isIdealBodyWeight(user)
   {
     const fiveFeet = 60.0;
     let idealBodyWeight = 0;
-    let inches = this.convertHeightMetersToInches(height);
+    let inches = this.convertHeightMetersToInches(user.height);
+    let weight;
+    const assessmentList = user.assessments;
+
+    if (user.assessments.length >= 1) {
+      weight = assessmentList[0].weight;
+    }
+    else
+    {
+      weight = user.startingWeight;
+    }
 
     if (inches <= fiveFeet)
     {
-      if (gender === "M")
+      if (user.gender === 'male')
       {
         idealBodyWeight = 50;
       }
@@ -98,7 +108,7 @@ const analytics = {
     }
     else
     {
-      if (gender === "M")
+      if (user.gender === 'male')
       {
         idealBodyWeight = 50 + ((inches - fiveFeet) * 2.3);
       }
@@ -107,17 +117,63 @@ const analytics = {
         idealBodyWeight = 45.5 + ((inches - fiveFeet) * 2.3);
       }
     }
-    if ( (idealBodyWeight <= weight + 2.0) && (idealBodyWeight >= weight - 2.0))
+    if ( (idealBodyWeight <= (weight + 2.0)) && (idealBodyWeight >= (weight - 2.0)))
     {
-      return "green";
+      return 'green';
     }
     else
     {
-      return "red";
+      return 'red';
     }
 
-  }
+  },
 
-}
+
+
+
+  trend(user)
+{
+  let trend = 'happyhealth_pika.png';
+  let assessmentList = user.assessments;
+  const previousAssessment = assessmentList[1];
+  const currentAssessment = assessmentList[0];
+  let lastBMI;
+  if (assessmentList.length !== 1) {
+    //previousAssessment = assessmentList[1];
+    lastBMI = (previousAssessment.weight / (user.height * user.height));
+  }
+  else {
+    //previousAssessment = user.startingWeight;
+    lastBMI = (user.startingWeight / (user.height * user.height));
+
+  }
+  const idealBMI = 22;
+  //const valueBMI = toTwoDecimalPlaces(previousAssessment / (getHeight() * getHeight()));
+
+
+  const previousCompare = Math.abs(lastBMI -idealBMI);
+  const currentCompare = Math.abs((currentAssessment.weight / (user.height * user.height)) -idealBMI);
+
+  //below full code should work to allow the nochange icon to appear when the two assessments are exactly even
+  //however this has not worked, and I have had to remvoe the no change icon due ot lack of funtionality
+  if (currentCompare > previousCompare)
+  {
+    trend = "angry_pika.jpg";
+  }
+  else
+  //if (currentCompare < previousCompare)
+  {
+    trend = "happyhealth_pika.png";
+  }
+  // else
+  // {
+  //   return "nochange.jpg";
+  // }
+
+  assessmentList[0].trend = trend;//when an assessment is created, this sends the trend information to it to give trend details.
+  //IMPORTANT! This means that it still does not update trend details when the previous assessment is deleted.
+},
+
+};
 
 module.exports = analytics;

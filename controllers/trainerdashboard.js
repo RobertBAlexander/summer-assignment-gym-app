@@ -6,8 +6,8 @@
 const uuid = require('uuid');
 const logger = require('../utils/logger');
 //const playlistStore = require('../models/playlist-store');
-const trainerStore = require('../models/trainer-store');
-const userStore = require('../models/user-store');
+const trainerStore = require('../models/trainer-store.js');
+const userStore = require('../models/user-store.js');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 
@@ -15,12 +15,14 @@ const trainerdashboard = {
   index(request, response) {
     logger.info('trainerdashboard rendering');
     const loggedInTrainer = accounts.getCurrentTrainer(request);
+    const userList = userStore.getAllUsers();
     //const calculateBMI = analytics.calculateBMI(loggedInUser);
     //const determineBMICategory = analytics.determineBMICategory(loggedInUser.calculateBMI)
     const viewData = {
       title: 'Gym App Trainer Dashboard',
       //user: userStore.getUserById(loggedInUser.id),
       trainer: loggedInTrainer,
+      userList: userList,
       //calculateBMI: calculateBMI,
       //determineBMICategory: analytics.determineBMICategory(calculateBMI),
       //idealBodyWeight: analytics.isIdealBodyWeight(loggedInUser),

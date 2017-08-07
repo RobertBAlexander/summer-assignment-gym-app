@@ -17,7 +17,7 @@ const dashboard = {
     const calculateBMI = analytics.calculateBMI(loggedInUser);
     //const determineBMICategory = analytics.determineBMICategory(loggedInUser.calculateBMI)
     const viewData = {
-      title: 'Gym App Dashboard',
+      title: 'Users Gym App Dashboard',
       //user: userStore.getUserById(loggedInUser.id),
       user: loggedInUser,
       calculateBMI: calculateBMI,
@@ -53,9 +53,13 @@ const dashboard = {
       upperArm: request.body.upperArm,
       waist: request.body.waist,
       hips: request.body.hips,
+      trend: '',
+      comment: '',
+
     };
     logger.debug('New Assessment =', newAssessment);
     userStore.addAssessment(userId, newAssessment);
+    analytics.trend(loggedInUser);
     response.redirect('/dashboard/');  //removed 'userId'
   },
 
@@ -69,7 +73,7 @@ const dashboard = {
     userStore.deleteAssessment(loggedInUser.id, assessmentId);
     logger.debug(`Deleting Assessment ${assessmentId}  for ${loggedInUser.firstname}`);
     //userStore.removeAssessment(userId, assessmentId);
-    response.redirect('/dashboard/');
+    response.redirect('/dashboard');
   },
 
 };

@@ -4,6 +4,7 @@
 'use strict';
 
 //const accounts = require('../controllers/accounts');
+const pictureStore = require('../models/picture-store');
 
 const analytics = {
 
@@ -158,21 +159,40 @@ const analytics = {
   //however this has not worked, and I have had to remvoe the no change icon due ot lack of funtionality
   if (currentCompare > previousCompare)
   {
-    trend = "angry_pika.jpg";
+    trend = "http://res.cloudinary.com/scealfada/image/upload/v1502489737/angry_pika_gydkr0.jpg";
   }
   else
-  //if (currentCompare < previousCompare)
+  if (currentCompare < previousCompare)
   {
-    trend = "happyhealth_pika.png";
+    trend = "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png";
   }
-  // else
-  // {
-  //   return "nochange.jpg";
-  // }
+   else
+   {
+     trend = "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg";
+   }
 
   assessmentList[0].trend = trend;//when an assessment is created, this sends the trend information to it to give trend details.
   //IMPORTANT! This means that it still does not update trend details when the previous assessment is deleted.
 },
+
+  /*profilepic(userid)
+      {
+        let profilepic = '<i class="ui yellow user icon"></i>';
+        //let photos = pictureStore.getAlbum(userid);
+        const piccys = pictureStore.getAlbum(userid);
+        const photoList = piccys.photos;
+
+         /* if (pic.photos.length = 0)
+          {
+          profilepic = '<i class="ui yellow user icon"></i>';
+        }
+        else
+        {
+          profilepic = '<img src="' + pictureStore.getPhotoById(userid, img) + 'style="width:50px height:50px border-radius:7px;">' ;
+
+        }
+        photoList[0].profilepic = profilepic;
+      }*/
 
 };
 

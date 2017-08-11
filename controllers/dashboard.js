@@ -15,6 +15,7 @@ const dashboard = {
     logger.info('dashboard rendering');
     const loggedInUser = accounts.getCurrentUser(request);
     const calculateBMI = analytics.calculateBMI(loggedInUser);
+    const isTrainer = false;
     //const determineBMICategory = analytics.determineBMICategory(loggedInUser.calculateBMI)
     const viewData = {
       title: 'Users Gym App Dashboard',
@@ -23,6 +24,8 @@ const dashboard = {
       calculateBMI: calculateBMI,
       determineBMICategory: analytics.determineBMICategory(calculateBMI),
       idealBodyWeight: analytics.isIdealBodyWeight(loggedInUser),
+      isTrainer: isTrainer,
+      //profilepic: analytics.profilepic(loggedInUser),
       //playlists: playlistStore.getUserPlaylists(loggedInUser.id),
     };
     logger.info('about to render');

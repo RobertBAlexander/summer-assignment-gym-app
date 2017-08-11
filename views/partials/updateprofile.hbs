@@ -44,6 +44,20 @@
                 </div>
             </form>
 
+            <form class="ui segment form" action="/memberprofile/updatepicture" method="POST" enctype="multipart/form-data">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Profile Picture</label>
+                        <input type="file" name="picture"></input>
+                    </div>
+                    <div class="field">
+                        <label>Title for Picture</label>
+                        <input placeholder="Title" type="text" name="title">
+                    </div>
+                </div>
+                <button class="ui mini blue submit button"> Upload </button>
+            </form>
+
             <form class="ui segment form" action="/memberprofile/updategender" method="POST">
                 <div class="two fields">
                     <div class="field">
@@ -93,7 +107,7 @@
     </div>
 
     <div class="column">
-        <img class="ui image" src="/public/images/eeveelotuion.jpg">
+        <img class="ui image" src="http://res.cloudinary.com/scealfada/image/upload/v1502489739/eeveelotuion_awzij0.jpg">
     </div>
 
 </section>

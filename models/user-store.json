@@ -12,6 +12,61 @@
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "assessments": [
         {
+          "assessmentId": "6d7c5654-ac66-483a-bbda-79a5b70538fd",
+          "weight": "90",
+          "chest": "45",
+          "thigh": "45",
+          "upperArm": "45",
+          "waist": "45",
+          "hips": "45",
+          "trend": "",
+          "comment": ""
+        },
+        {
+          "assessmentId": "d030f21e-18d1-483a-9299-3d71078d8a3f",
+          "weight": "81",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "",
+          "comment": ""
+        },
+        {
+          "assessmentId": "0b328b47-f15d-4be3-9c38-4fc9db5be329",
+          "weight": "80",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/nochange_xhsp47.jpg",
+          "comment": ""
+        },
+        {
+          "assessmentId": "f2ccd02b-817a-40d7-bf82-cbe603ee8613",
+          "weight": "80",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/nochange_xhsp47.jpg",
+          "comment": ""
+        },
+        {
+          "assessmentId": "fad8f80a-c817-4646-bb31-163c867ea03c",
+          "weight": "80",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "",
+          "comment": ""
+        },
+        {
           "assessmentId": "5dde61ba-6b13-42e7-86ec-25c778f21255",
           "weight": "111",
           "chest": "32",
@@ -20,7 +75,7 @@
           "waist": "32",
           "hips": "32",
           "trend": "",
-          "comment": ""
+          "comment": "vx cv vc"
         },
         {
           "assessmentId": "2dc7c179-e29a-4732-8d52-5f92eb62acf4",
@@ -31,18 +86,7 @@
           "waist": "44",
           "hips": "44",
           "trend": "angry_pika.jpg",
-          "comment": ""
-        },
-        {
-          "assessmentId": "fa263bc2-f4fc-4254-b3dc-9542959a5434",
-          "weight": "110",
-          "chest": "44",
-          "thigh": "44",
-          "upperArm": "44",
-          "waist": "44",
-          "hips": "44",
-          "trend": "",
-          "comment": ""
+          "comment": "dfhdgnsgng"
         },
         {
           "assessmentId": "7032db4c-038f-4241-8585-5be15942c06c",
@@ -78,18 +122,6 @@
           "comment": ""
         }
       ]
-    },
-    {
-      "firstname": "Robert",
-      "lastname": "Alexander",
-      "email": "robert.b.alexander@gmail.com",
-      "password": "secret",
-      "address": "24 Meledon Grove, Farmleigh, Dunmore Road",
-      "gender": "M",
-      "height": "1.9",
-      "startingWeight": "84",
-      "id": "6ebe4e71-5942-4c46-bae8-ccf18276dfc2",
-      "assessments": []
     }
   ]
 }

@@ -6,14 +6,14 @@
             <td>
                 <div class="column">
                     <p class="ui wechat icon">
-                        <a href="/trainer/dashboard/viewmember/${member.id}"><h3><i class="ui blue wechat icon"></i>{{firstname}}
+                        <a href="/viewmember/{{id}}"><h3><i class="ui blue wechat icon"></i>{{firstname}}
         {{lastname}}</h3></a></p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{assessments.length}} assessments</p>
                 </div>
             </td>
             <td>
                 <div class="column right aligned">
-                    <a href="/trainer/dashboard/${trainer.id}/deletetmember/${member.id}" class="ui red
+                    <a href="/trainerdashboard/deleteuser/{{id}}" class="ui red
                icon button"><i class="icon trash"></i>  Delete Member</a>
                 </div>
             </td>

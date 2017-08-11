@@ -61,6 +61,17 @@ const userStore = {
     this.store.save();
   },
 
+  deleteUser(id)
+  {
+    const user = this.getUserById(id);
+    this.store.remove(this.collection, user);
+    this.store.save();
+  },
+
+  save() {
+    this.store.save(); //Method used by controllers which saves the JSON object after they have altered data
+  },
+
 };
 
 module.exports = userStore;

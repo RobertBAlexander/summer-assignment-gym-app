@@ -9,6 +9,7 @@ const logger = require('../utils/logger');
 const userStore = require('../models/user-store.js');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
+const pictureStore = require('../models/picture-store.js');
 
 const memberprofile = {
   index(request, response) {
@@ -42,7 +43,7 @@ const memberprofile = {
 
   updatelname(request, response)
   {
-    logger.info('rendering update of first name');
+    logger.info('rendering update of last name');
     const loggedInUser = accounts.getCurrentUser(request);
     loggedInUser.lastname = request.body.lastname;
 
@@ -52,7 +53,7 @@ const memberprofile = {
 
   updateemail(request, response)
   {
-    logger.info('rendering update of first name');
+    logger.info('rendering update of email');
     const loggedInUser = accounts.getCurrentUser(request);
     loggedInUser.email = request.body.email;
 
@@ -60,9 +61,19 @@ const memberprofile = {
     response.redirect('/memberprofile');
   },
 
+  updatepicture(request, response)
+  {
+    logger.info('rendering update of profile picture');
+    const loggedInUser = accounts.getCurrentUser(request);
+    pictureStore.addPicture(loggedInUser.id, request.body.title, request.files.picture, function () {
+    response.redirect('/memberprofile');
+    });
+
+  },
+
   updategender(request, response)
   {
-    logger.info('rendering update of first name');
+    logger.info('rendering update of gender');
     const loggedInUser = accounts.getCurrentUser(request);
     loggedInUser.gender = request.body.gender;
 
@@ -72,7 +83,7 @@ const memberprofile = {
 
   updateheight(request, response)
   {
-    logger.info('rendering update of first name');
+    logger.info('rendering update of height');
     const loggedInUser = accounts.getCurrentUser(request);
     loggedInUser.height = request.body.height;
 
@@ -82,7 +93,7 @@ const memberprofile = {
 
   updatestartingweight(request, response)
   {
-    logger.info('rendering update of first name');
+    logger.info('rendering update of starting weight');
     const loggedInUser = accounts.getCurrentUser(request);
     loggedInUser.startingWeight = request.body.startingWeight;
 

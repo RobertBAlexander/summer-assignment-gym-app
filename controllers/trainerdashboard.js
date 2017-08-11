@@ -73,6 +73,16 @@ const trainerdashboard = {
     response.redirect('/dashboard');
   },*/
 
+  deleteuser(request, response)
+  {
+    logger.info('rendering deletion of user');
+    const loggedInUser = accounts.getCurrentUser(request);
+    const userId =request.params.id;
+    logger.debug(`Deleting User ${userId.firstname} ${userId}`);
+    userStore.deleteUser(userId);
+    response.redirect('/trainerDashboard');
+  }
+
 };
 
 module.exports = trainerdashboard;

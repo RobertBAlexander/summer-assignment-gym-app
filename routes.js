@@ -35,6 +35,7 @@ router.get('/memberprofile', memberprofile.index);
 router.post('/memberprofile/updatefname', memberprofile.updatefname);
 router.post('/memberprofile/updatelname', memberprofile.updatelname);
 router.post('/memberprofile/updateemail', memberprofile.updateemail);
+router.post('/memberprofile/updatepicture', memberprofile.updatepicture);
 router.post('/memberprofile/updategender', memberprofile.updategender);
 router.post('//memberprofile/updateheight', memberprofile.updateheight);
 router.post('/memberprofile/updatestartingweight', memberprofile.updatestartingweight);
@@ -50,7 +51,12 @@ router.get('/about', about.index);
 
 
 router.get('/trainerdashboard', trainerdashboard.index);
-router.get('/viewmember', viewmember.index);
+router.get('/trainerdashboard/deleteuser/:id', trainerdashboard.deleteuser);
+
+router.get('/viewmember/:id', viewmember.index);
+router.get('/viewmember/:id/deleteassessment/:assessmentId', viewmember.deleteAssessment);
+router.post('/viewmember/:id/updateComment/:assessmentId', viewmember.updateComment);
+
 router.get('/classescreation', classescreation.index);
 router.get('/fitnesscreation', fitnesscreation.index);
 

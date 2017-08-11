@@ -22,16 +22,16 @@
             <tbody>
             <div class="ui raised list">
                 <tr>
-                    <td> {{assessment.date}} </td>
-                    <td> {{assessment.weight}} </td>
-                    <td> {{assessment.chest}} </td>
-                    <td> {{assessment.thigh}} </td>
-                    <td> {{assessment.upperArm}} </td>
-                    <td> {{assessment.waist}} </td>
-                    <td> {{assessment.hips}} </td>
-                    <td> {{assessment.comment}} </td>
-                    <td> <img class="ui image" src="/public/images/{{member.trend}}"></td>
-                    <td><a href="/trainer/dashboard/viewmember/${member.id}/deleteassessment/{{assessment.id}}" class="ui big grey
+                    <td> {{date}} </td>
+                    <td> {{weight}} </td>
+                    <td> {{chest}} </td>
+                    <td> {{thigh}} </td>
+                    <td> {{upperArm}} </td>
+                    <td> {{waist}} </td>
+                    <td> {{hips}} </td>
+                    <td> {{comment}} </td>
+                    <td> {{trend}} </td>
+                    <td><a href="/viewmember/{{userId}}/deleteassessment/{{assessmentId}}" class="ui big grey
                icon button">
                         <i class="icon trash"></i></a></td>
                 </tr>
@@ -39,10 +39,10 @@
             </tbody>
         </table>
 
-        <form class="ui form" action="/trainer/dashboard/viewmember/{{member.id}}/updatecomment/{{assessment.id}}" method="POST">
+        <form class="ui form" action="/viewmember/{{../id}}/updateComment/{{assessmentId}}" method="POST">
             <div class="two fields">
                 <div class="field">
-                    <label>Comments</label>
+                    <label>Update Comment</label>
                     <input placeholder="{{assessment.comment}}" type="text" name="comment">
                 </div>
                 <div class="field">

@@ -76,6 +76,7 @@ const dashboard = {
     userStore.deleteAssessment(loggedInUser.id, assessmentId);
     logger.debug(`Deleting Assessment ${assessmentId}  for ${loggedInUser.firstname}`);
     //userStore.removeAssessment(userId, assessmentId);
+    analytics.trend(loggedInUser);
     response.redirect('/dashboard');
   },
 

@@ -12,6 +12,17 @@
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "assessments": [
         {
+          "assessmentId": "1481245b-4e05-4dcf-8411-bce4b4f0d62b",
+          "weight": "99",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "",
+          "comment": ""
+        },
+        {
           "assessmentId": "6d7c5654-ac66-483a-bbda-79a5b70538fd",
           "weight": "90",
           "chest": "45",
@@ -53,17 +64,6 @@
           "waist": "34",
           "hips": "34",
           "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/nochange_xhsp47.jpg",
-          "comment": ""
-        },
-        {
-          "assessmentId": "fad8f80a-c817-4646-bb31-163c867ea03c",
-          "weight": "80",
-          "chest": "34",
-          "thigh": "34",
-          "upperArm": "34",
-          "waist": "34",
-          "hips": "34",
-          "trend": "",
           "comment": ""
         },
         {

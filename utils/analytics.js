@@ -5,6 +5,7 @@
 
 //const accounts = require('../controllers/accounts');
 const pictureStore = require('../models/picture-store');
+const userStore = require('../models/user-store');
 
 const analytics = {
 
@@ -12,6 +13,7 @@ const analytics = {
   calculateBMI(user)
   {
     let memberWeight = 0;
+
 
     if (user.assessments.length > 0)
     {
@@ -136,10 +138,22 @@ const analytics = {
 {
   let trend = 'happyhealth_pika.png';
   let assessmentList = user.assessments;
-  const previousAssessment = assessmentList[1];
-  const currentAssessment = assessmentList[0];
+
   let lastBMI;
-  if (assessmentList.length !== 1) {
+
+  for (let i = 0; i < assessmentList.length; i++)
+  {
+  //  if (user.assessments[i].assessmentId === assessmentId)
+  //  {
+   //   return user.assessments[i];
+  //  }
+    //if (i === (assessmentList.length - 1)
+
+    const previousAssessment = assessmentList[i + 1];
+    const currentAssessment = assessmentList[i];
+
+
+  if (i !== (assessmentList.length - 1)) {
     //previousAssessment = assessmentList[1];
     lastBMI = (previousAssessment.weight / (user.height * user.height));
   }
@@ -171,9 +185,12 @@ const analytics = {
      trend = "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg";
    }
 
-  assessmentList[0].trend = trend;//when an assessment is created, this sends the trend information to it to give trend details.
+  assessmentList[i].trend = trend;//when an assessment is created, this sends the trend information to it to give trend details.
   //IMPORTANT! This means that it still does not update trend details when the previous assessment is deleted.
+  }
 },
+
+
 
   /*profilepic(userid)
       {

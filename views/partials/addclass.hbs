@@ -11,24 +11,41 @@
         </div>
         <div class="field">
             <label>Start Date</label>
-            <input placeholder="Start Date" type="text" name="startdate">
+            <input placeholder="Start Date" type="date" name="startdate">
         </div>
+
     </div>
 
     <div class="three fields">
         <div class="field">
-            <label>Times</label>
-            <input placeholder="From" type="number" step="0.01" min="0" max="24" name="starttime" required>
-            <input placeholder="Number" type="number" step="0.01" min="0" max="24" name="endtime" required>
-        </div>
-        <div class="field">
-            <label>Capacity</label>
-            <input placeholder="Capacity" type="number" step="1" min="1" max="40" name="capacity">
-        </div>
-        <div class="field">
-            <label>Difficulty Level</label>
-            <input placeholder="Difficulty" type="number" step="1" min="1" max="11" name="difficulty">
-        </div>
-    </div>
-    <button class="ui blue submit button">Add Class</button>
-</form>
+            <div class="field">
+                <label> Start Time </label>
+                <div class="ui calendar" id="startTimeCalendar">
+                    <div class="ui input left icon">
+                        <i class="time icon"></i>
+                        <input type="time" placeholder="From" name="starttime">
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label> Duration of class </label>
+                 <div class="ui calendar" id="startTimeCalendar">
+                     <div class="ui input left icon">
+                         <i class="time icon"></i>
+                         <input type="time" placeholder="Until" name="endtime">
+                     </div>
+                 </div>
+             </div>
+
+         </div>
+         <div class="field">
+             <label>Capacity</label>
+             <input placeholder="Capacity" type="number" step="1" min="1" max="40" name="capacity">
+         </div>
+         <div class="field">
+             <label>Difficulty Level</label>
+             <input placeholder="Difficulty" type="number" step="1" min="1" max="11" name="difficulty">
+         </div>
+     </div>
+     <button class="ui blue submit button">Add Class</button>
+ </form>

@@ -50,6 +50,7 @@ const dashboard = {
         {
       assessmentId: uuid(),
       //userid: loggedInUser.id,
+      date: request.body.date,
       weight: request.body.weight,
       chest: request.body.chest,
       thigh: request.body.thigh,

@@ -12,6 +12,29 @@
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "assessments": [
         {
+          "assessmentId": "be4781ee-0f58-42a7-8037-9fbc30784ff7",
+          "date": "2017-08-01",
+          "weight": "111",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "",
+          "comment": ""
+        },
+        {
+          "assessmentId": "7ffe5277-981e-4356-ad77-1f2921af4281",
+          "weight": "98",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/angry_pika_gydkr0.jpg",
+          "comment": ""
+        },
+        {
           "assessmentId": "1481245b-4e05-4dcf-8411-bce4b4f0d62b",
           "weight": "99",
           "chest": "34",
@@ -19,7 +42,7 @@
           "upperArm": "34",
           "waist": "34",
           "hips": "34",
-          "trend": "",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
           "comment": ""
         },
         {
@@ -30,7 +53,7 @@
           "upperArm": "45",
           "waist": "45",
           "hips": "45",
-          "trend": "",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
           "comment": ""
         },
         {
@@ -41,7 +64,7 @@
           "upperArm": "34",
           "waist": "34",
           "hips": "34",
-          "trend": "",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
           "comment": ""
         },
         {
@@ -52,7 +75,7 @@
           "upperArm": "34",
           "waist": "34",
           "hips": "34",
-          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/nochange_xhsp47.jpg",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg",
           "comment": ""
         },
         {
@@ -63,7 +86,7 @@
           "upperArm": "34",
           "waist": "34",
           "hips": "34",
-          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/nochange_xhsp47.jpg",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/angry_pika_gydkr0.jpg",
           "comment": ""
         },
         {
@@ -74,7 +97,7 @@
           "upperArm": "32",
           "waist": "32",
           "hips": "32",
-          "trend": "",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg",
           "comment": "vx cv vc"
         },
         {
@@ -85,7 +108,7 @@
           "upperArm": "44",
           "waist": "44",
           "hips": "44",
-          "trend": "angry_pika.jpg",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
           "comment": "dfhdgnsgng"
         },
         {
@@ -96,7 +119,7 @@
           "upperArm": "33",
           "waist": "33",
           "hips": "33",
-          "trend": "angry_pika.jpg",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
           "comment": ""
         },
         {
@@ -107,7 +130,7 @@
           "upperArm": "34",
           "waist": "34",
           "hips": "34",
-          "trend": "angry_pika.jpg",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/angry_pika_gydkr0.jpg",
           "comment": ""
         },
         {
@@ -118,10 +141,22 @@
           "upperArm": "45",
           "waist": "45",
           "hips": "45",
-          "trend": "happyhealth_pika.png",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
           "comment": ""
         }
       ]
+    },
+    {
+      "firstname": "Robert",
+      "lastname": "Alexander",
+      "email": "robert@mail.com",
+      "password": "secret",
+      "address": "24 Meledon",
+      "gender": "unspecified",
+      "height": "1.3",
+      "startingWeight": "68",
+      "id": "25759006-398d-4df2-bf74-3dea5de455ae",
+      "assessments": []
     }
   ]
 }

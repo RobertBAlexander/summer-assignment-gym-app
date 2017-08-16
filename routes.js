@@ -58,6 +58,8 @@ router.get('/viewmember/:id/deleteassessment/:assessmentId', viewmember.deleteAs
 router.post('/viewmember/:id/updateComment/:assessmentId', viewmember.updateComment);
 
 router.get('/classescreation', classescreation.index);
+router.post('/classescreation/addClass', classescreation.addClass);
+
 router.get('/fitnesscreation', fitnesscreation.index);
 
 module.exports = router;

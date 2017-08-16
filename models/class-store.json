@@ -1,0 +1,56 @@
+{
+  "classes": [
+    {
+
+      "classId": "27a76f35-5c3a-4d8e-aaf0-5864a792044c",
+      "className": "dfgfd",
+      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "lessonNumber": "5",
+      "startDate": "2017-04-03",
+      "maxCapacity": "5",
+      "difficulty": "11",
+      "lessons": [
+        {
+          "lessonId": "fa028420-4077-428a-b4ff-2793546bfc5f",
+          "lessonDate": "2017-04-03T00:00:00.000Z",
+          "startTime": "20:19",
+          "currentCapacity": 0,
+          "maxCapacity": "5",
+          "attending": []
+        },
+        {
+          "lessonId": "b3b16d62-df06-402d-b00a-6457644c2d42",
+          "lessonDate": "2017-04-10T00:00:00.000Z",
+          "startTime": "20:19",
+          "currentCapacity": 0,
+          "maxCapacity": "5",
+          "attending": []
+        },
+        {
+          "lessonId": "4e756896-8571-4368-a47b-79319ecdad8d",
+          "lessonDate": "2017-04-17T00:00:00.000Z",
+          "startTime": "20:19",
+          "currentCapacity": 0,
+          "maxCapacity": "5",
+          "attending": []
+        },
+        {
+          "lessonId": "eb25d7bc-c30a-4745-b435-d084b36d6aff",
+          "lessonDate": "2017-04-24T00:00:00.000Z",
+          "startTime": "20:19",
+          "currentCapacity": 0,
+          "maxCapacity": "5",
+          "attending": []
+        },
+        {
+          "lessonId": "b0814e1d-b997-4892-815d-7eecc4c402ea",
+          "lessonDate": "2017-05-01T00:00:00.000Z",
+          "startTime": "20:19",
+          "currentCapacity": 0,
+          "maxCapacity": "5",
+          "attending": []
+        }
+      ]
+    }
+  ]
+}

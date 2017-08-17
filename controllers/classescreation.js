@@ -56,7 +56,7 @@ const classescreation = {
       };
       newClass.lessons.push(lesson);
       }
-    logger.debug('New Class =', newClass);
+    logger.debug('New Class', newClass);
     classStore.addClass(newClass);
     response.redirect('/classescreation/');
 

@@ -61,7 +61,7 @@ const dashboard = {
       comment: '',
 
     };
-    logger.debug('New Assessment =', newAssessment);
+    logger.debug('New Assessment', newAssessment);
     userStore.addAssessment(userId, newAssessment);
     analytics.trend(loggedInUser);
     response.redirect('/dashboard/');  //removed 'userId'

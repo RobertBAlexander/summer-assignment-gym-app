@@ -54,7 +54,7 @@ router.get('/trainerdashboard', trainerdashboard.index);
 router.get('/trainerdashboard/deleteuser/:id', trainerdashboard.deleteuser);
 
 router.get('/viewmember/:id', viewmember.index);
-router.get('/viewmember/:id/deleteassessment/:assessmentId', viewmember.deleteAssessment);
+router.get('/viewmember/:id/deleteAssessment/:assessmentId', viewmember.deleteAssessment);
 router.post('/viewmember/:id/updateComment/:assessmentId', viewmember.updateComment);
 
 router.get('/classescreation', classescreation.index);

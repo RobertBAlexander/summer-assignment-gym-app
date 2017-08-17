@@ -1,14 +1,14 @@
 
 <section class="ui raised segment">
-    {{#each trainer.class}} <!--supposed to get the stuff from EVERY assessment in a list order.-->
+    {{#each classesList}} <!--supposed to get the stuff from EVERY assessment in a list order.-->
         <div class="ui column">
             <table class="ui center aligned raised celled table segment">
 
                 <thead>
                 <tr>
                     <th>Class</th>
-                    <th>Start Date</th>
                     <th>Number of Lessons</th>
+                    <th>Start Date</th>
                     <th>Total Capacity</th>
                     <th>Difficulty Level</th>
                     <th>Remove Class</th>
@@ -18,10 +18,10 @@
                 <tbody>
                 <div class="ui raised list">
                     <tr>
-                        <td> {{class.name}} </td>
-                        <td> {{class.startdate}} </td>
-                        <td> {{class.classnumber}} </td>
-                        <td> {{capacity}} </td>
+                        <td> {{className}} </td>
+                        <td> {{lessonNumber}} </td>
+                        <td> {{startDate}} </td>
+                        <td> {{maxCapacity}} </td>
                         <td> {{difficulty}} </td>
                         <td><a href="/trainer/dashboard/viewmember/${member.id}/deleteassessment/{{class.id}}" class="ui big grey
                icon button">
@@ -30,7 +30,7 @@
                 </div>
                 </tbody>
             </table>
-    {{#each trainer.class.lesson}}
+    {{#each class.lesson}}
             <table class="ui center aligned raised celled table segment">
 
                 <thead>

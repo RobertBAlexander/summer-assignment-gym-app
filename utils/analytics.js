@@ -143,11 +143,7 @@ const analytics = {
 
   for (let i = 0; i < assessmentList.length; i++)
   {
-  //  if (user.assessments[i].assessmentId === assessmentId)
-  //  {
-   //   return user.assessments[i];
-  //  }
-    //if (i === (assessmentList.length - 1)
+
 
     const previousAssessment = assessmentList[i + 1];
     const currentAssessment = assessmentList[i];

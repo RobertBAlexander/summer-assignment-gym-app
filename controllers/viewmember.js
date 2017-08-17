@@ -43,9 +43,10 @@ const viewmember = {
   deleteAssessment(request, response) {
     const userId = request.params.id;
     const assessmentId = request.params.assessmentId;
-    const viewmember = userStore.getUserById(userId);
+    //const viewmember = userStore.getUserById(userId);
     userStore.deleteAssessment(userId, assessmentId);
-    logger.debug(`Deleting Assessment ${assessmentId} for member ${userId}`);
+    userStore.save();
+    //logger.debug(`Deleting Assessment ${assessmentId} for member ${userId}`);
     response.redirect('/viewmember');
   },
 
@@ -56,7 +57,7 @@ const viewmember = {
     const assessmentToUpdate = userStore.getAssessment(userId, assessmentId);
     assessmentToUpdate.comment = comment;
     userStore.save();
-    response.redirect('/trainerdashboard');
+    response.redirect('viewmember', viewData);
   },
 
 

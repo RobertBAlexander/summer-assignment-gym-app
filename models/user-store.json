@@ -21,7 +21,7 @@
           "waist": "34",
           "hips": "34",
           "trend": "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg",
-          "comment": "dfgiudfbivnodfbindfb"
+          "comment": "try gain"
         },
         {
           "assessmentId": "be4781ee-0f58-42a7-8037-9fbc30784ff7",
@@ -33,7 +33,7 @@
           "waist": "34",
           "hips": "34",
           "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
-          "comment": "maybe good"
+          "comment": "Test"
         },
         {
           "assessmentId": "7ffe5277-981e-4356-ad77-1f2921af4281",
@@ -91,39 +91,6 @@
           "comment": ""
         },
         {
-          "assessmentId": "f2ccd02b-817a-40d7-bf82-cbe603ee8613",
-          "weight": "80",
-          "chest": "34",
-          "thigh": "34",
-          "upperArm": "34",
-          "waist": "34",
-          "hips": "34",
-          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/angry_pika_gydkr0.jpg",
-          "comment": ""
-        },
-        {
-          "assessmentId": "5dde61ba-6b13-42e7-86ec-25c778f21255",
-          "weight": "111",
-          "chest": "32",
-          "thigh": "32",
-          "upperArm": "32",
-          "waist": "32",
-          "hips": "32",
-          "trend": "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg",
-          "comment": "vx cv vc"
-        },
-        {
-          "assessmentId": "2dc7c179-e29a-4732-8d52-5f92eb62acf4",
-          "weight": "111",
-          "chest": "44",
-          "thigh": "44",
-          "upperArm": "44",
-          "waist": "44",
-          "hips": "44",
-          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
-          "comment": "dfhdgnsgng"
-        },
-        {
           "assessmentId": "7032db4c-038f-4241-8585-5be15942c06c",
           "weight": "100",
           "chest": "33",
@@ -131,28 +98,6 @@
           "upperArm": "33",
           "waist": "33",
           "hips": "33",
-          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
-          "comment": ""
-        },
-        {
-          "assessmentId": "a35dfd1d-6891-4051-ba3b-13ffa6ff4fa7",
-          "weight": "90",
-          "chest": "34",
-          "thigh": "34",
-          "upperArm": "34",
-          "waist": "34",
-          "hips": "34",
-          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/angry_pika_gydkr0.jpg",
-          "comment": ""
-        },
-        {
-          "assessmentId": "674682f2-655e-449e-8bb9-8172c6a9722b",
-          "weight": "122",
-          "chest": "45",
-          "thigh": "45",
-          "upperArm": "45",
-          "waist": "45",
-          "hips": "45",
           "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
           "comment": ""
         }
@@ -168,7 +113,32 @@
       "height": "1.3",
       "startingWeight": "68",
       "id": "25759006-398d-4df2-bf74-3dea5de455ae",
-      "assessments": []
+      "assessments": [
+        {
+          "assessmentId": "4b415b99-ef5d-4b94-89d3-c3dc3074e701",
+          "date": "3833-05-03",
+          "weight": "55",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
+          "comment": "improving!"
+        },
+        {
+          "assessmentId": "9f3a41b0-47e2-4cc8-a058-74d2adffb096",
+          "date": "0820-04-04",
+          "weight": "67",
+          "chest": "23",
+          "thigh": "23",
+          "upperArm": "23",
+          "waist": "23",
+          "hips": "23",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
+          "comment": ""
+        }
+      ]
     }
   ]
 }

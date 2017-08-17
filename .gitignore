@@ -50,4 +50,4 @@ jspm_packages
 .yarn-integrity
 
 #cloudinary
-.env.json
+.env.json.idea

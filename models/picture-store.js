@@ -47,6 +47,7 @@ const pictureStore = {
         userid: userId,
         photos: [],
       };
+      //if there is no photos, do below, otherwise replace last image with this new image.
       this.store.add(this.collection, album);
       this.store.save();
     }

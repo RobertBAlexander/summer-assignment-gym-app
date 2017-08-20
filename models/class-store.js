@@ -7,7 +7,7 @@ const _ = require('lodash');
 const JsonStore = require('./json-store');
 
 const classStore = {
-  store: new JsonStore('./models/user-store.json', { users: [] }),
+  store: new JsonStore('./models/class-store.json', { classes: [] }),
   collection: 'classes',
 
 getAllClasses() {
@@ -34,17 +34,26 @@ getLesson(classId, lessonId){
   }
 },
 
+  //getClassLessons probably does nothing!
 getClassLessons(classId)
 {
   return this.store.findBy(this.collection, { classId: classId });
 },
 
-deleteClass(id)
+deleteClass(classId)
 {
   const currentClass = this.getClassById(classId);
   this.store.remove(this.collection, currentClass);
   this.store.save();
 },
+
+deleteLesson(classId, lessonId)
+{
+  const currentClass = this.getClassById(classId);
+  _.remove(currentClass.lessons, { lessonId: lessonId });
+  this.store.save();
+},
+
 
   save() {
     this.store.save(); //Method used by controllers which saves the JSON object after they have altered data

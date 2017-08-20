@@ -3,7 +3,7 @@
     <div class="three fields">
         <div class="field">
             <label>Class Name</label>
-            <input placeholder="Class Name" type="text" name="className">
+            <input placeholder="Class Name" type="text" name="className" required>
         </div>
         <div class="field">
             <label>Number of Lessons</label>
@@ -11,7 +11,7 @@
         </div>
         <div class="field">
             <label>Start Date</label>
-            <input placeholder="Start Date" type="date" name="startDate">
+            <input placeholder="Start Date" type="date" name="startDate" required>
         </div>
 
     </div>
@@ -32,7 +32,7 @@
                  <div class="ui calendar" id="startTimeCalendar">
                      <div class="ui input left icon">
                          <i class="time icon"></i>
-                         <input type="time" placeholder="Until" name="Duration">
+                         <input type="time" placeholder="Duration" name="duration">
                      </div>
                  </div>
              </div>
@@ -40,11 +40,11 @@
          </div>
          <div class="field">
              <label>Capacity</label>
-             <input placeholder="Capacity" type="number" step="1" min="1" max="40" name="capacity">
+             <input placeholder="Capacity" type="number" step="1" min="1" max="40" name="capacity" required>
          </div>
          <div class="field">
              <label>Difficulty Level</label>
-             <input placeholder="Difficulty" type="number" step="1" min="1" max="11" name="difficulty">
+             <input placeholder="Difficulty" type="number" step="1" min="1" max="11" name="difficulty" required>
          </div>
      </div>
      <button class="ui blue submit button">Add Class</button>

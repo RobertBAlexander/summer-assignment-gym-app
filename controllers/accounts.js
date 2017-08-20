@@ -47,17 +47,19 @@ const accounts = {
   authenticate(request, response) {
     const user = userStore.getUserByEmail(request.body.email);
     const trainer = trainerStore.getTrainerByEmail(request.body.email);
+    const alert = "hello";
     if (user && user.password === request.body.password) {
       response.cookie('user', user.id);
       logger.info(`logging in ${user.id}`);
       response.redirect('/dashboard');
     }
     else if (trainer && trainer.password === request.body.password) {
-      response.cookie('trainer', trainer.email);
-      logger.info(`logging in ${trainer.email}`);
+      response.cookie('trainer', trainer.id);
+      logger.info(`logging in ${trainer.id}`);
       response.redirect('/trainerdashboard');
     }
     else {
+      alert: alert,
       response.redirect('/login');
     }
   },
@@ -68,8 +70,8 @@ const accounts = {
   },
 
   getCurrentTrainer(request) {
-    const trainerEmail = request.cookies.trainer;
-    return trainerStore.getTrainerByEmail(trainerEmail);
+    const trainerId = request.cookies.trainer;
+    return trainerStore.getTrainerById(trainerId);
   },
 
 

@@ -188,14 +188,14 @@ const analytics = {
 
 
 
-  /*profilepic(userid)
+  profilepic(userid)
       {
         let profilepic = '<i class="ui yellow user icon"></i>';
         //let photos = pictureStore.getAlbum(userid);
         const piccys = pictureStore.getAlbum(userid);
         const photoList = piccys.photos;
 
-         /* if (pic.photos.length = 0)
+          if (pic.photos.length = 0)
           {
           profilepic = '<i class="ui yellow user icon"></i>';
         }
@@ -205,7 +205,7 @@ const analytics = {
 
         }
         photoList[0].profilepic = profilepic;
-      }*/
+      }
 
 };
 

@@ -1,5 +1,5 @@
 /**
- * Created by Robert Alexander on 20/07/2017.
+ * Created by Robert Alexander on 20/08/2017.
  */
 'use strict';
 
@@ -10,22 +10,22 @@ const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 const pictureStore = require('../models/picture-store.js');
 
-const memberprofile = {
+const membersclasses = {
   index(request, response) {
-    logger.info('memberprofile rendering');
+    logger.info('membersclasses rendering');
     const loggedInUser = accounts.getCurrentUser(request);
     const calculateBMI = analytics.calculateBMI(loggedInUser);
     const viewData = {
-      title: 'Gym App Member Profile',
+      title: 'Gym App Member Schedule Classes',
       user: loggedInUser,
       calculateBMI: calculateBMI,
       determineBMICategory: analytics.determineBMICategory(calculateBMI),
       idealBodyWeight: analytics.isIdealBodyWeight(loggedInUser),
     };
     logger.info('about to render');
-    response.render('memberprofile', viewData);
+    response.render('membersclasses', viewData);
   },
-
+/*
   updatefname(request, response)
   {
     logger.info('rendering update of first name');
@@ -61,7 +61,7 @@ const memberprofile = {
     logger.info('rendering update of profile picture');
     const loggedInUser = accounts.getCurrentUser(request);
     pictureStore.addPicture(loggedInUser.id, request.body.title, request.files.picture, function () {
-    response.redirect('/memberprofile');
+      response.redirect('/memberprofile');
     });
 
   },
@@ -96,8 +96,8 @@ const memberprofile = {
     response.redirect('/memberprofile');
   },
 
-
+*/
 
 };
 
-module.exports = memberprofile;
+module.exports = membersclasses;

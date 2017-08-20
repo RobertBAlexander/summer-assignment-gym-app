@@ -71,3 +71,5 @@ body {
         color: #146C80;
     }
 }
+
+.hidden { display: none; }

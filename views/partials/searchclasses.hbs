@@ -1,0 +1,107 @@
+<form class="ui stacked segment form" action="/membersclasses/classesSearch" method="POST">
+    <h3 class="ui header">Search Classes</h3>
+    <div class="four fields">
+        <div class="field">
+        <label>Class Name </label>
+        <select name="className">
+            {{#each searchedClasses}}
+                <option name="{{className}}" value="unspecified"> {{className}}</option><br>
+            {{/each}}
+        </select>
+        </div>
+        <div class="field">
+        <label>Trainer </label>
+        <select name="trainer">
+            {{#each searchedClasses}}
+                <option name="{{../trainer.firstname}}" value="unspecified"> {{../trainer.firstname}}</option><br>
+            {{/each}}
+        </select>
+    </div>
+        <!--<div class="field">
+        <label>Date</label>
+            <select name="date">
+                {{#each user.bookings}}
+                    <option name="{{date}}" value="unspecified"> {{date}}</option><br>
+                {{/each}}
+            </select>
+        </div>-->
+<div class="field">
+    <br><button class="ui blue submit button">Search Classes</button>
+</div>
+    </div>
+    </div>
+</form>
+
+{{#each searchedClasses}}
+    <div class="ui column">
+        <table class="ui center aligned raised celled table segment">
+
+            <thead>
+            <tr>
+                <th>Class</th>
+                <th>Number of Lessons</th>
+                <th>Start Date</th>
+                <th>Difficulty Level</th>
+                <th>Attending Class</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <div class="ui raised list">
+                <tr>
+
+                    <td>{{className}}</td>
+                    <td> {{lessonNumber}} </td>
+                    <td> {{startDate}} </td>
+                    <td>{{difficulty}}</td>
+                    <td><a href="membersclasses/classAttend/{{classId}}" class="ui big green
+               icon button">
+                        <i class="icon sign in"></i></a></td>
+                </tr>
+            </div>
+            </tbody>
+        </table>
+        <button onclick="m{{className}}()">View/Hide Lessons</button>
+        <div id="{{className}}" class="hidden">
+            {{#each lessons}}
+                <table class="ui center aligned raised celled table segment">
+
+                    <thead>
+                    <tr>
+                        <th>Lesson Date</th>
+                        <th>Start Time</th>
+                        <th>Duration of Lesson</th>
+                        <th>spaces remaining</th>
+                        <th>Attending Lesson</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <div class="ui raised list">
+                        <tr>
+                            <td> {{lessonDate}} </td>
+                            <td>{{startTime}}</td>
+                            <td>{{duration}}</td>
+                            <td> {{currentCapacity}} / {{maxCapacity}} </td>
+                            <td><a href="membersclasses/{{../classId}}/attendLesson/{{lessonId}}" class="ui big green
+               icon button">
+                                <i class="icon add user"></i></a></td>
+                        </tr>
+                    </div>
+                    </tbody>
+                </table>
+            {{/each}}
+        </div>
+        <br><br>
+    </div>
+    <script>
+        function m{{className}}() {
+            var x = document.getElementById('{{className}}');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </script>
+{{/each}}

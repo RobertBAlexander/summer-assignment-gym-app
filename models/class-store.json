@@ -13,33 +13,41 @@
           "lessonId": "fa028420-4077-428a-b4ff-2793546bfc5f",
           "lessonDate": "2017-04-03T00:00:00.000Z",
           "startTime": "19:30",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "5",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "4e756896-8571-4368-a47b-79319ecdad8d",
           "lessonDate": "2017-04-17T00:00:00.000Z",
           "startTime": "20:19",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "5",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "eb25d7bc-c30a-4745-b435-d084b36d6aff",
           "lessonDate": "2017-04-24T00:00:00.000Z",
           "startTime": "20:19",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "5",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "b0814e1d-b997-4892-815d-7eecc4c402ea",
           "lessonDate": "2017-05-01T00:00:00.000Z",
           "startTime": "20:19",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "5",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         }
       ]
     },
@@ -56,57 +64,71 @@
           "lessonId": "e2f39d36-f203-4415-b7e0-14f53378f6eb",
           "lessonDate": "2017-04-03T00:00:00.000Z",
           "startTime": "20:18",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "22",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "5a119e0e-8d4f-4952-82f2-b4faab3bb785",
           "lessonDate": "2017-04-10T00:00:00.000Z",
           "startTime": "20:18",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "22",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "a6772245-0866-4c7b-9cda-87567ae948c2",
           "lessonDate": "2017-04-17T00:00:00.000Z",
           "startTime": "20:18",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "22",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "bdc1d103-1166-4e6a-8c6a-a4504ebcb74a",
           "lessonDate": "2017-04-24T00:00:00.000Z",
           "startTime": "20:18",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "22",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "1860ea99-0c10-489e-9ddb-925c8ca94f81",
           "lessonDate": "2017-05-01T00:00:00.000Z",
           "startTime": "20:18",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "22",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "20983408-70cf-44be-b014-65cdeba9e31b",
           "lessonDate": "2017-05-08T00:00:00.000Z",
           "startTime": "20:18",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "22",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "7f07eda9-0190-45ec-adfe-33dc88ce3af9",
           "lessonDate": "2017-05-15T00:00:00.000Z",
           "startTime": "20:18",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "22",
-          "attending": []
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         }
       ]
     },

@@ -42,6 +42,8 @@ router.post('//memberprofile/updateheight', memberprofile.updateheight);
 router.post('/memberprofile/updatestartingweight', memberprofile.updatestartingweight);
 
 router.get('/membersclasses', membersclasses.index);
+router.get('/membersclasses/:classId/attendLesson/:lessonId', membersclasses.lessonAttend);
+router.get('/membersclasses/classAttend/:classId', membersclasses.classAttend);
 
 
 router.get('/trainerdashboard', trainerdashboard.index);

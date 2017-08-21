@@ -3,10 +3,43 @@
  */
 'use strict';
 
-const pictureStore = require('../models/picture-store');
+const classStore = require('../models/class-store');
 const userStore = require('../models/user-store');
 
 const searches = {
+
+  classesSearch()
+  {
+    const trainerFilter = 'any';//needs to be changed to checking the search request.params for trainer designation.
+    const classList= classStore.classes;
+    for (let i = 0; i < classList.length; i++)
+    {
+      let trainerTrue = 'true';
+      if (trainerFilter == 'any' || trainerFilter == 'thisTrainer')
+      {
+        trainerTrue = 'true';
+      }
+      else
+      {
+        trainerTrue = 'false';
+      }
+
+      let nameTrue = 'true';
+      if (classNameFilter == 'any' || classNameFilter == 'thisClassName')
+      {
+        nameTrue = 'true';
+      }
+      else
+      {
+        nameTrue = 'false';
+      }
+
+      if (trainerTrue == 'true' && nameTrue == 'true')
+        return this.classId;
+
+    }
+
+  },
 
 
   trend(user)

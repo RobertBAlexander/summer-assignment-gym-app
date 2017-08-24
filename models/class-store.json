@@ -13,41 +13,33 @@
           "lessonId": "fa028420-4077-428a-b4ff-2793546bfc5f",
           "lessonDate": "2017-04-03T00:00:00.000Z",
           "startTime": "19:30",
-          "currentCapacity": 1,
+          "currentCapacity": 0,
           "maxCapacity": "5",
-          "attending": [
-            "3ad52697-6d98-4d80-8273-084de55a86c0"
-          ]
+          "attending": []
         },
         {
           "lessonId": "4e756896-8571-4368-a47b-79319ecdad8d",
           "lessonDate": "2017-04-17T00:00:00.000Z",
           "startTime": "20:19",
-          "currentCapacity": 1,
+          "currentCapacity": 0,
           "maxCapacity": "5",
-          "attending": [
-            "3ad52697-6d98-4d80-8273-084de55a86c0"
-          ]
+          "attending": []
         },
         {
           "lessonId": "eb25d7bc-c30a-4745-b435-d084b36d6aff",
           "lessonDate": "2017-04-24T00:00:00.000Z",
           "startTime": "20:19",
-          "currentCapacity": 1,
+          "currentCapacity": 0,
           "maxCapacity": "5",
-          "attending": [
-            "3ad52697-6d98-4d80-8273-084de55a86c0"
-          ]
+          "attending": []
         },
         {
           "lessonId": "b0814e1d-b997-4892-815d-7eecc4c402ea",
           "lessonDate": "2017-05-01T00:00:00.000Z",
           "startTime": "20:19",
-          "currentCapacity": 1,
+          "currentCapacity": 0,
           "maxCapacity": "5",
-          "attending": [
-            "3ad52697-6d98-4d80-8273-084de55a86c0"
-          ]
+          "attending": []
         }
       ]
     },

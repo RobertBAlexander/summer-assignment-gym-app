@@ -76,6 +76,33 @@ const membersclasses = {
     response.redirect('/membersclasses');
   },
 
+  leaveLesson(request, response)
+  {
+    const classId = request.params.classId;
+    const lessonId = request.params.lessonId;
+    const attendingLesson = classStore.getLesson(classId, lessonId);
+    const currentUser = accounts.getCurrentUser(request);
+    const userId = currentUser.id;
+    const attendList = attendingLesson.attending;
+
+    for (let i = 0; i < attendList.length; i++)
+    {
+      if(attendingLesson.attending[i] === currentUser.id)
+      {
+        //_.pull(attendList, userId);
+
+        attendingLesson.currentCapacity -= 1;
+        attendingLesson.attending.splice(attendingLesson.attending[i], 1);
+        classStore.store.save();
+      }
+      else
+      {
+        logger.debug('You were not enrolled in the first place.');
+      }
+    }
+    response.redirect('/membersclasses');
+  },
+
   classAttend(request, response) {
     const classId = request.params.classId;
     const lessonId = request.params.lessonId;
@@ -113,6 +140,37 @@ const membersclasses = {
     }
     response.redirect('/membersclasses');
   },
+
+  leaveClass(request, response)
+  {
+    const classId = request.params.classId;
+    const lessonId = request.params.lessonId;
+    const attendingClass = classStore.getClassById(classId);
+    //const attendingLesson = classStore.getLesson(classId, lessonId);
+    const currentUser = accounts.getCurrentUser(request);
+    const userId = currentUser.id;
+
+    for (let j = 0; j < attendingClass.lessons.length; j++) {
+      let lesson = attendingClass.lessons[j];
+      let attendList = lesson.attending;
+      let alreadyAttending = false;
+
+      for (let i = 0; i < lesson.attending.length; i++) {
+        if (lesson.attending[i] === currentUser.id) {
+          //_.pull(attendList, userId);
+
+          lesson.currentCapacity -= 1;
+          lesson.attending.splice(lesson.attending[i], 1);
+          classStore.store.save();
+        }
+        else {
+          logger.debug('You were not enrolled in the first place.');
+        }
+      }
+
+      }
+    response.redirect('/membersclasses');
+    },
 
   /*
   updatefname(request, response)

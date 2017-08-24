@@ -42,7 +42,9 @@
                 <th>Number of Lessons</th>
                 <th>Start Date</th>
                 <th>Difficulty Level</th>
-                <th>Attending Class</th>
+                <th>Your status</th>
+                <th>Attend Class</th>
+                <th>Leave Class</th>
             </tr>
             </thead>
 
@@ -54,9 +56,13 @@
                     <td> {{lessonNumber}} </td>
                     <td> {{startDate}} </td>
                     <td>{{difficulty}}</td>
+                    <td>{{difficulty}}</td>
                     <td><a href="membersclasses/classAttend/{{classId}}" class="ui big green
                icon button">
                         <i class="icon sign in"></i></a></td>
+                    <td><a href="membersclasses/leaveClass/{{classId}}" class="ui big red
+               icon button">
+                        <i class="icon sign out"></i></a></td>
                 </tr>
             </div>
             </tbody>
@@ -72,7 +78,9 @@
                         <th>Start Time</th>
                         <th>Duration of Lesson</th>
                         <th>spaces remaining</th>
-                        <th>Attending Lesson</th>
+                        <th>Your status</th>
+                        <th>Attend Lesson</th>
+                        <th>Leave Lesson</th>
                     </tr>
                     </thead>
 
@@ -83,9 +91,14 @@
                             <td>{{startTime}}</td>
                             <td>{{duration}}</td>
                             <td> {{currentCapacity}} / {{maxCapacity}} </td>
+                            <td> {{currentCapacity}} / {{maxCapacity}} </td>
                             <td><a href="membersclasses/{{../classId}}/attendLesson/{{lessonId}}" class="ui big green
                icon button">
                                 <i class="icon add user"></i></a></td>
+                            <td><a href="membersclasses/{{../classId}}/leaveLesson/{{lessonId}}" class="ui big red
+               icon button">
+                                <i class="icon remove user"></i></a></td>
+
                         </tr>
                     </div>
                     </tbody>

@@ -12,6 +12,42 @@
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "assessments": [
         {
+          "assessmentId": "0cbb026a-1a11-4a3b-92a0-55d14d5d823d",
+          "date": "0005-05-05",
+          "weight": "111",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "",
+          "comment": ""
+        },
+        {
+          "assessmentId": "eb455246-f429-4299-a709-fbb32c387b58",
+          "date": "0030-03-03",
+          "weight": "121",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "",
+          "comment": ""
+        },
+        {
+          "assessmentId": "24a39f03-b896-4654-8116-0698c5af58c3",
+          "date": "0050-05-05",
+          "weight": "111",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg",
+          "comment": ""
+        },
+        {
           "assessmentId": "0c9f5cf0-b4d2-404a-b27a-e3e2dcea80fc",
           "date": "2017-05-04",
           "weight": "111",
@@ -22,18 +58,6 @@
           "hips": "34",
           "trend": "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg",
           "comment": "try gain"
-        },
-        {
-          "assessmentId": "be4781ee-0f58-42a7-8037-9fbc30784ff7",
-          "date": "2017-08-01",
-          "weight": "111",
-          "chest": "34",
-          "thigh": "34",
-          "upperArm": "34",
-          "waist": "34",
-          "hips": "34",
-          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
-          "comment": "Test"
         },
         {
           "assessmentId": "7ffe5277-981e-4356-ad77-1f2921af4281",
@@ -87,7 +111,7 @@
           "upperArm": "34",
           "waist": "34",
           "hips": "34",
-          "trend": "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/angry_pika_gydkr0.jpg",
           "comment": ""
         },
         {
@@ -104,41 +128,106 @@
       ]
     },
     {
-      "firstname": "Robert",
-      "lastname": "Alexander",
-      "email": "robert@mail.com",
+      "firstname": "tim",
+      "lastname": "tom",
+      "email": "tim@mail.com",
       "password": "secret",
-      "address": "24 Meledon",
-      "gender": "unspecified",
-      "height": "1.3",
-      "startingWeight": "68",
-      "id": "25759006-398d-4df2-bf74-3dea5de455ae",
-      "assessments": [
+      "address": "addressofhome",
+      "gender": "female",
+      "height": "2",
+      "startingWeight": "65",
+      "id": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
+      "assessments": [],
+      "bookings": [
         {
-          "assessmentId": "4b415b99-ef5d-4b94-89d3-c3dc3074e701",
-          "date": "3833-05-03",
-          "weight": "55",
-          "chest": "34",
-          "thigh": "34",
-          "upperArm": "34",
-          "waist": "34",
-          "hips": "34",
-          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
-          "comment": "improving!"
+          "bookingId": "6cd8b179-3513-4b23-be9f-99ca71966335",
+          "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825"
         },
         {
-          "assessmentId": "9f3a41b0-47e2-4cc8-a058-74d2adffb096",
-          "date": "0820-04-04",
-          "weight": "67",
-          "chest": "23",
-          "thigh": "23",
-          "upperArm": "23",
-          "waist": "23",
-          "hips": "23",
+          "bookingId": "a94258fb-b338-4306-b23d-9cf70d6f7ddd",
+          "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825"
+        },
+        {
+          "bookingId": "80104333-0c98-4e75-a265-4980fee09448",
+          "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
+          "date": "2019-05-06",
+          "time": "20:30"
+        },
+        {
+          "bookingId": "743b1381-5900-4517-b4c7-ae4a4c2fb026",
+          "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
+          "date": "2928-04-03",
+          "time": "20:30"
+        },
+        {
+          "bookingId": "2e6a5687-34ec-49fa-997a-129a80ed7788",
+          "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
+          "date": "2020-04-04",
+          "time": "10:30"
+        },
+        {
+          "bookingId": "17d38492-fdd7-4152-8a79-0e2855226dd0",
+          "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
+          "date": "1029-03-02",
+          "time": "20:00"
+        }
+      ],
+      "goals": []
+    },
+    {
+      "firstname": "Robert",
+      "lastname": "Alexander",
+      "email": "robert.b.alexander@gmail.com",
+      "password": "secret",
+      "address": "24 Meledon",
+      "gender": "male",
+      "height": "1.5",
+      "startingWeight": "68",
+      "id": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
+      "assessments": [
+        {
+          "assessmentId": "25bbd06b-d1ea-453c-a28f-f6c7117ae1b5",
+          "date": "6565-05-06",
+          "weight": "56",
+          "chest": "56",
+          "thigh": "56",
+          "upperArm": "56",
+          "waist": "56",
+          "hips": "56",
           "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
           "comment": ""
         }
-      ]
+      ],
+      "bookings": [
+        {
+          "bookingId": "1cc9b904-7e97-47b4-8775-b274700d0414",
+          "userId": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
+          "date": "1010-09-09",
+          "time": "10:00"
+        },
+        {
+          "bookingId": "86de75c2-bbd8-44b0-afc6-ecce51ce674f",
+          "id": "bob",
+          "userId": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
+          "date": "3030-06-06",
+          "time": "03:30"
+        },
+        {
+          "bookingId": "4091c99e-2983-43e5-bdf8-4d0a027c5f9a",
+          "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+          "userId": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
+          "date": "2010-08-09",
+          "time": "09:30"
+        },
+        {
+          "bookingId": "963b63da-3a99-434a-b37f-d3670dc31bf3",
+          "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+          "userId": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
+          "date": "2010-07-08",
+          "time": "09:30"
+        }
+      ],
+      "goals": []
     }
   ]
 }

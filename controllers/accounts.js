@@ -39,6 +39,8 @@ const accounts = {
     const user = request.body;
     user.id = uuid();
     user.assessments = [];
+    user.bookings = [];
+    user.goals = [];
     userStore.addUser(user);
     logger.info(`registering ${user.email}`);
     response.redirect('/login');

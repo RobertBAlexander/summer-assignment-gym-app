@@ -44,6 +44,7 @@ const classescreation = {
       const startDate = new Date(request.body.startDate);
       const daysToAdd = (i * 7);
       const lessonDate = new Date(startDate.setTime(startDate.getTime() + (daysToAdd * 86400000)));
+      let userIsAttending = false;
       const lesson =
           {
         lessonId: uuid(),
@@ -52,6 +53,7 @@ const classescreation = {
         duration: request.body.duration,
         currentCapacity: 0,
         maxCapacity: request.body.capacity,
+        userIsAttending: userIsAttending,
         attending: [],
       };
       newClass.lessons.push(lesson);

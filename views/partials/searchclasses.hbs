@@ -25,6 +25,7 @@
                 {{/each}}
             </select>
         </div>-->
+
 <div class="field">
     <br><button class="ui blue submit button">Search Classes</button>
 </div>
@@ -56,7 +57,7 @@
                     <td> {{lessonNumber}} </td>
                     <td> {{startDate}} </td>
                     <td>{{difficulty}}</td>
-                    <td>{{difficulty}}</td>
+                    <td>{{../statusOfLesson}}</td>
                     <td><a href="membersclasses/classAttend/{{classId}}" class="ui big green
                icon button">
                         <i class="icon sign in"></i></a></td>
@@ -91,7 +92,7 @@
                             <td>{{startTime}}</td>
                             <td>{{duration}}</td>
                             <td> {{currentCapacity}} / {{maxCapacity}} </td>
-                            <td> {{currentCapacity}} / {{maxCapacity}} </td>
+                            <td> <i class="icon {{statusOfLesson}} Circle"></i> </td>
                             <td><a href="membersclasses/{{../classId}}/attendLesson/{{lessonId}}" class="ui big green
                icon button">
                                 <i class="icon add user"></i></a></td>

@@ -6,7 +6,7 @@ const router = express.Router();
 
 const dashboard = require('./controllers/dashboard.js');
 const memberprofile = require('./controllers/memberprofile.js');
-const bookings = require('./controllers/bookings.js');
+const membersbookings = require('./controllers/membersbookings.js');
 const goals = require('./controllers/goals.js');
 
 const about = require('./controllers/about.js');
@@ -47,6 +47,9 @@ router.get('/membersclasses/:classId/leaveLesson/:lessonId', membersclasses.leav
 router.get('/membersclasses/classAttend/:classId', membersclasses.classAttend);
 router.get('/membersclasses/leaveClass/:classId', membersclasses.leaveClass);
 
+router.get('/membersbookings', membersbookings.index);
+router.post('/membersbookings/addBooking', membersbookings.addBooking);
+
 
 router.get('/trainerdashboard', trainerdashboard.index);
 router.get('/trainerdashboard/deleteuser/:id', trainerdashboard.deleteuser);
@@ -65,7 +68,7 @@ router.post('/classescreation/updateClassDifficulty/:classId', classescreation.u
 router.post('/classescreation/:classId/updateLessonStart/:lessonId', classescreation.updateLessonStart);
 router.post('/classescreation/:classId/updateDuration/:lessonId', classescreation.updateDuration);
 
-router.get('/bookings', bookings.index);
+
 //router.get('/classes', classes.index);
 router.get('/goals', goals.index);
 //router.get('/fitness', fitness.index);

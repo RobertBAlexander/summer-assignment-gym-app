@@ -43,6 +43,7 @@ const userStore = {
     //return this.store.findOneBy(this.collection, { id: id });
   },
 
+  //does this even work?
   getUserAssessments(userId)
   {
     return this.store.findBy(this.collection, { userId: userId });
@@ -60,6 +61,46 @@ const userStore = {
     _.remove(user.assessments, { assessmentId: assessmentId });
     this.store.save();
   },
+
+  getAllUserBookings(userId)
+  {
+    const user = this.getUserById(userId);
+    return user.bookings;
+  },
+
+  getBookingById(userId, bookingId)
+  {
+    const user = this.getUserById(userId);
+    for (let i = 0; i < user.bookings.length; i++)
+    {
+      if (user.bookings[i].bookingId === bookingId)
+      {
+        return user.bookings[i];
+      }
+    }
+  },
+
+  //doe this even work?
+  getUserBookings(userId)
+  {
+    return this.store.findBy(this.collection, { userId: userId });
+  },
+
+  addBooking(userId, booking)
+  {
+    const user = this.getUserById(userId);
+    user.bookings.push(booking);
+    this.save();
+  },
+
+  deleteBooking(userId, bookingId)
+  {
+    const user = this.getUserById(userId);
+    _.remove(user.bookings, { bookingId: bookingId });
+    this.store.save();
+  },
+
+
 
   deleteUser(id)
   {

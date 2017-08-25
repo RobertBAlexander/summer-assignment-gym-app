@@ -40,6 +40,46 @@ const searches = {
     }
 
   },
+//check if this is any good!!!
+
+  statusOfLesson(lessonList, userId)
+  {
+    let statusOfLesson = 'Minus';
+    for (let i = 0; i < lessonList.length >= 0; i++)
+    {
+      if (lessonList[i].attending.indexOf(userId) >= 0)
+      {
+        statusOfLesson = 'Check';
+        break;
+      }
+    }
+    return statusOfLesson;
+
+    /*const userId = user.id;
+
+    for (let k = 0; k < classStore.getAllClasses().length; k++)
+
+      var classList = classStore.getAllClasses();
+      var classId = classList[k].classId;
+      let attendingClass = classStore.getClassById(classId);
+
+      for (let j = 0; j < attendingClass.lessons.length; j++) {
+        let lessonId = attendingClass.lessons[j].lessonId;
+        const attendingLesson = classStore.getLesson(classId, lessonId);
+        const attendList = attendingLesson.attending;
+
+        for (let i = 0; i < attendList.length; i++) {
+
+
+          let attendingStatus = 'red Minus';
+
+          if (attendingLesson.attending[i] === userId) {
+            attendingStatus = 'green Check';
+        }
+      }
+    }
+    attendList[i].attendingStatus = attendingStatus;*/
+  },
 
 
   trend(user)

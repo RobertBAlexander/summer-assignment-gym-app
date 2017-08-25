@@ -1,78 +1,100 @@
 /**
- * Created by Robert Alexander on 20/08/2017.
+ * Created by Robert Alexander on 24/08/2017.
  */
 'use strict';
 
 const uuid = require('uuid');
 const logger = require('../utils/logger');
 const trainerStore = require('../models/trainer-store.js');
+const userStore = require('../models/user-store.js');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 const searches = require('../utils/searches.js');
 const classStore = require('../models/class-store.js');
 
-const membersclasses = {
+const membersbookings = {
   index(request, response) {
-    logger.info('membersclasses rendering');
+    logger.info('membersbookings rendering');
     const loggedInUser = accounts.getCurrentUser(request);
-    const calculateBMI = analytics.calculateBMI(loggedInUser);
     const userId = loggedInUser.id;
+    const calculateBMI = analytics.calculateBMI(loggedInUser);
     const searchedClasses = classStore.getAllClasses();
-    const classId = request.params.classId;
-    //const lessonList = classStore.getClassById(classId).lessons;
-    const trainerClassId = searchedClasses.trainerId;
+    const listTrainers = trainerStore.getAllTrainers();
 
-    const trainer = trainerStore.getTrainerById(trainerClassId);
+    const listBookings = loggedInUser.bookings;
 
-    const lessonId = request.params.lessonId;
-    //const statusOfLesson = searches.statusOfLesson(lessonList, userId);
 
-    let i = 0;
-    let classAttend = false;//not sure if this is about fully attending that lesson, or if that individual user is fully attending the whole class
-    let classMixAttend = false;
-
-    while (i < searchedClasses)
+    for (let j = 0; j < listBookings; j++)
     {
-      searchedClasses[i].lessons.forEach( function (lesson) {
-      lesson.userIsAttending = true;
-      let j = 0;
-      let k = 0;
-      while (j < lesson.attending.length)
-      {
-        if (lesson.attending[j] === loggedInUser)
-        {
-          lesson.userIsAttending = true;
-          classMixAttend = true;
-          k++;
-          if (k === lesson.attending.length)
-          {
-            classAttend = true;
-          }
-        }
-        j++
-      }
+      let trainerId = listBookings[j].trainerId;
+      let bookedTrainer = trainerStore.getTrainerById(trainerId);
+      let trainerName = bookedTrainer.firstname;
+      return trainerName;
 
-    }
-    );
-      i++;
+      //for (let i = 0; i < trainerStore.trainers.length; i++)
+      //{
+      //  if (trainerStore.trainers[i].id === listBookings[j].trainerId)
+      //  {
+      //    let trainer = trainerStore.getTrainerById(listBookings[j].trainerId);
+      //    let trainerName = trainer.firstname;
+      //    return trainerName;
+      //  }
+      //}
     }
 
-
+    //const trainerClassId = searchedClasses.trainerId;
+    //const statusOfLesson = searches.statusOfLesson(loggedInUser);
+    //const trainer = trainerStore.getTrainerById(trainerClassId);
+    //const classId = request.params.classId;
+    //const lessonId = request.params.lessonId;
 
     const viewData = {
-      title: 'Gym App Member Schedule Classes',
+      title: 'Gym App Member Book Assessments',
       user: loggedInUser,
       calculateBMI: calculateBMI,
       determineBMICategory: analytics.determineBMICategory(calculateBMI),
       idealBodyWeight: analytics.isIdealBodyWeight(loggedInUser),
       searchedClasses: searchedClasses,
-      trainer: trainer,
-      //statusOfLesson: statusOfLesson,
+      listTrainers: listTrainers,
+      listBookings: listBookings,
+      //trainerName: trainerName,
+      //trainer: trainer,
+
     };
-    logger.info('about to render', classId);
-    response.render('membersclasses', viewData);
+    logger.info('about to render bookings', userId);
+    response.render('membersbookings', viewData);
   },
 
+  addBooking(request, response)
+  {
+    const loggedInUser = accounts.getCurrentUser(request);
+    const userId = loggedInUser.id;
+    const trainerId = request.body.trainerId;
+    const currentTrainer = trainerStore.getTrainerById(trainerId);
+    const newBooking =
+        {
+          bookingId: uuid(),
+          trainerId: request.body.trainer,
+          userId: userId,
+          date: request.body.date,
+          time: request.body.time,
+
+        };
+
+    logger.debug('New Booking', newBooking);
+    userStore.addBooking(userId, newBooking);
+
+
+    response.redirect('/membersbookings/');
+  },
+
+  //addBooking(request, response)
+  //{
+  //  const loggedInUser
+ // }
+
+
+/*
   updateSearch(request, response)
   {
     logger.info('rendering search update');
@@ -205,83 +227,11 @@ const membersclasses = {
         }
       }
 
-      }
+    }
     response.redirect('/membersclasses');
-    },
-
-  /*
-  updatefname(request, response)
-  {
-    logger.info('rendering update of first name');
-    const loggedInUser = accounts.getCurrentUser(request);
-    loggedInUser.firstname = request.body.firstname;
-
-    userStore.store.save();
-    response.redirect('/memberprofile');
-  },
-
-  updatelname(request, response)
-  {
-    logger.info('rendering update of last name');
-    const loggedInUser = accounts.getCurrentUser(request);
-    loggedInUser.lastname = request.body.lastname;
-
-    userStore.store.save();
-    response.redirect('/memberprofile');
-  },
-
-  updateemail(request, response)
-  {
-    logger.info('rendering update of email');
-    const loggedInUser = accounts.getCurrentUser(request);
-    loggedInUser.email = request.body.email;
-
-    userStore.store.save();
-    response.redirect('/memberprofile');
-  },
-
-  updatepicture(request, response)
-  {
-    logger.info('rendering update of profile picture');
-    const loggedInUser = accounts.getCurrentUser(request);
-    pictureStore.addPicture(loggedInUser.id, request.body.title, request.files.picture, function () {
-      response.redirect('/memberprofile');
-    });
-
-  },
-
-  updategender(request, response)
-  {
-    logger.info('rendering update of gender');
-    const loggedInUser = accounts.getCurrentUser(request);
-    loggedInUser.gender = request.body.gender;
-
-    userStore.store.save();
-    response.redirect('/memberprofile');
-  },
-
-  updateheight(request, response)
-  {
-    logger.info('rendering update of height');
-    const loggedInUser = accounts.getCurrentUser(request);
-    loggedInUser.height = request.body.height;
-
-    userStore.store.save();
-    response.redirect('/memberprofile');
-  },
-
-  updatestartingweight(request, response)
-  {
-    logger.info('rendering update of starting weight');
-    const loggedInUser = accounts.getCurrentUser(request);
-    loggedInUser.startingWeight = request.body.startingWeight;
-
-    userStore.store.save();
-    response.redirect('/memberprofile');
   },
 
 */
-
 };
 
-module.exports = membersclasses;
+module.exports = membersbookings;

@@ -5,6 +5,7 @@
     <tr>
 
         <th>Trainer</th>
+        <th>Trainer</th>
         <th>Date</th>
         <th>Assessment</th>
         <th>Remove Booking</th>
@@ -18,17 +19,18 @@
 
             <tr>
 
+                <td> You have booked an assessment for {{date}} at {{time}} with Trainer {{trainerId}}{{trainerName}}{{../trainerName}} </td>
                 <td> {{trainer}} </td>
                 <td> {{date}} </td>
                 <td> {{assessment}} </td>
-                <td><a href="/bookings/deletebooking/{{id}}" class="ui big grey
+                <td><a href="/membersbookings/deletebooking/{{bookingId}}" class="ui big grey
                icon button">
                     <i class="icon trash"></i></a></td>
             </tr>
         </div>
         </tbody>
             </table>
-            <form class="ui form" action="/user/bookings/{{member.id}}/updatebooking/{{booking.id}}" method="POST">
+            <form class="ui form" action="/user/membersbookings/{{member.id}}/updatebooking/{{booking.id}}" method="POST">
                 <div class="three fields">
                     <div class="field">
                         <label>Trainer</label>

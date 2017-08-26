@@ -28,26 +28,48 @@ const membersclasses = {
     //const statusOfLesson = searches.statusOfLesson(lessonList, userId);
 
     let i = 0;
-    let classAttend = false;//not sure if this is about fully attending that lesson, or if that individual user is fully attending the whole class
-    let classMixAttend = false;
 
-    while (i < searchedClasses)
+
+    //let classMixAttend = false;
+
+
+    while (i < searchedClasses.length)
     {
+
+      //let searchedClasses[i].numberAttended = 0;//Major issue here!!!
       searchedClasses[i].lessons.forEach( function (lesson) {
-      lesson.userIsAttending = true;
+      lesson.userIsAttending = 'red minus';
+      searchedClasses[i].numberAttended = 4;
+      searchedClasses[i].classAttend = 'none';//not sure if this is about fully attending that lesson, or if that individual user is fully attending the whole class
+
       let j = 0;
-      let k = 0;
+      //let k = 0;
       while (j < lesson.attending.length)
       {
-        if (lesson.attending[j] === loggedInUser)
+        if (lesson.attending[j] === userId)
         {
-          lesson.userIsAttending = true;
-          classMixAttend = true;
-          k++;
-          if (k === lesson.attending.length)
-          {
-            classAttend = true;
-          }
+          lesson.userIsAttending = 'green check';
+          searchedClasses[i].numberAttended += 1;
+          classStore.store.save();
+          //if (searchedClasses[i].numberAttended = 0){
+          //  searchedClasses[i].classAttend = 'none'
+         // }
+          //else if ((searchedClasses[i].numberAttended > 0) && (searchedClasses[i].numberAttended < searchedClasses[i].lessons.length))
+          //{
+          //  searchedClasses[i].classAttend = 'mixed';
+          //}
+          //else
+          //{
+          //  searchedClasses[i].classAttend = 'full';
+          //}
+          //classStore.store.save();
+
+          //classMixAttend = true;
+          //k++;
+          //if (k === lesson.attending.length)
+          //{
+          //  classAttend = true;
+          //}
         }
         j++
       }

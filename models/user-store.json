@@ -125,7 +125,47 @@
           "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
           "comment": ""
         }
-      ]
+      ],
+      "bookings": [
+        {
+          "bookingId": "7681cda0-1191-4ee8-8b47-af27ba515970",
+          "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+          "date": "2013-06-07",
+          "time": "20:30"
+        },
+        {
+          "bookingId": "5539123a-3cec-4dec-a38c-daf8aa6c33dc",
+          "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751marge",
+          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+          "date": "2019-05-05",
+          "time": "10:00"
+        },
+        {
+          "bookingId": "db1f1796-3c0d-407a-bf2e-bf2f745e2d0d",
+          "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751marge",
+          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+          "date": "0444-04-03",
+          "time": "04:00"
+        },
+        {
+          "bookingId": "f5080f8a-4db3-467a-91bb-b45d7c4638f8",
+          "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+          "trainerName": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+          "date": "5050-07-07",
+          "time": "03:00"
+        },
+        {
+          "bookingId": "49f054a9-d9b1-4ce7-96cd-d6f0a7c9f2b8",
+          "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+          "trainerName": "marge simpson",
+          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+          "date": "2010-08-08",
+          "time": "10:00"
+        }
+      ],
+      "goals": []
     },
     {
       "firstname": "tim",

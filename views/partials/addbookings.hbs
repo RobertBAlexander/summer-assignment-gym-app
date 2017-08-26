@@ -5,6 +5,7 @@
         <select name="trainer">
     {{#each listTrainers}}
             <option name="trainerId" value="{{id}}">{{firstname}} {{lastname}}</option><br>
+        <input type="hidden" value="{{firstname}} {{lastname}}" name="trainerName">
     {{/each}}
         </select>
     </div>

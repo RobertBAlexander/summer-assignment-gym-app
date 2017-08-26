@@ -38,12 +38,14 @@ const classescreation = {
       startDate: request.body.startDate,
       maxCapacity: request.body.capacity,
       difficulty: request.body.difficulty,
+      classAttend: 'none',
+      numberAttended: 0,
       lessons: [],
     };
     for (let i = 0; i < request.body.lessonNumber; i++) {
       const startDate = new Date(request.body.startDate);
       const daysToAdd = (i * 7);
-      const lessonDate = new Date(startDate.setTime(startDate.getTime() + (daysToAdd * 86400000)));
+      const lessonDate = new Date(startDate.setTime(startDate.getTime() + (daysToAdd * 86400000)));//7*24*60*60 is one week of sseconds
       let userIsAttending = false;
       const lesson =
           {

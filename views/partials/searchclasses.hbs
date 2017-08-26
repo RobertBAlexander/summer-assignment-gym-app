@@ -79,7 +79,7 @@
                         <th>Start Time</th>
                         <th>Duration of Lesson</th>
                         <th>spaces remaining</th>
-                        <th>Your status</th>
+                        <th>Are you enrolled?</th>
                         <th>Attend Lesson</th>
                         <th>Leave Lesson</th>
                     </tr>
@@ -92,7 +92,7 @@
                             <td>{{startTime}}</td>
                             <td>{{duration}}</td>
                             <td> {{currentCapacity}} / {{maxCapacity}} </td>
-                            <td> <i class="icon {{statusOfLesson}} Circle"></i> </td>
+                            <td>  <i class="ui {{userIsAttending}} circle icon"></i></td>
                             <td><a href="membersclasses/{{../classId}}/attendLesson/{{lessonId}}" class="ui big green
                icon button">
                                 <i class="icon add user"></i></a></td>

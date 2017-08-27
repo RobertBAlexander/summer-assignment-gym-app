@@ -87,9 +87,34 @@ const membersbookings = {
     logger.debug('New Booking', newBooking);
     userStore.addBooking(userId, newBooking);
 
+    response.redirect('/membersbookings/');
+  },
+
+  deleteBooking(request, response)
+  {
+    const loggedInUser = accounts.getCurrentUser(request);
+    const bookingId = request.params.bookingId;
+    const userId = loggedInUser.id;
+    userStore.deleteBooking(userId, bookingId);
 
     response.redirect('/membersbookings/');
   },
+
+  updateBooking(request, response)
+  {
+    const loggedInUser = accounts.getCurrentUser(request);
+    const userId = loggedInUser.id;
+    const bookingId = request.params.bookingId;
+    const bookingToUpdate = userStore.getBookingById(userId, bookingId);
+    const trainerId = request.body.trainerId;
+    const date = request.body.date;
+    const time = request.body.time;
+    bookingToUpdate.trainerId = trainerId;
+    bookingToUpdate.date = date;
+    bookingToUpdate.time = time;
+    userStore.save();
+    response.redirect('/membersbookings/');
+  }
 
 
 

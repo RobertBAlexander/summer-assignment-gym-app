@@ -80,7 +80,7 @@ const userStore = {
     }
   },
 
-  //doe this even work?
+  //does this even work? This is above, and working. So why is it here?
   getUserBookings(userId)
   {
     return this.store.findBy(this.collection, { userId: userId });

@@ -49,6 +49,8 @@ router.get('/membersclasses/leaveClass/:classId', membersclasses.leaveClass);
 
 router.get('/membersbookings', membersbookings.index);
 router.post('/membersbookings/addBooking', membersbookings.addBooking);
+router.get('/membersbookings/deleteBooking/:bookingId', membersbookings.deleteBooking);
+router.post('/membersbookings/:userId/updateBooking/:bookingId', membersbookings.updateBooking);
 
 
 router.get('/trainerdashboard', trainerdashboard.index);

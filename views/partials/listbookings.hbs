@@ -4,10 +4,10 @@
     <thead>
     <tr>
 
-        <th>Trainer</th>
-        <th>Trainer</th>
+        <th>Booking</th>
         <th>Date</th>
-        <th>Assessment</th>
+        <th>Time</th>
+        <th>Assessment Status</th>
         <th>Remove Booking</th>
     </tr>
     </thead>
@@ -20,25 +20,36 @@
             <tr>
 
                 <td> You have booked an assessment for {{date}} at {{time}} with Trainer {{trainerName}} </td>
-                <td> {{trainerName}} </td>
                 <td> {{date}} </td>
-                <td> {{assessment}} </td>
-                <td><a href="/membersbookings/deletebooking/{{bookingId}}" class="ui big grey
+                <td> {{time}} </td>
+                <td> !!Assessment status!!Incomplete </td>
+                <td><a href="/membersbookings/deleteBooking/{{bookingId}}" class="ui big grey
                icon button">
                     <i class="icon trash"></i></a></td>
             </tr>
         </div>
         </tbody>
             </table>
-            <form class="ui form" action="/user/membersbookings/{{member.id}}/updatebooking/{{booking.id}}" method="POST">
-                <div class="three fields">
+
+<form class="ui form" action="/membersbookings/{{userId}}/updateBooking/{{bookingId}}" method="POST">
+                <div class="four fields">
                     <div class="field">
-                        <label>Trainer</label>
-                        <input placeholder="{{booking.trainer}}" type="text" name="trainer">
+                        <label>Trainer </label>
+                        <select name="trainer">
+                            {{#each ../listTrainers}}
+                                <option name="trainerId" value="{{id}}">{{firstname}} {{lastname}}</option><br>
+                                <input type="hidden" value="{{firstname}} {{lastname}}" name="trainerName">
+                            {{/each}}
+                        </select>
                     </div>
                     <div class="field">
                         <label>Date</label>
-                        <input placeholder="{{booking.date}}" type="text" name="date">
+                            <input placeholder="Date" type="date" name="date" required><br>
+                    </div>
+                    <div class="field">
+                        <label>Time</label>
+                        <input placeholder="Time" type="time" name="time" step="1800" required><br>
+                        <p>*Assessment bookings take place every half hour. You must book your assessment at a half hour increment.</p>
                     </div>
                     <div class="field">
                         <hr style="height:10px; visibility:hidden;" />
@@ -46,4 +57,5 @@
                     </div>
                 </div>
             </form>
+    <br><br><br>
         {{/each}}

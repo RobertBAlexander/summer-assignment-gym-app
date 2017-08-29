@@ -1,0 +1,57 @@
+
+{{#each user.bookings}}
+    {{#if trainersBooking}}
+    <table class="ui center aligned raised celled table segment">
+        <thead>
+        <tr>
+
+            <th>Booking</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Perform Assessment</th>
+            <th>Remove Booking</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <div class="ui raised list">
+
+
+
+            <tr>
+
+                <td> You are due to give an assessment to {{userFullName}} on {{date}} at {{time}}</td>
+                <td> {{date}} </td>
+                <td> {{time}} </td>
+                <td><a href="/viewmember/{{../id}}/performBookedAssessment/{{bookingId}}" class="ui big green
+               icon button"><i class="icon edit"></i></a></td></td>
+                <td><a href="/viewmember/{{../id}}/deleteBooking/{{bookingId}}" class="ui big grey
+               icon button">
+                    <i class="icon trash"></i></a></td>
+            </tr>
+        </div>
+        </tbody>
+    </table>
+
+    <form class="ui form" action="/viewmember/{{../id}}/updateBooking/{{bookingId}}" method="POST">
+        <div class="three fields">
+            <div class="field">
+                <label>Date</label>
+                <input placeholder="Date" type="date" name="date" required><br>
+            </div>
+            <div class="field">
+                <label>Time</label>
+                <input placeholder="Time" type="time" name="time" step="1800" required><br>
+                <p>*Assessment bookings take place every half hour. You must book your assessment at a half hour increment.</p>
+            </div>
+            <div class="field">
+                <hr style="height:10px; visibility:hidden;" />
+                <button class="ui blue submit button">Update</button>
+            </div>
+        </div>
+    </form>
+    <br>
+    {{else}}
+        <p></p>
+    {{/if}}
+{{/each}}

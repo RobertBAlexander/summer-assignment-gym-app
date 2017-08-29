@@ -59,6 +59,10 @@ router.get('/trainerdashboard/deleteuser/:id', trainerdashboard.deleteuser);
 router.get('/viewmember/:id', viewmember.index);
 router.get('/viewmember/:id/deleteAssessment/:assessmentId', viewmember.deleteAssessment);
 router.post('/viewmember/:id/updateComment/:assessmentId', viewmember.updateComment);
+router.get('/viewmember/:id/deleteBooking/:bookingId', viewmember.deleteBooking);
+router.post('/viewmember/:id/updateBooking/:bookingId', viewmember.updateBooking);
+router.get('/viewmember/:id/performBookedAssessment/:bookingId', viewmember.performBookedAssessment);
+router.post('/viewmember/:id/addBookedAssessment/:bookingId', viewmember.addBookedAssessment);
 
 router.get('/classescreation', classescreation.index);
 router.post('/classescreation/addClass', classescreation.addClass);

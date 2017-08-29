@@ -12,6 +12,42 @@
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "assessments": [
         {
+          "assessmentId": "4f22c928-822d-4ab5-8646-bb87cc578c06",
+          "date": "0020-09-09",
+          "weight": "109",
+          "chest": "45",
+          "thigh": "45",
+          "upperArm": "45",
+          "waist": "45",
+          "hips": "45",
+          "trend": "",
+          "comment": "good job"
+        },
+        {
+          "assessmentId": "878b4760-e304-4af7-93d0-a2af6f40d970",
+          "date": "2019-09-09",
+          "weight": "110",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "",
+          "comment": "this is working"
+        },
+        {
+          "assessmentId": "206b2f28-4b23-44b8-9857-677ea833177f",
+          "date": "2019-04-03",
+          "weight": "111",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "",
+          "comment": "keep it up"
+        },
+        {
           "assessmentId": "0cbb026a-1a11-4a3b-92a0-55d14d5d823d",
           "date": "0005-05-05",
           "weight": "111",
@@ -126,29 +162,7 @@
           "comment": ""
         }
       ],
-      "bookings": [
-        {
-          "bookingId": "5539123a-3cec-4dec-a38c-daf8aa6c33dc",
-          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-          "date": "2018-01-01",
-          "time": "01:00"
-        },
-        {
-          "bookingId": "db1f1796-3c0d-407a-bf2e-bf2f745e2d0d",
-          "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751marge",
-          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-          "date": "0444-04-03",
-          "time": "04:00"
-        },
-        {
-          "bookingId": "49f054a9-d9b1-4ce7-96cd-d6f0a7c9f2b8",
-          "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-          "trainerName": "marge simpson",
-          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-          "date": "2010-08-08",
-          "time": "10:00"
-        }
-      ],
+      "bookings": [],
       "goals": []
     },
     {
@@ -165,35 +179,41 @@
       "bookings": [
         {
           "bookingId": "6cd8b179-3513-4b23-be9f-99ca71966335",
-          "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825"
+          "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
+          "trainersBooking": false
         },
         {
           "bookingId": "a94258fb-b338-4306-b23d-9cf70d6f7ddd",
-          "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825"
+          "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
+          "trainersBooking": false
         },
         {
           "bookingId": "80104333-0c98-4e75-a265-4980fee09448",
           "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
           "date": "2019-05-06",
-          "time": "20:30"
+          "time": "20:30",
+          "trainersBooking": false
         },
         {
           "bookingId": "743b1381-5900-4517-b4c7-ae4a4c2fb026",
           "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
           "date": "2928-04-03",
-          "time": "20:30"
+          "time": "20:30",
+          "trainersBooking": false
         },
         {
           "bookingId": "2e6a5687-34ec-49fa-997a-129a80ed7788",
           "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
           "date": "2020-04-04",
-          "time": "10:30"
+          "time": "10:30",
+          "trainersBooking": false
         },
         {
           "bookingId": "17d38492-fdd7-4152-8a79-0e2855226dd0",
           "userId": "13b37aa7-c538-464c-b7ba-19e9f7a3b825",
           "date": "1029-03-02",
-          "time": "20:00"
+          "time": "20:00",
+          "trainersBooking": false
         }
       ],
       "goals": []
@@ -227,28 +247,32 @@
           "bookingId": "1cc9b904-7e97-47b4-8775-b274700d0414",
           "userId": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
           "date": "1010-09-09",
-          "time": "10:00"
+          "time": "10:00",
+          "trainersBooking": false
         },
         {
           "bookingId": "86de75c2-bbd8-44b0-afc6-ecce51ce674f",
           "id": "bob",
           "userId": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
           "date": "3030-06-06",
-          "time": "03:30"
+          "time": "03:30",
+          "trainersBooking": false
         },
         {
           "bookingId": "4091c99e-2983-43e5-bdf8-4d0a027c5f9a",
           "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
           "userId": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
           "date": "2010-08-09",
-          "time": "09:30"
+          "time": "09:30",
+          "trainersBooking": false
         },
         {
           "bookingId": "963b63da-3a99-434a-b37f-d3670dc31bf3",
           "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
           "userId": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
           "date": "2010-07-08",
-          "time": "09:30"
+          "time": "09:30",
+          "trainersBooking": true
         }
       ],
       "goals": []

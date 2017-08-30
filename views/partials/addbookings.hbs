@@ -2,19 +2,19 @@
     <h3 class="ui header">Add Assessment Booking</h3>
     <div class="two fields">
         <label>Trainer </label><div class="field">
-        <select name="trainer">
-    {{#each listTrainers}}
-            <option name="trainerId" value="{{id}}">{{firstname}} {{lastname}}</option><br>
-        <input type="hidden" value="{{firstname}} {{lastname}}" name="trainerName">
-    {{/each}}
+        <select name="trainerId">
+            {{#each listTrainers}}
+                <option value="{{trainerId}}">{{firstname}} {{lastname}}</option><br>
+                <input type="hidden" value="{{firstname}} {{lastname}}" name="trainerName">
+            {{/each}}
         </select>
     </div>
     </div>
-        <div class="two fields">
-            <label>Date</label>
-            <div class="field">
-                    <input placeholder="Date" type="date" name="date" required><br>
-            </div>
+    <div class="two fields">
+        <label>Date</label>
+        <div class="field">
+            <input placeholder="Date" type="date" name="date" required><br>
+        </div>
     </div>
     <div class="two fields">
         <label>Time</label>

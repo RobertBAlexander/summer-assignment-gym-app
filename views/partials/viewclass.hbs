@@ -1,7 +1,7 @@
 <section class="ui raised segment">
     {{#each classesList}} <!--supposed to get the stuff from EVERY assessment in a list order.-->
         <div class="ui column">
-            <table class="ui center aligned raised celled table segment">
+            <table class="ui inverted orange center aligned raised celled table segment">
 
                 <thead>
                 <tr>
@@ -20,19 +20,19 @@
 
                         <td> <form action="/classescreation/updateClassName/{{classId}}" method="POST">
                                <input placeholder="{{className}}" type="text" name="className" required><br><br>
-                               <button class="ui tiny blue submit button">Update Name</button>
+                               <button class="ui tiny teal submit button">Update Name</button>
                              </form>
                         </td>
                         <td> {{lessonNumber}} </td>
                         <td> {{startDate}} </td>
                         <td> <form action="/classescreation/updateClassCapacity/{{classId}}" method="POST">
                             <input placeholder="{{maxCapacity}}" type="number" step="1" min="1" max="40" name="maxCapacity" required><br><br>
-                            <button class="ui tiny blue submit button">Update Capacity</button>
+                            <button class="ui tiny teal submit button">Update Capacity</button>
                         </form>
                         </td>
                         <td> <form action="/classescreation/updateClassDifficulty/{{classId}}" method="POST">
                             <input placeholder="{{difficulty}}" type="number" step="1" min="1" max="11" name="difficulty" required><br><br>
-                            <button class="ui tiny blue submit button">Update Difficulty</button>
+                            <button class="ui tiny teal submit button">Update Difficulty</button>
                         </form>
                         </td>
                         <td><a href="/classescreation/deleteClass/{{classId}}" class="ui big grey
@@ -43,11 +43,11 @@
                 </tbody>
             </table>
 
-            <button onclick="m{{className}}()">View/Hide Lessons</button>
+            <button class="ui tiny teal button" onclick="m{{className}}()">View/Hide Lessons</button>
 
-            <div id="{{className}}" class="hidden">
+            <div id="{{className}}" style="display: none;">
             {{#each lessons}}
-            <table class="ui center aligned raised celled table segment">
+            <table class="ui teal center aligned raised celled table segment">
 
                 <thead>
                 <tr>
@@ -65,12 +65,12 @@
                         <td> {{lessonDate}} </td>
                         <td> <form action="/classescreation/{{../classId}}/updateLessonStart/{{lessonId}}" method="POST">
                             {{startTime}} &nbsp; &nbsp;<input type="time" name="startTime" required><br><br>
-                            <button class="ui tiny blue submit button">Update Start Time</button>
+                            <button class="ui tiny orange submit button">Update Start Time</button>
                         </form>
                         </td>
                         <td> <form action="/classescreation/{{../classId}}/updateDuration/{{lessonId}}" method="POST">
                             {{duration}} &nbsp; &nbsp;<input type="time" name="duration" required><br><br>
-                            <button class="ui tiny blue submit button">Update Duration</button>
+                            <button class="ui tiny orange submit button">Update Duration</button>
                         </form>
                         </td>
                         <td> {{currentCapacity}} / {{maxCapacity}} </td>

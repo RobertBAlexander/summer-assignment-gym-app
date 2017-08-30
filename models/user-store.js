@@ -100,6 +100,38 @@ const userStore = {
     this.store.save();
   },
 
+  getAllUserGoals(userId)
+  {
+    const user = this.getUserById(userId);
+    return user.goals;
+  },
+
+  getGoalById(userId, goalId)
+  {
+    const user = this.getUserById(userId);
+    for (let i = 0; i < user.goals.length; i++)
+    {
+      if (user.goals[i].goalId === goalId)
+      {
+        return user.goals[i];
+      }
+    }
+  },
+
+  addGoal(userId, goal)
+  {
+    const user = this.getUserById(userId);
+    user.bookings.push(goal);
+    this.save();
+  },
+
+  deleteGoal(userId, goalId)
+  {
+    const user = this.getUserById(userId);
+    _.remove(user.goals, { goalId: goalId });
+    this.store.save();
+  },
+
 
 
   deleteUser(id)

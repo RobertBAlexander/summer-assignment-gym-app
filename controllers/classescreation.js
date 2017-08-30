@@ -33,7 +33,7 @@ const classescreation = {
         {
       classId: uuid(),
       className: request.body.className,
-      trainerId: loggedInTrainer.id,
+      trainerId: loggedInTrainer.trainerId,
       lessonNumber: request.body.lessonNumber,
       startDate: request.body.startDate,
       maxCapacity: request.body.capacity,

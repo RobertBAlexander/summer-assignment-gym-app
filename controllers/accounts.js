@@ -56,8 +56,8 @@ const accounts = {
       response.redirect('/dashboard');
     }
     else if (trainer && trainer.password === request.body.password) {
-      response.cookie('trainer', trainer.id);
-      logger.info(`logging in ${trainer.id}`);
+      response.cookie('trainer', trainer.trainerId);
+      logger.info(`logging in ${trainer.trainerId}`);
       response.redirect('/trainerdashboard');
     }
     else {

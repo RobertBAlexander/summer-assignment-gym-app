@@ -9,17 +9,19 @@
       "maxCapacity": "26",
       "difficulty": "4",
       "classAttend": "none",
-      "numberAttended": 4,
+      "numberAttended": 5,
       "lessons": [
         {
           "lessonId": "17678108-cd46-4500-b9d1-a37f7dad3281",
           "lessonDate": "2018-09-02T00:00:00.000Z",
           "startTime": "20:30",
           "duration": "01:00",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "26",
-          "userIsAttending": "red minus",
-          "attending": []
+          "userIsAttending": "green check",
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "597a9c09-164a-40ac-aab6-ee3c8a560945",
@@ -36,40 +38,36 @@
           "lessonDate": "2018-09-16T00:00:00.000Z",
           "startTime": "20:30",
           "duration": "01:00",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "26",
-          "userIsAttending": "red minus",
-          "attending": []
+          "userIsAttending": "green check",
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "8d23eca5-51d0-4ee0-95f1-5573b7f16bda",
           "lessonDate": "2018-09-23T00:00:00.000Z",
           "startTime": "20:30",
           "duration": "01:00",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "26",
-          "userIsAttending": "red minus",
-          "attending": []
+          "userIsAttending": "green check",
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         },
         {
           "lessonId": "6278569d-04d6-4b58-8013-ecda1c75506e",
           "lessonDate": "2018-09-30T00:00:00.000Z",
           "startTime": "20:30",
           "duration": "01:00",
-          "currentCapacity": 0,
+          "currentCapacity": 1,
           "maxCapacity": "26",
-          "userIsAttending": "red minus",
-          "attending": []
-        },
-        {
-          "lessonId": "b37c533b-cc99-4bf5-9904-0c16a69ff7f7",
-          "lessonDate": "2018-10-07T00:00:00.000Z",
-          "startTime": "20:30",
-          "duration": "01:00",
-          "currentCapacity": 0,
-          "maxCapacity": "26",
-          "userIsAttending": "red minus",
-          "attending": []
+          "userIsAttending": "green check",
+          "attending": [
+            "3ad52697-6d98-4d80-8273-084de55a86c0"
+          ]
         }
       ]
     },
@@ -201,67 +199,6 @@
           "maxCapacity": "25",
           "userIsAttending": "red minus",
           "attending": []
-        }
-      ]
-    },
-    {
-      "classId": "32d8dcc2-23a5-4908-b778-a569ef4bddb6",
-      "className": "Jumping",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "lessonNumber": "4",
-      "startDate": "2017-09-03",
-      "maxCapacity": "8",
-      "difficulty": "2",
-      "classAttend": "none",
-      "numberAttended": 5,
-      "lessons": [
-        {
-          "lessonId": "af67984c-107f-4f7d-bf3d-2201ef2ba90b",
-          "lessonDate": "2017-09-03T00:00:00.000Z",
-          "startTime": "13:30",
-          "duration": "01:00",
-          "currentCapacity": 1,
-          "maxCapacity": "8",
-          "userIsAttending": "green check",
-          "attending": [
-            "3ad52697-6d98-4d80-8273-084de55a86c0"
-          ]
-        },
-        {
-          "lessonId": "50d1d320-fdbf-46e0-aeaf-5adc5c40fdd8",
-          "lessonDate": "2017-09-10T00:00:00.000Z",
-          "startTime": "13:30",
-          "duration": "01:00",
-          "currentCapacity": 1,
-          "maxCapacity": "8",
-          "userIsAttending": "green check",
-          "attending": [
-            "3ad52697-6d98-4d80-8273-084de55a86c0"
-          ]
-        },
-        {
-          "lessonId": "a1c7d388-e911-4dbf-86c8-f6b7752f92c5",
-          "lessonDate": "2017-09-17T00:00:00.000Z",
-          "startTime": "13:30",
-          "duration": "01:00",
-          "currentCapacity": 1,
-          "maxCapacity": "8",
-          "userIsAttending": "green check",
-          "attending": [
-            "3ad52697-6d98-4d80-8273-084de55a86c0"
-          ]
-        },
-        {
-          "lessonId": "0e3823d7-7ab9-463e-be73-ccb55db3f572",
-          "lessonDate": "2017-09-24T00:00:00.000Z",
-          "startTime": "13:30",
-          "duration": "01:00",
-          "currentCapacity": 1,
-          "maxCapacity": "8",
-          "userIsAttending": "green check",
-          "attending": [
-            "3ad52697-6d98-4d80-8273-084de55a86c0"
-          ]
         }
       ]
     }

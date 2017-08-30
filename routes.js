@@ -7,7 +7,7 @@ const router = express.Router();
 const dashboard = require('./controllers/dashboard.js');
 const memberprofile = require('./controllers/memberprofile.js');
 const membersbookings = require('./controllers/membersbookings.js');
-const goals = require('./controllers/goals.js');
+const membergoals = require('./controllers/membergoals.js');
 
 const about = require('./controllers/about.js');
 const accounts = require('./controllers/accounts.js');
@@ -15,6 +15,7 @@ const accounts = require('./controllers/accounts.js');
 const trainerdashboard = require('./controllers/trainerdashboard.js');
 const viewmember = require('./controllers/viewmember.js');
 const classescreation = require('./controllers/classescreation.js');
+const goalcreation = require('./controllers/goalcreation.js');
 const fitnesscreation = require('./controllers/fitnesscreation.js');
 const membersclasses = require('./controllers/membersclasses.js');
 
@@ -52,6 +53,9 @@ router.post('/membersbookings/addBooking', membersbookings.addBooking);
 router.get('/membersbookings/deleteBooking/:bookingId', membersbookings.deleteBooking);
 router.post('/membersbookings/:userId/updateBooking/:bookingId', membersbookings.updateBooking);
 
+router.get('/membergoals', membergoals.index);
+//router.post('/membersgoals/addGoal', membergoals.addGoal);
+
 
 router.get('/trainerdashboard', trainerdashboard.index);
 router.get('/trainerdashboard/deleteuser/:id', trainerdashboard.deleteuser);
@@ -74,9 +78,8 @@ router.post('/classescreation/updateClassDifficulty/:classId', classescreation.u
 router.post('/classescreation/:classId/updateLessonStart/:lessonId', classescreation.updateLessonStart);
 router.post('/classescreation/:classId/updateDuration/:lessonId', classescreation.updateDuration);
 
+router.get('/goalcreation', goalcreation.index);
 
-//router.get('/classes', classes.index);
-router.get('/goals', goals.index);
 //router.get('/fitness', fitness.index);
 
 router.get('/about', about.index);

@@ -10,7 +10,7 @@ const accounts = require('./accounts.js');
 const dashboard = require('./dashboard.js');
 const analytics = require('../utils/analytics.js');
 
-const goals = {
+const membergoals = {
   index(request, response) {
     logger.info('goals rendering');
     const loggedInUser = accounts.getCurrentUser(request);
@@ -25,11 +25,11 @@ const goals = {
     };
     logger.info('about to render');
     //, playlistStore.getAllPlaylists() --goes in above next to 'about to render'
-    response.render('goals', viewData);
+    response.render('membergoals', viewData);
   },
 
 
 
 };
 
-module.exports = goals;
+module.exports = membergoals;

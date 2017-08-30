@@ -22,8 +22,8 @@ const trainerStore = {
     this.store.save();
   },
 
-  getTrainerById(id) {
-    return this.store.findOneBy(this.collection, { id: id });
+  getTrainerById(trainerId) {
+    return this.store.findOneBy(this.collection, { trainerId: trainerId });
   },
 
   getTrainerByEmail(email) {
@@ -41,19 +41,10 @@ const trainerStore = {
     return this.store.findBy(this.collection, { userid: userid });
   },
 
-  addClass(id, assessment) {
-    const trainer = this.getTrainerById(id);
+  addClass(trainerId, assessment) {
+    const trainer = this.getTrainerById(trainerId);
     trainer.classes.unshift(assessment);
     //this.store.add(this.collection, assessment);
-    this.store.save();
-  },
-
-  removeClass(id, assessmentId)
-  {
-    const trainer = this.getTrainerById(id);
-    _.remove(trainer.classes, { classId: classId });
-    //const assessment = this.getAssessment(id);
-    //this.store.remove(this.collection, assessment);
     this.store.save();
   },
 

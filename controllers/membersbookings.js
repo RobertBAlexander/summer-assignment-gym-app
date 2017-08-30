@@ -68,21 +68,22 @@ const membersbookings = {
   {
     const loggedInUser = accounts.getCurrentUser(request);
     const userId = loggedInUser.id;
-    const trainerId = request.body.trainerId;
-    const currentTrainer = trainerStore.getTrainerById(trainerId);
+    //const trainerId = request.body.trainerId;
+    //const currentTrainer = trainerStore.getTrainerById(trainerId);
     const userFirstName = loggedInUser.firstname;
     const userLastName = loggedInUser.lastname;
     const userFullName = userFirstName + ' ' + userLastName;
     //const trainerFname = currentTrainer.firstname;
     //const trainerLname = currentTrainer.lastname;
     //const trainerName = trainerFname + trainerLname;
+    logger.debug('trainer id', request)
     const newBooking =
         {
           bookingId: uuid(),
-          trainerId: request.body.trainer,
           trainerName: request.body.trainerName,
           userFullName: userFullName,
           userId: userId,
+          trainerId: request.body.trainerId,
           date: request.body.date,
           time: request.body.time,
 

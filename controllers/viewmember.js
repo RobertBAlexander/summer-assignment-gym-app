@@ -14,7 +14,7 @@ const viewmember = {
   index(request, response) {
     logger.info('viewmember rendering');
     const loggedInTrainer = accounts.getCurrentTrainer(request);
-    const trainersId = loggedInTrainer.id;
+    const trainerId = loggedInTrainer.trainerId;
     const userId = request.params.id;
     const user = userStore.getUserById(userId);
     const calculateBMI = analytics.calculateBMI(user);
@@ -39,7 +39,7 @@ const viewmember = {
   {
       userBookings[i].trainersBooking = false;
 
-      if ( trainersId === userBookings[i].trainerId)
+      if ( trainerId === userBookings[i].trainerId)
       {
         userBookings[i].trainersBooking = true;
       }
@@ -50,7 +50,7 @@ const viewmember = {
       title: 'Gym App Trainer Viewing User',
       id: userId,
       user: user,
-      trainersId: trainersId,
+      trainerId: trainerId,
       calculateBMI: calculateBMI,
       determineBMICategory: analytics.determineBMICategory(calculateBMI),
       idealBodyWeight: isIdealBodyWeight,
@@ -70,9 +70,11 @@ const viewmember = {
 
   deleteAssessment(request, response) {
     const userId = request.params.id;
+    const user = userStore.getUserById(userId);
     const assessmentId = request.params.assessmentId;
     //const viewmember = userStore.getUserById(userId);
     userStore.deleteAssessment(userId, assessmentId);
+    analytics.trend(user);
     //logger.debug(`Deleting Assessment ${assessmentId} for member ${userId}`);
     response.redirect('/viewmember/'+userId);
   },
@@ -112,7 +114,7 @@ const viewmember = {
   {
     logger.info('performBookedAssessment rendering');
     const loggedInTrainer = accounts.getCurrentTrainer(request);
-    const trainersId = loggedInTrainer.id;
+    const trainersId = loggedInTrainer.trainerId;
     const userId = request.params.id;
     const user = userStore.getUserById(userId);
     const calculateBMI = analytics.calculateBMI(user);
@@ -141,7 +143,7 @@ const viewmember = {
 
 addBookedAssessment(request, response) {
   const loggedInTrainer = accounts.getCurrentTrainer(request);
-  const trainersId = loggedInTrainer.id;
+  const trainersId = loggedInTrainer.trainerId;
   const userId = request.params.id;
   const user = userStore.getUserById(userId);
   const bookingId = request.params.bookingId;
@@ -165,6 +167,7 @@ addBookedAssessment(request, response) {
   logger.debug('New Assessment', newAssessment);
   userStore.addAssessment(userId, newAssessment);
   userStore.deleteBooking(userId, bookingId);
+  analytics.trend(user);
   //analytics.trend(user);
   response.redirect('/viewmember/'+userId);
 },

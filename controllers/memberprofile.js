@@ -61,7 +61,7 @@ const memberprofile = {
     logger.info('rendering update of profile picture');
     const loggedInUser = accounts.getCurrentUser(request);
     pictureStore.addPicture(loggedInUser.id, request.body.title, request.files.picture, function () {
-    response.redirect('/memberprofile');
+      response.redirect('/memberprofile');
     });
 
   },
@@ -95,8 +95,6 @@ const memberprofile = {
     userStore.store.save();
     response.redirect('/memberprofile');
   },
-
-
 
 };
 

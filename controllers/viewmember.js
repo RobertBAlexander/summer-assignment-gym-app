@@ -20,31 +20,18 @@ const viewmember = {
     const calculateBMI = analytics.calculateBMI(user);
     const isIdealBodyWeight = analytics.isIdealBodyWeight(user);
     const userBookings = userStore.getAllUserBookings(userId);
-    //const isTrainer = true;
-    /*let i = 0;
-    while (i < userBookings.length) {
-      userBookings[i].forEach(function (booking) {
 
-        booking.trainersBooking = false;
-            if (booking.trainerId === trainersId) {
-              booking.trainersBooking = true;
-              userStore.save();
-            }
-          }
-
-      );
-    }*/
-
-  for (let i = 0; i < userBookings.length; i++)
-  {
+    for (let i = 0; i < userBookings.length; i++)
+    {
       userBookings[i].trainersBooking = false;
 
-      if ( trainerId === userBookings[i].trainerId)
+      if (trainerId === userBookings[i].trainerId)
       {
         userBookings[i].trainersBooking = true;
       }
-    userStore.save();
-   }
+
+      userStore.save();
+    }
 
     const viewData = {
       title: 'Gym App Trainer Viewing User',
@@ -56,27 +43,19 @@ const viewmember = {
       idealBodyWeight: isIdealBodyWeight,
       trainer: loggedInTrainer,
       userBookings: userBookings,
-     // isTrainer: isTrainer,
 
     };
     logger.debug(`View ${user.firstname} assessments`);
-    //const list = viewmember.assessments;
-    //for (let i = 0; i < list.length; i++) {
-    //  list[i].updateComment = true;
-
-    //}
     response.render('viewmember', viewData);
   },
 
   deleteAssessment(request, response) {
     const userId = request.params.id;
     const user = userStore.getUserById(userId);
-    const assessmentId = request.params.assessmentId;
-    //const viewmember = userStore.getUserById(userId);
+    const assessmentId = request.params.assessmentId; //const viewmember = userStore.getUserById(userId);
     userStore.deleteAssessment(userId, assessmentId);
-    analytics.trend(user);
-    //logger.debug(`Deleting Assessment ${assessmentId} for member ${userId}`);
-    response.redirect('/viewmember/'+userId);
+    analytics.trend(user); //logger.debug(`Deleting Assessment ${assessmentId} for member ${userId}`);
+    response.redirect('/viewmember/' + userId);
   },
 
   updateComment(request, response) {
@@ -86,7 +65,7 @@ const viewmember = {
     const assessmentToUpdate = userStore.getAssessment(userId, assessmentId);
     assessmentToUpdate.comment = comment;
     userStore.save();
-    response.redirect('/viewmember/'+userId);
+    response.redirect('/viewmember/' + userId);
   },
 
   deleteBooking(request, response)
@@ -94,7 +73,7 @@ const viewmember = {
     const userId = request.params.id;
     const bookingId = request.params.bookingId;
     userStore.deleteBooking(userId, bookingId);
-    response.redirect('/viewmember/' +userId);
+    response.redirect('/viewmember/' + userId);
   },
 
   updateBooking(request, response)
@@ -107,7 +86,7 @@ const viewmember = {
     bookingToUpdate.date = date;
     bookingToUpdate.time = time;
     userStore.save();
-    response.redirect('/viewmember/'+userId);
+    response.redirect('/viewmember/' + userId);
   },
 
   performBookedAssessment(request, response)
@@ -118,8 +97,7 @@ const viewmember = {
     const userId = request.params.id;
     const user = userStore.getUserById(userId);
     const calculateBMI = analytics.calculateBMI(user);
-    const isIdealBodyWeight = analytics.isIdealBodyWeight(user);
-    //const userBookings = userStore.getAllUserBookings(userId);
+    const isIdealBodyWeight = analytics.isIdealBodyWeight(user); //const userBookings = userStore.getAllUserBookings(userId);
     const bookingId = request.params.bookingId;
     const performingBooking = userStore.getBookingById(userId, bookingId);
     const viewData = {
@@ -131,8 +109,7 @@ const viewmember = {
       determineBMICategory: analytics.determineBMICategory(calculateBMI),
       idealBodyWeight: isIdealBodyWeight,
       trainer: loggedInTrainer,
-      bookingId: bookingId,
-      //userBookings: userBookings,
+      bookingId: bookingId, //userBookings: userBookings,
       performingBooking: performingBooking,
 
     };
@@ -141,38 +118,34 @@ const viewmember = {
     response.render('performBookedAssessment', viewData);
   },
 
-addBookedAssessment(request, response) {
-  const loggedInTrainer = accounts.getCurrentTrainer(request);
-  const trainersId = loggedInTrainer.trainerId;
-  const userId = request.params.id;
-  const user = userStore.getUserById(userId);
-  const bookingId = request.params.bookingId;
-  const performingBooking = userStore.getBookingById(userId, bookingId);
-  const date = performingBooking.date;
-  const newAssessment =
-      {
-        assessmentId: bookingId,
-        //userid: loggedInUser.id,
-        date: date,
-        weight: request.body.weight,
-        chest: request.body.chest,
-        thigh: request.body.thigh,
-        upperArm: request.body.upperArm,
-        waist: request.body.waist,
-        hips: request.body.hips,
-        trend: '',
-        comment: request.body.comment,
+  addBookedAssessment(request, response) {
+    const loggedInTrainer = accounts.getCurrentTrainer(request);
+    const trainersId = loggedInTrainer.trainerId;
+    const userId = request.params.id;
+    const user = userStore.getUserById(userId);
+    const bookingId = request.params.bookingId;
+    const performingBooking = userStore.getBookingById(userId, bookingId);
+    const date = performingBooking.date;
+    const newAssessment =
+        {
+          assessmentId: bookingId, //userid: loggedInUser.id,
+          date: date,
+          weight: request.body.weight,
+          chest: request.body.chest,
+          thigh: request.body.thigh,
+          upperArm: request.body.upperArm,
+          waist: request.body.waist,
+          hips: request.body.hips,
+          trend: '',
+          comment: request.body.comment,
 
-      };
-  logger.debug('New Assessment', newAssessment);
-  userStore.addAssessment(userId, newAssessment);
-  userStore.deleteBooking(userId, bookingId);
-  analytics.trend(user);
-  //analytics.trend(user);
-  response.redirect('/viewmember/'+userId);
-},
-
-
+        };
+    logger.debug('New Assessment', newAssessment);
+    userStore.addAssessment(userId, newAssessment);
+    userStore.deleteBooking(userId, bookingId);
+    analytics.trend(user); //analytics.trend(user);
+    response.redirect('/viewmember/' + userId);
+  },
 
 };
 

@@ -4,8 +4,7 @@
 'use strict';
 
 const _ = require('lodash');
-const JsonStore = require('./json-store');
-//const userStore = require('./user-store');
+const JsonStore = require('./json-store'); //const userStore = require('./user-store');
 const cloudinary = require('cloudinary');
 const path = require('path');
 const logger = require('../utils/logger');
@@ -14,7 +13,7 @@ try {
   const env = require('../.env.json');
   cloudinary.config(env.cloudinary);
 }
-catch(e) {
+catch (e) {
   logger.info('You must provide a Cloudinary credentials file - see README.md');
   process.exit(1);
 }
@@ -46,8 +45,7 @@ const pictureStore = {
       album = {
         userid: userId,
         photos: [],
-      };
-      //if there is no photos, do below, otherwise replace last image with this new image.
+      }; //if there is no photos, do below, otherwise replace last image with this new image.
       this.store.add(this.collection, album);
       this.store.save();
     }

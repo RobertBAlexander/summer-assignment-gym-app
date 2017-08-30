@@ -22,30 +22,6 @@ const membersbookings = {
     const listTrainers = trainerStore.getAllTrainers();
     const listBookings = loggedInUser.bookings;
 
-
-    /*for (let j = 0; j < listBookings; j++)
-    {
-      let trainerId = listBookings[j].trainerId;
-      let bookedTrainer = trainerStore.getTrainerById(trainerId);
-      let trainerName = bookedTrainer.trainerName;
-
-      //for (let i = 0; i < trainerStore.trainers.length; i++)
-      //{
-      //  if (trainerStore.trainers[i].id === listBookings[j].trainerId)
-      //  {
-      //    let trainer = trainerStore.getTrainerById(listBookings[j].trainerId);
-      //    let trainerName = trainer.firstname;
-      //    return trainerName;
-      //  }
-      //}
-    }*/
-
-    //const trainerClassId = searchedClasses.trainerId;
-    //const statusOfLesson = searches.statusOfLesson(loggedInUser);
-    //const trainer = trainerStore.getTrainerById(trainerClassId);
-    //const classId = request.params.classId;
-    //const lessonId = request.params.lessonId;
-
     const viewData = {
       title: 'Gym App Member Book Assessments',
       user: loggedInUser,
@@ -54,11 +30,7 @@ const membersbookings = {
       idealBodyWeight: analytics.isIdealBodyWeight(loggedInUser),
       searchedClasses: searchedClasses,
       listTrainers: listTrainers,
-      listBookings: listBookings,
-      //trainerName: trainerName,
-      //trainerName: trainerName,
-      //trainer: trainer,
-
+      listBookings: listBookings, //trainerName: trainerName,
     };
     logger.info('about to render bookings', userId);
     response.render('membersbookings', viewData);
@@ -68,15 +40,12 @@ const membersbookings = {
   {
     const loggedInUser = accounts.getCurrentUser(request);
     const userId = loggedInUser.id;
-    //const trainerId = request.body.trainerId;
-    //const currentTrainer = trainerStore.getTrainerById(trainerId);
+    const trainerId = request.body.trainerId;
+    const currentTrainer = trainerStore.getTrainerById(trainerId);
     const userFirstName = loggedInUser.firstname;
     const userLastName = loggedInUser.lastname;
     const userFullName = userFirstName + ' ' + userLastName;
-    //const trainerFname = currentTrainer.firstname;
-    //const trainerLname = currentTrainer.lastname;
-    //const trainerName = trainerFname + trainerLname;
-    logger.debug('trainer id', request)
+    logger.debug('trainer id', request);
     const newBooking =
         {
           bookingId: uuid(),
@@ -119,10 +88,7 @@ const membersbookings = {
     bookingToUpdate.time = time;
     userStore.save();
     response.redirect('/membersbookings/');
-  }
-
-
-
+  },
 
 };
 

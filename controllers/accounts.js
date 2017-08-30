@@ -1,7 +1,8 @@
+'use strict';
 /**
  * Created by Robert Alexander on 12/07/2017.
  */
-'use strict';
+
 const userStore = require('../models/user-store');
 const trainerStore = require('../models/trainer-store');
 const logger = require('../utils/logger');
@@ -49,20 +50,18 @@ const accounts = {
   authenticate(request, response) {
     const user = userStore.getUserByEmail(request.body.email);
     const trainer = trainerStore.getTrainerByEmail(request.body.email);
-    const alert = "hello";
+    const alert = 'hello';
     if (user && user.password === request.body.password) {
       response.cookie('user', user.id);
       logger.info(`logging in ${user.id}`);
       response.redirect('/dashboard');
-    }
-    else if (trainer && trainer.password === request.body.password) {
+    } else if (trainer && trainer.password === request.body.password) {
       response.cookie('trainer', trainer.trainerId);
       logger.info(`logging in ${trainer.trainerId}`);
       response.redirect('/trainerdashboard');
-    }
-    else {
+    } else {
       alert: alert,
-      response.redirect('/login');
+          response.redirect('/login');
     }
   },
 
@@ -75,7 +74,6 @@ const accounts = {
     const trainerId = request.cookies.trainer;
     return trainerStore.getTrainerById(trainerId);
   },
-
 
 };
 

@@ -29,30 +29,24 @@ const userStore = {
     return this.store.findOneBy(this.collection, { email: email });
   },
 
-
   getAssessment(userId, assessmentId)
   {
     const user = this.getUserById(userId);
-    for (let i = 0; i < user.assessments.length; i++)
-    {
-      if (user.assessments[i].assessmentId === assessmentId)
-      {
+    for (let i = 0; i < user.assessments.length; i++) {
+      if (user.assessments[i].assessmentId === assessmentId) {
         return user.assessments[i];
       }
     }
-    //return this.store.findOneBy(this.collection, { id: id });
   },
 
   //does this even work?
-  getUserAssessments(userId)
-  {
+  getUserAssessments(userId) {
     return this.store.findBy(this.collection, { userId: userId });
   },
 
   addAssessment(id, assessment) {
     const user = this.getUserById(id);
-    user.assessments.unshift(assessment);
-    //this.store.add(this.collection, assessment);
+    user.assessments.unshift(assessment); //this.store.add(this.collection, assessment);
     this.store.save();
   },
 
@@ -71,10 +65,8 @@ const userStore = {
   getBookingById(userId, bookingId)
   {
     const user = this.getUserById(userId);
-    for (let i = 0; i < user.bookings.length; i++)
-    {
-      if (user.bookings[i].bookingId === bookingId)
-      {
+    for (let i = 0; i < user.bookings.length; i++) {
+      if (user.bookings[i].bookingId === bookingId) {
         return user.bookings[i];
       }
     }
@@ -109,10 +101,8 @@ const userStore = {
   getGoalById(userId, goalId)
   {
     const user = this.getUserById(userId);
-    for (let i = 0; i < user.goals.length; i++)
-    {
-      if (user.goals[i].goalId === goalId)
-      {
+    for (let i = 0; i < user.goals.length; i++) {
+      if (user.goals[i].goalId === goalId) {
         return user.goals[i];
       }
     }
@@ -131,8 +121,6 @@ const userStore = {
     _.remove(user.goals, { goalId: goalId });
     this.store.save();
   },
-
-
 
   deleteUser(id)
   {

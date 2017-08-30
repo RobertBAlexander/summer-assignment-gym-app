@@ -12,9 +12,10 @@ const app = express();
 
 app.set('view engine', 'hbs');
 
-app.get('/', function (req,res) {
-  res.render('index', {now: new Date() });
+app.get('/', function (req, res) {
+  res.render('index', { now: new Date() });
 });
+
 app.listen(4000);
 
 module.exports = app;

@@ -14,21 +14,18 @@ const membergoals = {
   index(request, response) {
     logger.info('goals rendering');
     const loggedInUser = accounts.getCurrentUser(request);
-    //const calculateBMI = analytics.calculateBMI(loggedInUser);
+    const calculateBMI = analytics.calculateBMI(loggedInUser);
     const viewData = {
       title: 'Gym App goals',
       user: loggedInUser,
-      //calculateBMI: calculateBMI,
-      //determineBMICategory: analytics.determineBMICategory(calculateBMI),
-      //idealBodyWeight: analytics.isIdealBodyWeight(loggedInUser),
-      //playlists: playlistStore.getUserPlaylists(loggedInUser.id),
+      calculateBMI: calculateBMI,
+      determineBMICategory: analytics.determineBMICategory(calculateBMI),
+      idealBodyWeight: analytics.isIdealBodyWeight(loggedInUser),
+      playlists: playlistStore.getUserPlaylists(loggedInUser.id),
     };
-    logger.info('about to render');
-    //, playlistStore.getAllPlaylists() --goes in above next to 'about to render'
+    logger.info('about to render'); //, playlistStore.getAllPlaylists() --goes in above next to 'about to render'
     response.render('membergoals', viewData);
   },
-
-
 
 };
 

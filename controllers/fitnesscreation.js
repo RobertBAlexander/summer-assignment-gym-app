@@ -25,9 +25,6 @@ const fitnesscreation = {
     response.render('fitnesscreation', viewData);
   },
 
-
-
-
 };
 
 module.exports = fitnesscreation;

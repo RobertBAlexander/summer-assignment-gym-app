@@ -28,10 +28,11 @@ const goalcreation = {
     {
       userBookings[i].trainersBooking = false;
 
-      if ( trainerId === userBookings[i].trainerId)
+      if (trainerId === userBookings[i].trainerId)
       {
         userBookings[i].trainersBooking = true;
       }
+
       userStore.save();
     }
 

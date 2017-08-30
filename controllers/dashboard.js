@@ -4,8 +4,7 @@
 'use strict';
 
 const uuid = require('uuid');
-const logger = require('../utils/logger');
-//const playlistStore = require('../models/playlist-store');
+const logger = require('../utils/logger'); //const playlistStore = require('../models/playlist-store');
 const userStore = require('../models/user-store.js');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
@@ -15,41 +14,25 @@ const dashboard = {
     logger.info('dashboard rendering');
     const loggedInUser = accounts.getCurrentUser(request);
     const calculateBMI = analytics.calculateBMI(loggedInUser);
-    const isTrainer = false;
-    //const determineBMICategory = analytics.determineBMICategory(loggedInUser.calculateBMI)
+    const isTrainer = false; //const determineBMICategory = analytics.determineBMICategory(loggedInUser.calculateBMI)
     const viewData = {
-      title: 'Users Gym App Dashboard',
-      //user: userStore.getUserById(loggedInUser.id),
+      title: 'Users Gym App Dashboard', //user: userStore.getUserById(loggedInUser.id),
       user: loggedInUser,
       calculateBMI: calculateBMI,
       determineBMICategory: analytics.determineBMICategory(calculateBMI),
       idealBodyWeight: analytics.isIdealBodyWeight(loggedInUser),
-      isTrainer: isTrainer,
-      //profilepic: analytics.profilepic(loggedInUser),
-      //playlists: playlistStore.getUserPlaylists(loggedInUser.id),
+      isTrainer: isTrainer, //profilepic: analytics.profilepic(loggedInUser), //playlists: playlistStore.getUserPlaylists(loggedInUser.id),
     };
-    logger.info('about to render');
-    //, playlistStore.getAllPlaylists() --goes in above next to 'about to render'
+    logger.info('about to render'); //, playlistStore.getAllPlaylists() --goes in above next to 'about to render'
     response.render('dashboard', viewData);
   },
 
-
-
-  /*deletePlaylist(request, response) {
-    const playlistId = request.params.id;
-    logger.debug(`Deleting Playlist ${playlistId}`);
-    playlistStore.removePlaylist(playlistId);
-    response.redirect('/dashboard');
-  },*/
-
   addAssessment(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    const userId = loggedInUser.id;
-    //const user = userStore.getUserById(userId);
+    const userId = loggedInUser.id; //const user = userStore.getUserById(userId);
     const newAssessment =
         {
-      assessmentId: uuid(),
-      //userid: loggedInUser.id,
+      assessmentId: uuid(), //userid: loggedInUser.id,
       date: request.body.date,
       weight: request.body.weight,
       chest: request.body.chest,

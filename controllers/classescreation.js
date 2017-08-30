@@ -31,17 +31,17 @@ const classescreation = {
     const loggedInTrainer = accounts.getCurrentTrainer(request);
     const newClass =
         {
-      classId: uuid(),
-      className: request.body.className,
-      trainerId: loggedInTrainer.trainerId,
-      lessonNumber: request.body.lessonNumber,
-      startDate: request.body.startDate,
-      maxCapacity: request.body.capacity,
-      difficulty: request.body.difficulty,
-      classAttend: 'none',
-      numberAttended: 0,
-      lessons: [],
-    };
+          classId: uuid(),
+          className: request.body.className,
+          trainerId: loggedInTrainer.trainerId,
+          lessonNumber: request.body.lessonNumber,
+          startDate: request.body.startDate,
+          maxCapacity: request.body.capacity,
+          difficulty: request.body.difficulty,
+          classAttend: 'none',
+          numberAttended: 0,
+          lessons: [],
+        };
     for (let i = 0; i < request.body.lessonNumber; i++) {
       const startDate = new Date(request.body.startDate);
       const daysToAdd = (i * 7);
@@ -49,22 +49,23 @@ const classescreation = {
       let userIsAttending = false;
       const lesson =
           {
-        lessonId: uuid(),
-        lessonDate: lessonDate,
-        startTime: request.body.startTime,
-        duration: request.body.duration,
-        currentCapacity: 0,
-        maxCapacity: request.body.capacity,
-        userIsAttending: userIsAttending,
-        attending: [],
-      };
+            lessonId: uuid(),
+            lessonDate: lessonDate,
+            startTime: request.body.startTime,
+            duration: request.body.duration,
+            currentCapacity: 0,
+            maxCapacity: request.body.capacity,
+            userIsAttending: userIsAttending,
+            attending: [],
+          };
       newClass.lessons.push(lesson);
-      }
+    }
+
     logger.debug('New Class', newClass);
     classStore.addClass(newClass);
     response.redirect('/classescreation/');
 
-   },
+  },
 
   //addLesson
 
@@ -76,16 +77,16 @@ const classescreation = {
     response.redirect('/classescreation/');
   },
 
-deleteLesson(request, response)
-{
-  const classId = request.params.classId;
-  const lessonId = request.params.lessonId;
-  classStore.deleteLesson(classId, lessonId);
-  const currentClass = classStore.getClassById(classId);
-  currentClass.lessonNumber = (currentClass.lessonNumber - 1);
+  deleteLesson(request, response)
+  {
+    const classId = request.params.classId;
+    const lessonId = request.params.lessonId;
+    classStore.deleteLesson(classId, lessonId);
+    const currentClass = classStore.getClassById(classId);
+    currentClass.lessonNumber = (currentClass.lessonNumber - 1);
 
-  response.redirect('/classescreation/');
-},
+    response.redirect('/classescreation/');
+  },
 
   updateClassName(request, response) {
     const classId = request.params.classId;
@@ -109,6 +110,7 @@ deleteLesson(request, response)
       const lesson = lessonsList[i];
       lesson.maxCapacity = maxCapacity;
     }
+
     classStore.save();
     response.redirect('/classescreation/');
   },

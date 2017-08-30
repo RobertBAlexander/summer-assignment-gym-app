@@ -16,7 +16,6 @@ const trainerStore = {
     return this.store.findAll(this.collection);
   },
 
-
   addTrainer(trainer) {
     this.store.add(this.collection, trainer);
     this.store.save();
@@ -43,8 +42,7 @@ const trainerStore = {
 
   addClass(trainerId, assessment) {
     const trainer = this.getTrainerById(trainerId);
-    trainer.classes.unshift(assessment);
-    //this.store.add(this.collection, assessment);
+    trainer.classes.unshift(assessment); //this.store.add(this.collection, assessment);
     this.store.save();
   },
 

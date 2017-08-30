@@ -4,8 +4,7 @@
 'use strict';
 
 const uuid = require('uuid');
-const logger = require('../utils/logger');
-//const playlistStore = require('../models/playlist-store');
+const logger = require('../utils/logger'); //const playlistStore = require('../models/playlist-store');
 const trainerStore = require('../models/trainer-store.js');
 const userStore = require('../models/user-store.js');
 const accounts = require('./accounts.js');
@@ -16,72 +15,24 @@ const trainerdashboard = {
     logger.info('trainerdashboard rendering');
     const loggedInTrainer = accounts.getCurrentTrainer(request);
     const userList = userStore.getAllUsers();
-    //const calculateBMI = analytics.calculateBMI(loggedInUser);
-    //const determineBMICategory = analytics.determineBMICategory(loggedInUser.calculateBMI)
     const viewData = {
       title: 'Gym App Trainer Dashboard',
-      //user: userStore.getUserById(loggedInUser.id),
       trainer: loggedInTrainer,
       userList: userList,
-      //calculateBMI: calculateBMI,
-      //determineBMICategory: analytics.determineBMICategory(calculateBMI),
-      //idealBodyWeight: analytics.isIdealBodyWeight(loggedInUser),
-      //playlists: playlistStore.getUserPlaylists(loggedInUser.id),
     };
     logger.info('about to render');
-    //, playlistStore.getAllPlaylists() --goes in above next to 'about to render'
     response.render('trainerdashboard', viewData);
   },
-
-
-
-  /*deletePlaylist(request, response) {
-   const playlistId = request.params.id;
-   logger.debug(`Deleting Playlist ${playlistId}`);
-   playlistStore.removePlaylist(playlistId);
-   response.redirect('/dashboard');
-   },*/
-
-  /*
-  addAssessment(request, response) {
-    const loggedInUser = accounts.getCurrentUser(request);
-    const userId = loggedInUser.id;
-    //const user = userStore.getUserById(userId);
-    const newAssessment =
-        {
-          id: uuid(),
-          //userid: loggedInUser.id,
-          weight: request.body.weight,
-          chest: request.body.chest,
-          thigh: request.body.thigh,
-          upperArm: request.body.upperArm,
-          waist: request.body.waist,
-          hips: request.body.hips,
-        };
-    logger.debug('New Assessment =', newAssessment);
-    userStore.addAssessment(userId, newAssessment);
-    response.redirect('/dashboard/');  //removed 'userId'
-  },
-
-  deleteAssessment(request, response)
-  {
-    const loggedInUser = accounts.getCurrentUser(request);
-    const assessmentId = request.params.id;
-    const userId = loggedInUser.id;
-    logger.debug(`Deleting Assessment ${assessmentId}`);
-    userStore.removeAssessment(userId, assessmentId);
-    response.redirect('/dashboard');
-  },*/
 
   deleteuser(request, response)
   {
     logger.info('rendering deletion of user');
     const loggedInUser = accounts.getCurrentUser(request);
-    const userId =request.params.id;
+    const userId = request.params.id;
     logger.debug(`Deleting User ${userId.firstname} ${userId}`);
     userStore.deleteUser(userId);
     response.redirect('/trainerDashboard');
-  }
+  },
 
 };
 

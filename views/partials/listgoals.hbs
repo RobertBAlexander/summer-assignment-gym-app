@@ -1,36 +1,41 @@
 
-{{#each user.goals}}
-    <table class="ui center aligned raised celled table segment">
-        <thead>
-        <tr>
 
-            <th>Goal Date</th>
-            <th>Goal Status</th>
-            <th>Weight</th>
-            <th>Above or Below</th>
-            <th>Description</th>
-            <th>Remove Goal</th>
-        </tr>
-        </thead>
+<table class="ui center aligned raised celled table segment">
+    <thead>
+    <tr>
+        <th>Date to aim for</th>
+        <th>Weight</th>
+        <th>Chest</th>
+        <th>Thigh</th>
+        <th>Upper Arm</th>
+        <th>Waist</th>
+        <th>Hips</th>
+        <th>Goal Status</th>
+        <th>Description</th>
+        <th>Delete Goal</th>
+    </tr>
+    </thead>
 
-        <tbody>
-        <div class="ui raised list">
+    <tbody>
+    <div class="ui raised list">
 
-
+        {{#each user.goals}}
 
             <tr>
-
-                <td> {{goaldate}} </td>
-                <td> {{goalstatus}} </td>
+                <td> {{date}} </td>
                 <td> {{weight}} </td>
-                <td> {{aboveorbelow}} </td>
-                <td> {{description}} </td>
-                <td><a href="/bookings/deletegoal/{{id}}" class="ui big grey
+                <td> {{chest}} </td>
+                <td> {{thigh}} </td>
+                <td> {{upperArm}} </td>
+                <td> {{waist}} </td>
+                <td> {{hips}} </td>
+                <td> {{goalStatus}} </td>
+                <td>{{description}}</td>
+                <td><a href="/membergoals/deleteGoal/{{goalId}}" class="ui big grey
                icon button">
                     <i class="icon trash"></i></a></td>
             </tr>
-        </div>
-        </tbody>
-    </table>
-
-{{/each}}
+        {{/each}}
+    </div>
+    </tbody>
+</table>

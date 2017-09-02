@@ -111,7 +111,7 @@ const userStore = {
   addGoal(userId, goal)
   {
     const user = this.getUserById(userId);
-    user.bookings.push(goal);
+    user.goals.push(goal);
     this.save();
   },
 

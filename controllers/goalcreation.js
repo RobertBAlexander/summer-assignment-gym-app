@@ -51,6 +51,44 @@ const goalcreation = {
     response.render('goalcreation', viewData);
   },
 
+  addGoal(request, response) {
+    const loggedInTrainer = accounts.getCurrentTrainer(request);
+    const trainersId = loggedInTrainer.trainerId;
+    const userId = request.params.id;
+    const user = userStore.getUserById(userId);
+    const newGoal =
+        {
+          goalId: uuid(),
+          date: request.body.goaldate,
+          weight: request.body.weight,
+          aboveorWeight: request.body.aboveorWeight,
+          chest: request.body.chest,
+          aboveorChest: request.body.aboveorChest,
+          thigh: request.body.thigh,
+          aboveorThigh: request.body.aboveorThigh,
+          upperArm: request.body.upperArm,
+          aboveorArm: request.body.aboveorArm,
+          waist: request.body.waist,
+          aboveorWaist: request.body.aboveorWaist,
+          hips: request.body.hips,
+          aboveorHips: request.body.aboveorHips,
+          description: request.body.description,
+          goalStatus: 'open',
+
+        };
+    logger.debug('New Goal', newGoal);
+    userStore.addGoal(userId, newGoal);
+    response.redirect('/goalcreation/' + userId);
+  },
+
+  deleteGoal(request, response) {
+    const userId = request.params.id;
+    const user = userStore.getUserById(userId);
+    const goalId = request.params.goalId;
+    userStore.deleteGoal(userId, goalId);
+    response.redirect('/goalcreation/' + userId);
+  },
+
 };
 
 module.exports = goalcreation;

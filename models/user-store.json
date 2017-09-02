@@ -325,7 +325,46 @@
           "trainersBooking": true
         }
       ],
-      "goals": []
+      "goals": [
+        {
+          "goalId": "dd418910-ca5c-44bb-9834-afbe5a29610a",
+          "date": "2010-09-09",
+          "weight": "111",
+          "aboveorWeight": "below",
+          "chest": "34",
+          "aboveorChest": "below",
+          "thigh": "34",
+          "aboveorThigh": "below",
+          "upperArm": "32",
+          "aboveorArm": "below",
+          "waist": "34",
+          "aboveorWaist": "below",
+          "hips": "34",
+          "aboveorHips": "below",
+          "description": "I am",
+          "goalStatus": "open"
+        },
+        {
+          "goalId": "0246a942-03a9-40c1-b999-5a267354e849",
+          "date": "0909-09-09",
+          "weight": [
+            "45",
+            "45"
+          ],
+          "aboveorWeight": "unspecified",
+          "chest": "432",
+          "aboveorChest": "unspecified",
+          "thigh": "45",
+          "aboveorThigh": "unspecified",
+          "upperArm": "45",
+          "aboveorArm": "unspecified",
+          "waist": "45",
+          "aboveorWaist": "unspecified",
+          "aboveorHips": "unspecified",
+          "description": "ghfgh",
+          "goalStatus": "open"
+        }
+      ]
     },
     {
       "firstname": "tim",

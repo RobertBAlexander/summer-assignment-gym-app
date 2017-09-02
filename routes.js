@@ -49,7 +49,9 @@ router.post('/membersbookings/addBooking', membersbookings.addBooking);
 router.get('/membersbookings/deleteBooking/:bookingId', membersbookings.deleteBooking);
 router.post('/membersbookings/:userId/updateBooking/:bookingId', membersbookings.updateBooking);
 
-router.get('/membergoals', membergoals.index); //router.post('/membersgoals/addGoal', membergoals.addGoal);
+router.get('/membergoals', membergoals.index);
+router.post('/membergoals/addGoal', membergoals.addGoal);
+router.get('/membergoals/deleteGoal/:goalId', membergoals.deleteGoal);
 
 router.get('/trainerdashboard', trainerdashboard.index);
 router.get('/trainerdashboard/deleteuser/:id', trainerdashboard.deleteuser);
@@ -72,7 +74,9 @@ router.post('/classescreation/updateClassDifficulty/:classId', classescreation.u
 router.post('/classescreation/:classId/updateLessonStart/:lessonId', classescreation.updateLessonStart);
 router.post('/classescreation/:classId/updateDuration/:lessonId', classescreation.updateDuration);
 
-router.get('/goalcreation', goalcreation.index);
+router.get('/goalcreation/:id', goalcreation.index);
+router.post('/goalcreation/:id/addGoal', goalcreation.addGoal);
+router.get('/goalcreation/:id/deleteGoal/:goalId', goalcreation.deleteGoal);
 
 //router.get('/fitness', fitness.index);
 

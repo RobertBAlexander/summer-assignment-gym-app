@@ -78,9 +78,11 @@ router.get('/goalcreation/:id', goalcreation.index);
 router.post('/goalcreation/:id/addGoal', goalcreation.addGoal);
 router.get('/goalcreation/:id/deleteGoal/:goalId', goalcreation.deleteGoal);
 
-//router.get('/fitness', fitness.index);
+router.get('/fitnesscreation/:id', fitnesscreation.index);
+router.post('/fitnesscreation/:id/addFitnessProg', fitnesscreation.addFitnessProg);
+router.get('/fitnesscreation/:id/fitnessprogdetails/:programId', fitnesscreation.fitnessprogdetails);
 
 router.get('/about', about.index); //router.get('/assessment/:id', assessment.index);
-router.get('/fitnesscreation', fitnesscreation.index);
+
 
 module.exports = router;

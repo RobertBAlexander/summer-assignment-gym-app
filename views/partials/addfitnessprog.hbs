@@ -1,13 +1,13 @@
-<form class="ui stacked segment form" action="/classescreation/addclass " method="POST">
-    <h3 class="ui header">Add Fitness Program</h3>
+<form class="ui stacked segment form" action="/fitnesscreation/{{user.id}}/addFitnessProg" method="POST">
+    <h3 class="ui header">Add Fitness Program for {{user.firstname}}</h3>
     <div class="field">
         <label>Program name</label>
-        <input placeholder="Program Name" type="text" name="programname">
+        <input placeholder="Program Name" type="text" name="programName">
     </div>
     <div class="five fields">
         <div class="field">
             <label>Session 1</label>
-            <select name="sessiontype">
+            <select name="sessionType1">
                 <option name="sessiontype" value="predefined"> Pre-defined</option><br>
                 <option name="sessiontype" value="custom">Bespoke session</option><br>
                 <option name="sessiontype" value="class">Attend scheduled class</option><br>
@@ -15,7 +15,7 @@
         </div>
         <div class="field">
             <label>Session 2</label>
-            <select name="sessiontype">
+            <select name="sessionType2">
                 <option name="sessiontype" value="predefined"> Pre-defined</option><br>
                 <option name="sessiontype" value="custom">Bespoke session</option><br>
                 <option name="sessiontype" value="class">Attend scheduled class</option><br>
@@ -23,7 +23,7 @@
         </div>
         <div class="field">
             <label>Session 3</label>
-            <select name="sessiontype">
+            <select name="sessionType3">
                 <option name="sessiontype" value="predefined"> Pre-defined</option><br>
                 <option name="sessiontype" value="custom">Bespoke session</option><br>
                 <option name="sessiontype" value="class">Attend scheduled class</option><br>
@@ -31,7 +31,7 @@
         </div>
         <div class="field">
             <label>Session 4</label>
-            <select name="sessiontype">
+            <select name="sessionType4">
                 <option name="sessiontype" value="predefined"> Pre-defined</option><br>
                 <option name="sessiontype" value="custom">Bespoke session</option><br>
                 <option name="sessiontype" value="class">Attend scheduled class</option><br>
@@ -39,52 +39,12 @@
         </div>
         <div class="field">
             <label>Session 5</label>
-            <select name="sessiontype">
+            <select name="sessionType5">
                 <option name="sessiontype" value="predefined"> Pre-defined</option><br>
                 <option name="sessiontype" value="custom">Bespoke session</option><br>
                 <option name="sessiontype" value="class">Attend scheduled class</option><br>
             </select>
         </div>
-    </div>
-    <button class="ui blue submit button">Add Fitness Program</button>
-</form>
-
-<form class="ui stacked segment form" action="/classescreation/addclass " method="POST">
-    <h3 class="ui header">Pre-defined Sessions</h3>
-    <div class="three fields">
-        <div class="field">
-            <label>Pre-defined Sessions</label>
-            <select name="programtype">
-                <option name="programtype" value="cardio"> Cardio workouts</option><br>
-                <option name="programtype" value="extreme">Xtream workouts for Xtream people</option><br>
-                <option name="programtype" value="jazz">Exercise to Jazzercise videos</option><br>
-            </select>
-        </div>
-        <div class="field">
-            <label>Bespoke</label>
-            <input placeholder="Bespoke Session" type="text" rows="5" cols="50" name="customdetails">
-        </div>
-        <div class="two fields">
-        <div class="field">
-            <label>Scheduled Class</label>
-            <select name="classtype">
-                <option name="classtype" value="jazz"> Jazzercise</option><br>
-                <option name="classtype" value="boxing">Sparring Partners</option><br>
-                <option name="classtype" value="yoga">Do or do not, there is not try- Yoga</option><br>
-            </select>
-        </div>
-            <div class="field">
-                <label>Date to attend</label>
-                <select name="attendancedate">
-                    <option name="attendancedate" value="14"> 14/07/17</option><br>
-                    <option name="attendancedate" value="21">21/07/17</option><br>
-                    <option name="attendancedate" value="28">28/07/17</option><br>
-                </select>
-            </div>
-        </div>
-
-
-
     </div>
     <button class="ui blue submit button">Add Fitness Program</button>
 </form>

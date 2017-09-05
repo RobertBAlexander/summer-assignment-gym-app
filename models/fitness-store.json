@@ -1,800 +1,177 @@
 {
   "programs": [
     {
-      "programId": "d90f2c66-d42f-4c3c-85a3-06abb97dca0a",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": []
-    },
-    {
-      "programId": "fc350bee-237c-423f-8d47-0ab1b80dd97b",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": []
-    },
-    {
-      "programId": "e54b3117-98ed-4f72-8894-0d659196928d",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": []
-    },
-    {
-      "programId": "b4817d6d-5596-436e-8502-9395fa287bc7",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": []
-    },
-    {
-      "programId": "3fa30698-c0f0-4fdd-b70c-2155545c9df1",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": []
-    },
-    {
-      "programId": "031b6834-4172-4db1-946d-3f77e4f7d04f",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": []
-    },
-    {
-      "programId": "84d241ff-12e3-4999-9d1b-f0ad62386866",
+      "programId": "a69036e1-2cdc-46fe-89e0-757f166fa02a",
+      "programName": "Program Name",
+      "trainersProgram": true,
       "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
       "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "userName": "homer",
       "sessions": [
         {
-          "sessionId": "14d30145-aff8-4495-b760-dfa835595ef1",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "c7f0d97a-bcd5-4558-859b-da8a3f5a2329",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "8b31aef7-7879-42b0-b21b-20a2445e5978",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "cd3432d0-2956-47ae-8976-5203457ab586",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "4dc9914a-ece8-4bcb-9968-049ddf73e371",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "3389f87f-a072-4af2-bca4-54e3d35153b3",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "1ff83bc5-2c48-426e-b90e-a5c6beaf9543",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "77951268-7d6a-4463-b4b4-93a4e4daa912",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "78bffba2-5ed6-4a58-90ef-48a90cf61696",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "7dfbc370-a14a-479d-84ff-4e51d349f8ed",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "9e89baaa-5257-443a-a548-53aad6423373",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "8301c81e-b98b-4f31-9138-33df4156ef88",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "4607bb85-f54f-4397-aeb7-ba8c7219857c",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "42a566c4-3035-45f9-9f9b-f56eb1f8db9b",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "420eafd3-67c5-4abb-a7eb-4c35585574d2",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "51ddb6fe-4eb9-4b17-82b4-3f0953efdf06",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "604dbe7d-84d3-4211-9976-31423f84888c",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "93e3b08e-c19a-48aa-9ac8-01840fd7bd84",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "0e776244-656d-423b-9ee2-1456963ef549",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "e4665ccd-03e3-42a9-8b27-1dab486c79c4",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "22fb1f39-8b52-40fd-bfb3-41d4f9dbbf79",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "7a7bf6f4-02f3-4391-a06a-50eb32367fb8",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "a9eb702a-747d-4606-a4c5-8bede17cc20e",
-          "sessiontype": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "281561ac-1a66-42b5-8a3d-3033b8c6585d",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "b68ebcc2-984d-4901-ad9f-7c721ee7f4d3",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "53f003db-96bd-4563-a8e8-9f21c7e36ef5",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "db2b0898-4ed8-4b99-b399-6e974a963315",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "8c625130-5fba-4ebb-b3f6-9f224652666b",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "e1bfe809-59c4-4d14-9239-ff94e0ceb9b4",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "5e7c5e31-2788-4ac9-a63b-802f880ed516",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "493b5f55-05a3-461d-8ecc-4f4d39e3f852",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "540433ec-87a8-4a9f-931f-974ce440e734",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "feef80e6-0c9d-440d-98fb-41dd5ca66742",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "8c66515b-1a80-4c38-845f-d9e55f1848a2",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "1e4e191b-d4b4-4568-9fa0-08da1168e5eb",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "57a64900-a3cc-4f2d-866a-53d562ec893e",
-      "programName": "asasasas",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "779e479f-bff9-4c64-a36d-0673952d6842",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "346dc80a-c9eb-4755-a186-7834342c0ca7",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "ed6fb55c-f5e9-4d2a-9cc1-5568092437e5",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "63c56250-cc05-491a-9fa6-c5cdd6b4b187",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "1b52d367-8aa9-4f06-8c05-56db611d6cd5",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "293c5228-be8d-4c9a-8c55-388a8a6f3063",
-      "programName": "sdsdsdsd",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "853f378e-ce8c-4f18-8bc0-dd10612e7fb5",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "b9750837-f295-46c8-879d-e44bab4f94a9",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "d1151d31-f137-451d-9f9c-f1505d724ca9",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "58f6437c-1e3b-4687-9f4c-b14af45146bd",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "8b4b2e9f-9570-40d5-aef2-1b3a25b0c9f7",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "555d241d-8ce3-49ed-ac3f-9bf2ccab7b0d",
-      "programName": "xsxsxsxs",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "114e79a6-9183-4330-be8b-e91b20cbd2cb",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "7f67e65b-2aa0-4411-b8ac-ec87dcd39bb0",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "862d0630-6d63-44db-ab19-5fa445c4cf3c",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "424b2711-4f84-4edf-a453-e8ab446d749b",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "44a67bc1-3256-42d6-843b-82423abd4eae",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "91c59fc9-0733-4619-9de5-880aec4a7b35",
-      "programName": "xsxsxsxs",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "44bdaed1-13cd-4692-8233-3249c9634c09",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "bae8795e-8607-44e1-b077-e49b9c4d4777",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "1fa3e619-0898-4b4a-8a54-f0dde66236f6",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "18f6de38-c209-4dfb-9390-441a8d24468c",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "a714a544-2f0f-4965-9dcc-a317216c88f0",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "ff537cbc-8ce3-4ebc-aae2-3f498d61e7f4",
-      "programName": "wewewewe",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "618f1b4b-dabb-4965-a888-f2697015d55a",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "8257cdc6-bf3c-48a5-be7f-53cca6ae491a",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "1466fba5-a1d8-40c8-b4ff-a028d7546564",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "fad0aa78-41be-4820-a472-5540c2d6b404",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "9dc17a41-ba7c-406d-b3b0-0350864c0a3c",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "aacabe05-0e0f-4ac7-b251-f063025fa764",
-      "programName": "qqqqqq",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "de707307-442b-4eb5-a776-135c79e62aee",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "109ba0cb-af23-4f74-a409-a38e5b268b35",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "e3852923-3f4c-40fa-8158-cbe0eb867643",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "42212258-282c-442b-9707-275e5f35a6b0",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "86428f65-4c92-413a-b88f-004a8e0e86c5",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "8bfe91da-adca-4ef8-ba2e-6e4f04aefeb7",
-      "programName": "dddddddddddf",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "410f08b8-e7dd-48bb-8874-3eab627b80c1",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "487b3ccd-4174-4bee-a460-d584df432fdd",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "67f30157-244f-41ea-9995-a656da868c7c",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "0bfef9c3-04f9-4260-9465-e0bd178029e3",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "d86fb9f9-6124-4d4b-9f06-136f390bde2f",
-          "sessionType": "predefined",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "f68ce267-d07f-4e05-bae3-6fbffc07b3d2",
-      "programName": "let go",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "7cbc78ca-0d4a-4b08-8761-555eb4072b3a",
-          "sessionType": "custom",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "e6f687fe-d0e6-44cd-ae7d-94aa342838c6",
-          "sessionType": "custom",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "bb53cfca-ce18-412e-9471-04893ed7f376",
-          "sessionType": "custom",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "ebc69ba9-e8eb-49db-8ed6-66aa05c56e4c",
-          "sessionType": "custom",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "99b85ced-d20b-4e12-a751-fe544b55cee8",
-          "sessionType": "custom",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "3d01c26e-c83f-4f06-b96a-b2c604b3f935",
-      "programName": "hello",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "0a97f119-226f-485b-bf15-77b2c22836bb",
-          "sessionType": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "60bea119-948c-4d72-860d-795faa58186f",
-          "sessionType": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "49dd4b3e-9dac-4485-9986-6ad736152c6b",
-          "sessionType": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "e7fb61f5-e759-443f-956a-714f1b1fcd9d",
-          "sessionType": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "ce0a3cc2-cfe2-4e7c-af64-8885fb64720a",
-          "sessionType": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "60b1ea0f-bbe1-4d34-b7f6-bf00d9f24155",
-      "programName": "otit",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "a0a03033-4709-41b4-93df-4c7a7d355dce",
-          "sessionType": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "3972fb7b-aff3-41a2-86ad-58a6f384bf70",
-          "sessionType": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "ec92af94-0c0c-4d9b-955a-bfe65c1b4030",
-          "sessionType": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "75c7d249-1e78-45fa-955e-6f295c7caf60",
-          "sessionType": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "598ba3ee-3639-47a7-ac18-e1a8d529e7a7",
-          "sessionType": null,
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "programId": "6e43b316-cf3e-4754-afdf-fea5353d20e8",
-      "programName": "rthtrt",
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": "d8890083-9945-439c-aacb-2aa6a5265c9c",
+          "sessionId": 1,
           "sessionType": "class",
-          "sessionName": "",
-          "classId": "",
+          "custom": false,
+          "predefined": false,
+          "classId": true,
+          "sessionName": "d76f9b4d-8602-4439-9a67-0b8cb4520aa5",
           "description": ""
         },
         {
-          "sessionId": "09eabd40-8c52-4685-be4c-d7ea72544c53",
+          "sessionId": 2,
           "sessionType": "class",
-          "sessionName": "",
-          "classId": "",
+          "custom": false,
+          "predefined": false,
+          "classId": true,
+          "sessionName": "7d9003a6-82aa-487d-ba23-66f7f80a15e9",
           "description": ""
         },
         {
-          "sessionId": "f4cb8bf2-cdaf-4b00-8aa4-2a906a4168a0",
+          "sessionId": 3,
           "sessionType": "class",
-          "sessionName": "",
-          "classId": "",
+          "custom": false,
+          "predefined": false,
+          "classId": true,
+          "sessionName": "d76f9b4d-8602-4439-9a67-0b8cb4520aa5",
           "description": ""
         },
         {
-          "sessionId": "65862165-e585-495c-b8ad-1c6143838996",
-          "sessionType": "class",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
+          "sessionId": 4,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "classId": false,
+          "sessionName": "cardio",
+          "description": "Cardio workouts are good for the cardigan"
         },
         {
-          "sessionId": "b22feb83-75a0-42ba-95e2-1cec6e0d9503",
-          "sessionType": "class",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
+          "sessionId": 5,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "classId": false,
+          "sessionName": "cardio",
+          "description": "Cardio workouts are good for the cardigan"
         }
       ]
     },
     {
-      "programId": "39f9dc35-d300-4b61-b96a-997bb1cd6779",
-      "programName": "full test",
+      "programId": "fb6073f4-16b1-42cb-a1cf-2dfd9dc6fa53",
+      "programName": "Program Name",
+      "trainersProgram": true,
       "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
       "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "userName": "homer",
       "sessions": [
         {
-          "sessionId": "670bd65c-2c2f-4fe1-8583-3d86889d672f",
+          "sessionId": 1,
           "sessionType": "class",
-          "sessionName": "",
-          "classId": "",
+          "custom": false,
+          "predefined": false,
+          "isClass": true,
+          "classId": "7d9003a6-82aa-487d-ba23-66f7f80a15e9",
+          "sessionName": "Boxercise",
           "description": ""
         },
         {
-          "sessionId": "c0f25ebe-9ec8-4a9c-829c-247a95811dae",
-          "sessionType": "custom",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "fd3f9956-4d58-4978-bd7b-902e9bfc90e7",
+          "sessionId": 2,
           "sessionType": "predefined",
-          "sessionName": "",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
           "classId": "",
-          "description": ""
+          "sessionName": "cardio",
+          "description": "Cardio workouts are good for the cardigan"
         },
         {
-          "sessionId": "87e19e11-3da5-4012-90d0-a9b771ab3e76",
-          "sessionType": "custom",
-          "sessionName": "",
-          "classId": "",
-          "description": ""
-        },
-        {
-          "sessionId": "dbc5daed-5274-40fb-9787-b90cb5e06832",
+          "sessionId": 3,
           "sessionType": "predefined",
-          "sessionName": "",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
           "classId": "",
+          "sessionName": "cardio",
+          "description": "Cardio workouts are good for the cardigan"
+        },
+        {
+          "sessionId": 4,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "cardio",
+          "description": "Cardio workouts are good for the cardigan"
+        },
+        {
+          "sessionId": 5,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "cardio",
+          "description": "Cardio workouts are good for the cardigan"
+        }
+      ]
+    },
+    {
+      "programId": "6acd020f-9b7c-4177-8aa5-acb9fa1ffd3e",
+      "programName": "sdfsdf",
+      "trainersProgram": true,
+      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "userName": "homer",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "sessionType": "class",
+          "custom": false,
+          "predefined": false,
+          "isClass": true,
+          "classId": "7d9003a6-82aa-487d-ba23-66f7f80a15e9",
+          "sessionName": "Boxercise",
           "description": ""
+        },
+        {
+          "sessionId": 2,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "extreme",
+          "description": "Xtream workouts for Xtream people"
+        },
+        {
+          "sessionId": 3,
+          "sessionType": "class",
+          "custom": false,
+          "predefined": false,
+          "isClass": true,
+          "classId": "d76f9b4d-8602-4439-9a67-0b8cb4520aa5",
+          "sessionName": "Pilates",
+          "description": ""
+        },
+        {
+          "sessionId": 4,
+          "sessionType": "custom",
+          "custom": true,
+          "predefined": false,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "test4",
+          "description": ""
+        },
+        {
+          "sessionId": 5,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "jazz",
+          "description": "Exercise to Jazzercise videos"
         }
       ]
     }

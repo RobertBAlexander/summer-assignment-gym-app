@@ -29,11 +29,9 @@ const membersclasses = {
 
     while (i < searchedClasses.length)
     {
-
-      //let searchedClasses[i].numberAttended = 0;//Major issue here!!!
+      searchedClasses[i].numberAttended = 0;
       searchedClasses[i].lessons.forEach(function (lesson) {
         lesson.userIsAttending = 'red minus';
-        searchedClasses[i].numberAttended = 4;
         searchedClasses[i].classAttend = 'none';//not sure if about fully attending that lesson, or ifuser is attending whole class
 
         let j = 0;
@@ -42,7 +40,7 @@ const membersclasses = {
           if (lesson.attending[j] === userId)
           {
             lesson.userIsAttending = 'green check';
-            searchedClasses[i].numberAttended += 1;
+            searchedClasses[i].numberAttended = Number(searchedClasses[i].numberAttended) + 1;
             classStore.store.save();
           }
 

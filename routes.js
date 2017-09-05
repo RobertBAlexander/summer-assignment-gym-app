@@ -81,6 +81,9 @@ router.get('/goalcreation/:id/deleteGoal/:goalId', goalcreation.deleteGoal);
 router.get('/fitnesscreation/:id', fitnesscreation.index);
 router.post('/fitnesscreation/:id/addFitnessProg', fitnesscreation.addFitnessProg);
 router.get('/fitnesscreation/:id/fitnessprogdetails/:programId', fitnesscreation.fitnessprogdetails);
+router.post('/fitnesscreation/:id/updateFitnessProg/:programId', fitnesscreation.updateFitnessProg);
+router.get('/fitnesscreation/:id/deleteFitnessProg/:programId', fitnesscreation.deleteFitnessProg);
+router.get('/fitnesscreation/:id/fitnessprogdetails/:programId', fitnesscreation.updateFitnessProg);
 
 router.get('/about', about.index); //router.get('/assessment/:id', assessment.index);
 

@@ -1,36 +1,47 @@
-<form class="ui stacked segment form" action="/classescreation/addclass" method="POST">
-    <h3 class="ui header">Pre-defined Sessions</h3>
-    <div class="three fields">
+<form class="ui stacked segment form" id="class" action="/fitnesscreation/{{id}}/updateFitnessProg/{{programId}}" method="POST">
+{{#each sessionsList}}
+
+{{#if predefined}}
+    <div class="two fields ui stacked segment form">
         <div class="field">
-            <label>Pre-defined Sessions</label>
-            <select name="programtype">
+            <label>Pre-defined Session</label>
+            <select name="sessionName{{sessionId}}">
                 <option name="programtype" value="cardio"> Cardio workouts</option><br>
+                <hidden value="Cardio workouts" name="description{{sessionId}}"></hidden>
                 <option name="programtype" value="extreme">Xtream workouts for Xtream people</option><br>
+                <hidden value="Xtream workouts for Xtream people" name="description{{sessionId}}"></hidden>
                 <option name="programtype" value="jazz">Exercise to Jazzercise videos</option><br>
+                <hidden value="Exercise to Jazzercise videos" name="description{{sessionId}}"></hidden>
             </select>
         </div>
+    </div>
+{{/if}}
+{{#if custom}}
+    <div class="two fields ui stacked segment form">
         <div class="field">
-            <label>Bespoke</label>
-            <input placeholder="Bespoke Session" type="text" rows="5" cols="50" name="customdetails">
-        </div>
-        <div class="two fields">
-            <div class="field">
-                <label>Scheduled Class</label>
-                <select name="classtype">
-                    <option name="classtype" value="jazz"> Jazzercise</option><br>
-                    <option name="classtype" value="boxing">Sparring Partners</option><br>
-                    <option name="classtype" value="yoga">Do or do not, there is not try- Yoga</option><br>
-                </select>
-            </div>
-            <div class="field">
-                <label>Date to attend</label>
-                <select name="attendancedate">
-                    <option name="attendancedate" value="14"> 14/07/17</option><br>
-                    <option name="attendancedate" value="21">21/07/17</option><br>
-                    <option name="attendancedate" value="28">28/07/17</option><br>
-                </select>
-            </div>
+            <label>Bespoke Session</label>
+            <input placeholder="{{#if sessionName}}{{sessionName}}{{else}}Bespoke Name{{/if}}" type="text" name="sessionName{{sessionId}}"><br><br>
+            <textarea placeholder="{{#if description}}{{description}}{{else}}Bespoke Description{{/if}}" type="text" rows="5" cols="50" name="description{{sessionId}}"></textarea>
         </div>
     </div>
+{{/if}}
+{{#if isClass}}
+        <div class="two fields ui stacked segment form">
+            <div class="field">
+                <label>Scheduled Class</label><div class="field">
+                <select name="classId{{sessionId}}">
+                    {{#each ../classList}}
+                        <option name="{{className}}" value="{{classId}}">{{className}}</option><br>
+                    {{/each}}
+
+                    <!--This needs a description, which needs to go into the class when created!
+If we have classId, do all need that Id, or does it take over the previous sessionId?-->
+                </select>
+            </div>
+            </div>
+        </div>
+{{/if}}
+
+{{/each}}
     <button class="ui blue submit button">Add Fitness Program</button>
 </form>

@@ -1,6 +1,6 @@
 
 <section class="ui raised segment">
-    {{#each trainer.fitnessprog}} <!--supposed to get the stuff from EVERY assessment in a list order.-->
+    {{#each fitnessArray}} <!--supposed to get the stuff from EVERY assessment in a list order.-->
         <div class="ui column">
             <table class="ui center aligned raised celled table segment">
 
@@ -12,6 +12,7 @@
                     <th>Session 3</th>
                     <th>Session 4</th>
                     <th>Session 5</th>
+                    <th>Edit Fitness Programme</th>
                     <th>Remove Fitness Programme</th>
                 </tr>
                 </thead>
@@ -19,13 +20,14 @@
                 <tbody>
                 <div class="ui raised list">
                     <tr>
-                        <td> {{fitnessprog.programname}} </td>
-                        <td> {{fitnessprog.sessionone}} </td>
-                        <td> {{fitnessprog.sessiontwo}} </td>
-                        <td> {{fitnessprog.sessionthree}} </td>
-                        <td> {{fitnessprog.sessionfour}} </td>
-                        <td> {{fitnessprog.sessionfive}} </td>
-                        <td><a href="/trainer/dashboard/viewmember/{{trainer.id}}/deletefitnessprog/{{fitnessprog.id}}" class="ui big grey
+                        <td> {{programName}} </td>
+    {{#each sessions}}
+                        <td> {{sessionName}}, a {{sessionType}} session </td>
+    {{/each}}
+                        <td><a href="/fitnesscreation/{{userId}}/fitnessprogdetails/{{programId}}" class="ui big green
+               icon button">
+                            <i class="icon edit"></i></a></td>
+                        <td><a href="/fitnesscreation/{{userId}}/deleteFitnessProg/{{programId}}" class="ui big grey
                icon button">
                             <i class="icon trash"></i></a></td>
                     </tr>

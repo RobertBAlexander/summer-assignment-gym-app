@@ -35,9 +35,14 @@ const fitnessStore = {
   },
 
   //getClassLessons probably does nothing!
-  getProgramSessions(programId)
+  //getProgramSessions(programId)
+  //{
+  //  return this.store.findBy(this.collection, { programId: programId });
+  //},
+  getAllProgramSessions(programId)
   {
-    return this.store.findBy(this.collection, { programId: programId });
+    const program = this.getProgramById(programId);
+    return program.sessions;
   },
 
   deleteProgram(programId)
@@ -47,12 +52,12 @@ const fitnessStore = {
     this.store.save();
   },
 
-  deleteSession(programId, sessionId)
+/*  deleteSession(programId, sessionId)
   {
     const currentProgram = this.getProgramById(programId);
     _.remove(currentProgram.sessions, { sessionId: sessionId });
     this.store.save();
-  },
+  },*/
 
   save() {
     this.store.save(); //Method used by controllers which saves the JSON object after they have altered data

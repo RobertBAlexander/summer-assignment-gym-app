@@ -6,7 +6,7 @@
             {{#each listTrainers}}
                 <option value="{{trainerId}}">{{firstname}} {{lastname}}</option><br>
                 <input type="hidden" value="{{firstname}} {{lastname}}" name="trainerName">
-            {{/each}}
+            {{/each}}<!--there is a display error here due to the hidden input-->
         </select>
     </div>
     </div>

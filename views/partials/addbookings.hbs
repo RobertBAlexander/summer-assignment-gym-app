@@ -5,7 +5,7 @@
         <select name="trainerId">
             {{#each listTrainers}}
                 <option value="{{trainerId}}">{{firstname}} {{lastname}}</option><br>
-                <hidden value="{{firstname}} {{lastname}}" name="trainerName">
+                <hidden value="{{firstname}}" name="trainerName"></hidden>
             {{/each}}<!--there is a display error here due to the hidden input-->
         </select>
     </div>
@@ -22,7 +22,6 @@
             <input placeholder="Time" type="time" name="time" step="1800" required><br>
             <p>*Assessment bookings take place every half hour. You must book your assessment at a half hour increment.</p>
         </div>
-
     </div>
     <button class="ui blue submit button">Add Booking</button>
 </form>

@@ -1,4 +1,6 @@
-
+<div class="ui large blue ribbon label">
+     {{user.firstname}}'s Assessment Booking Details <i class="pointing down icon"></i>
+</div>
 {{#each user.bookings}}
 <table class="ui center aligned raised celled table segment">
     <thead>
@@ -35,10 +37,10 @@
                 <div class="four fields">
                     <div class="field">
                         <label>Trainer </label>
-                        <select name="trainer">
+                        <select name="trainerId">
                             {{#each ../listTrainers}}
-                                <option name="trainerId" value="{{id}}">{{firstname}} {{lastname}}</option><br>
-                                <input type="hidden" value="{{firstname}} {{lastname}}" name="trainerName">
+                                <option name="trainerId" value="{{trainerId}}">{{firstname}} {{lastname}}</option><br>
+                                <hidden value="{{firstname}} {{lastname}}" name="trainerName"></hidden>
                             {{/each}}
                         </select>
                     </div>

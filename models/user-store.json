@@ -200,28 +200,34 @@
       ],
       "bookings": [
         {
-          "bookingId": "b5e9f0b5-5e7c-4dba-9dc7-226e0a43e698",
+          "bookingId": "94804431-7f6a-468d-a9dd-d83551f7d429",
+          "trainerName": "Ned Flaners",
           "userFullName": "homer simpson",
           "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
           "trainerId": "8m48fjn4-7b7f-9fj8-ad26-9n7htf35gb5s",
-          "date": "Wed, 06 Sep 2017",
-          "time": "09:00"
+          "date": "Thu, 14 Sep 2017",
+          "time": "09:00",
+          "trainersBooking": false
         },
         {
-          "bookingId": "ed3deef3-0ae4-4302-aa98-85eb2a85aa28",
+          "bookingId": "2caf9777-03ca-43a6-9439-40fb78b6a886",
+          "trainerName": "Marge Simpson",
           "userFullName": "homer simpson",
           "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
           "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-          "date": "Wed, 06 Sep 2017",
-          "time": "09:00"
+          "date": "Wed, 20 Sep 2017",
+          "time": "09:00",
+          "trainersBooking": true
         },
         {
-          "bookingId": "9f4d3df6-aebd-49d8-bd05-de330f830687",
+          "bookingId": "94112a94-fa70-4664-afa0-06345b7bb7ab",
           "userFullName": "homer simpson",
-          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+          "trainerFullName": "Marge Simpson",
           "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-          "date": "Wed, 06 Sep 2017",
-          "time": "09:00"
+          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+          "date": "Fri, 15 Sep 2017",
+          "time": "09:00",
+          "trainersBooking": true
         }
       ],
       "goals": [

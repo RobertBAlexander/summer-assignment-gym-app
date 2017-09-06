@@ -1,4 +1,30 @@
-
+<form class="ui stacked segment form" action="/viewmember/{{id}}/addBooking" method="POST">
+    <h3 class="ui header">Add Assessment Booking</h3>
+    <div class="two fields">
+        <label>User </label><div class="field">
+        <select name="userId">
+            {{#each listUsers}}
+                <option value="{{userId}}">{{firstname}} {{lastname}}</option><br>
+                <hidden value="{{firstname}}" name="trainerName"></hidden>
+            {{/each}}<!--there is a display error here due to the hidden input-->
+        </select>
+    </div>
+    </div>
+    <div class="two fields">
+        <label>Date</label>
+        <div class="field">
+            <input placeholder="Date" type="date" name="date" required><br>
+        </div>
+    </div>
+    <div class="two fields">
+        <label>Time</label>
+        <div class="field">
+            <input placeholder="Time" type="time" name="time" step="1800" required><br>
+            <p>*Assessment bookings take place every half hour. You must book your assessment at a half hour increment.</p>
+        </div>
+    </div>
+    <button class="ui blue submit button">Add Booking</button>
+</form>
 {{#each user.bookings}}
     {{#if trainersBooking}}
     <table class="ui center aligned raised celled table segment">

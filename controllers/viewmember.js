@@ -7,6 +7,7 @@ const uuid = require('uuid');
 const logger = require('../utils/logger');
 const trainerStore = require('../models/trainer-store');
 const userStore = require('../models/user-store');
+const classStore = require('../models/class-store');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 const dateformat = require('dateformat');
@@ -21,6 +22,7 @@ const viewmember = {
     const calculateBMI = analytics.calculateBMI(user);
     const isIdealBodyWeight = analytics.isIdealBodyWeight(user);
     const userBookings = userStore.getAllUserBookings(userId);
+    const listUsers = userStore.getAllUsers();
 
     for (let i = 0; i < userBookings.length; i++)
     {
@@ -44,6 +46,7 @@ const viewmember = {
       idealBodyWeight: isIdealBodyWeight,
       trainer: loggedInTrainer,
       userBookings: userBookings,
+      listUsers: listUsers,
 
     };
     logger.debug(`View ${user.firstname} assessments`);
@@ -66,6 +69,61 @@ const viewmember = {
     const assessmentToUpdate = userStore.getAssessment(userId, assessmentId);
     assessmentToUpdate.comment = comment;
     userStore.save();
+    response.redirect('/viewmember/' + userId);
+  },
+
+  addBooking(request, response)
+  {
+    const loggedInTrainer = accounts.getCurrentTrainer(request);
+    const trainerId = loggedInTrainer.trainerId;
+    const userId = request.params.id;
+    const listUsers = userStore.getAllUsers();
+    const currentUser = userStore.getUserById(userId);
+    const trainerFirstName = loggedInTrainer.firstname;
+    const trainerLastName = loggedInTrainer.lastname;
+    const trainerFullName = trainerFirstName + ' ' + trainerLastName;
+    const userFullName = currentUser.firstname + ' ' + currentUser.lastname;
+    const date = request.body.date;
+    logger.debug('trainer id', request);
+    const newBooking =
+        {
+          bookingId: uuid(),
+          userFullName: userFullName,
+          trainerFullName: trainerFullName,
+          trainerId: trainerId,
+          userId: userId,
+          date: dateformat(date, 'ddd, dd mmm yyyy'),
+          time: request.body.time,
+        };
+
+    const userList = userStore.getAllUsers();
+    let availableTime = true;
+    for (let i = 0; i < userList.length; i++)
+    {
+      let thisUserId = userList[i].id;
+      let bookingList = userStore.getAllUserBookings(thisUserId);
+      for (let j = 0; j < bookingList.length; j++)
+      {
+        logger.debug(newBooking.date === bookingList[j].date);
+        if ((newBooking.date.toString() === bookingList[j].date) && (newBooking.time === bookingList[j].time)
+            && (newBooking.trainerId === bookingList[j].trainerId))
+        {
+          availableTime = false;
+          logger.debug('available time SHOULD BE FALSE');
+          break;
+        }
+      }
+    }
+
+    if (availableTime)
+    {
+      logger.debug('New Booking', availableTime);
+      userStore.addBooking(userId, newBooking);
+    } else
+    {
+      logger.debug(`A booking is already taking place at this time with this trainer.`);
+    }
+
     response.redirect('/viewmember/' + userId);
   },
 

@@ -46,12 +46,13 @@ const membersbookings = {
     const userFirstName = loggedInUser.firstname;
     const userLastName = loggedInUser.lastname;
     const userFullName = userFirstName + ' ' + userLastName;
+    const trainerName = currentTrainer.firstname + ' ' + currentTrainer.lastname;
     const date = request.body.date;
     logger.debug('trainer id', request);
     const newBooking =
         {
           bookingId: uuid(),
-          trainerName: request.body.trainerName,
+          trainerName: trainerName,
           userFullName: userFullName,
           userId: userId,
           trainerId: request.body.trainerId,
@@ -61,30 +62,49 @@ const membersbookings = {
 
     const userList = userStore.getAllUsers();
     let availableTime = true;
-    let counter = 0;
     for (let i = 0; i < userList.length; i++)
     {
       let thisUserId = userList[i].id;
       let bookingList = userStore.getAllUserBookings(thisUserId);
       for (let j = 0; j < bookingList.length; j++)
       {
-        if (newBooking.date === bookingList[j].date)// && (newBooking.time === bookingList[j].time)
-           // && (newBooking.trainerId === bookingList[j].trainerId))
+        logger.debug(newBooking.date === bookingList[j].date);
+        if ((newBooking.date.toString() === bookingList[j].date) && (newBooking.time === bookingList[j].time)
+            && (newBooking.trainerId === bookingList[j].trainerId))
         {
           availableTime = false;
-          counter += 1;
-
+          logger.debug('available time SHOULD BE FALSE');
+          break;
         }
       }
     }
-
-    if (availableTime = true)
+//this is not functioning! Not sure why.
+    let noClasses = true;
+    const classList = classStore.getAllClasses();
+    for (let k = 0; k < classList.length; k++)
     {
-      logger.debug('New Booking', counter);
+      let classId = classList[k].classId;
+      let lessonList = classStore.getClassLessons(classId);
+      for (let l = 0; l < lessonList.length; l++)
+      {
+        logger.debug(newBooking.date === lessonList[l].lessonDate);
+        if (newBooking.date.toString() === lessonList[l].lessonDate)
+        {
+          noClasses = false;
+          logger.debug('noClasses SHOULD BE FALSE');
+          break;
+        }
+      }
+
+    }
+
+    if (availableTime)
+    {
+      logger.debug('New Booking', availableTime);
       userStore.addBooking(userId, newBooking);
     } else
     {
-      logger.debug(`A booking is already taking place at this time with this trainer.`, counter);
+      logger.debug(`A booking is already taking place at this time with this trainer.`);
     }
 
     response.redirect('/membersbookings/');

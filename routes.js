@@ -71,6 +71,7 @@ router.get('/classescreation/:classId/deleteLesson/:lessonId', classescreation.d
 router.post('/classescreation/updateClassName/:classId', classescreation.updateClassName);
 router.post('/classescreation/updateClassCapacity/:classId', classescreation.updateClassCapacity);
 router.post('/classescreation/updateClassDifficulty/:classId', classescreation.updateClassDifficulty);
+router.post('/classescreation/:classId/updateLessonDate/:lessonId', classescreation.updateLessonDate);
 router.post('/classescreation/:classId/updateLessonStart/:lessonId', classescreation.updateLessonStart);
 router.post('/classescreation/:classId/updateDuration/:lessonId', classescreation.updateDuration);
 

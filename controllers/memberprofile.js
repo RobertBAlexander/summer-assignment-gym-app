@@ -9,6 +9,7 @@ const userStore = require('../models/user-store.js');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 const pictureStore = require('../models/picture-store.js');
+const dateformat = require('dateformat');
 
 const memberprofile = {
   index(request, response) {

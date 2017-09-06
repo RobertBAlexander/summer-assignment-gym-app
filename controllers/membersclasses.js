@@ -10,6 +10,7 @@ const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 const searches = require('../utils/searches.js');
 const classStore = require('../models/class-store.js');
+const dateformat = require('dateformat');
 
 const membersclasses = {
   index(request, response) {

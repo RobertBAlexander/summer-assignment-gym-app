@@ -9,6 +9,7 @@ const trainerStore = require('../models/trainer-store');
 const userStore = require('../models/user-store');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
+const dateformat = require('dateformat');
 
 const viewmember = {
   index(request, response) {
@@ -83,7 +84,7 @@ const viewmember = {
     const date = request.body.date;
     const time = request.body.time;
     const bookingToUpdate = userStore.getBookingById(userId, bookingId);
-    bookingToUpdate.date = date;
+    bookingToUpdate.date = dateformat(date, 'ddd, dd mmm yyyy');
     bookingToUpdate.time = time;
     userStore.save();
     response.redirect('/viewmember/' + userId);
@@ -129,7 +130,7 @@ const viewmember = {
     const newAssessment =
         {
           assessmentId: bookingId, //userid: loggedInUser.id,
-          date: date,
+          date: dateformat(date, 'ddd, dd mmm yyyy'),
           weight: request.body.weight,
           chest: request.body.chest,
           thigh: request.body.thigh,

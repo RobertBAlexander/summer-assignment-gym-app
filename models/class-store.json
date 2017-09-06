@@ -9,20 +9,8 @@
       "maxCapacity": "26",
       "difficulty": "4",
       "classAttend": "none",
-      "numberAttended": 4,
+      "numberAttended": 3,
       "lessons": [
-        {
-          "lessonId": "17678108-cd46-4500-b9d1-a37f7dad3281",
-          "lessonDate": "2018-09-02T00:00:00.000Z",
-          "startTime": "20:30",
-          "duration": "01:00",
-          "currentCapacity": 1,
-          "maxCapacity": "26",
-          "userIsAttending": "green check",
-          "attending": [
-            "3ad52697-6d98-4d80-8273-084de55a86c0"
-          ]
-        },
         {
           "lessonId": "597a9c09-164a-40ac-aab6-ee3c8a560945",
           "lessonDate": "2018-09-09T00:00:00.000Z",
@@ -198,6 +186,132 @@
           "currentCapacity": 0,
           "maxCapacity": "25",
           "userIsAttending": "red minus",
+          "attending": []
+        }
+      ]
+    },
+    {
+      "classId": "83f0b520-fa7a-4c04-995b-51050057a659",
+      "className": "tesetdate",
+      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "lessonNumber": "5",
+      "startDate": "2017-09-20",
+      "maxCapacity": "7",
+      "difficulty": "2",
+      "classAttend": "none",
+      "numberAttended": 0,
+      "lessons": [
+        {
+          "lessonId": "6d11f7ec-f42d-4e47-baef-92fb09cbb67b",
+          "lessonDate": "Wed, 20 Sep 2017",
+          "startTime": "09:00",
+          "duration": "01:00",
+          "currentCapacity": 0,
+          "maxCapacity": "7",
+          "userIsAttending": false,
+          "attending": []
+        },
+        {
+          "lessonId": "4b77324d-bcff-441c-bb26-b35dce4eb459",
+          "lessonDate": "Wed, 27 Sep 2017",
+          "startTime": "09:00",
+          "duration": "01:00",
+          "currentCapacity": 0,
+          "maxCapacity": "7",
+          "userIsAttending": false,
+          "attending": []
+        },
+        {
+          "lessonId": "e5bdcb1e-ba32-4340-8d5b-8ad16149ac12",
+          "lessonDate": "Wed, 04 Oct 2017",
+          "startTime": "09:00",
+          "duration": "01:00",
+          "currentCapacity": 0,
+          "maxCapacity": "7",
+          "userIsAttending": false,
+          "attending": []
+        },
+        {
+          "lessonId": "04dbb0e9-a2b7-47e9-a391-9642a729547e",
+          "lessonDate": "Wed, 11 Oct 2017",
+          "startTime": "09:00",
+          "duration": "01:00",
+          "currentCapacity": 0,
+          "maxCapacity": "7",
+          "userIsAttending": false,
+          "attending": []
+        },
+        {
+          "lessonId": "acbe03fd-7f06-4224-ac75-bc7045498a7a",
+          "lessonDate": "Wed, 18 Oct 2017",
+          "startTime": "09:00",
+          "duration": "01:00",
+          "currentCapacity": 0,
+          "maxCapacity": "7",
+          "userIsAttending": false,
+          "attending": []
+        }
+      ]
+    },
+    {
+      "classId": "ae89c5a4-c083-4a57-a482-a61ce9a9cf64",
+      "className": "testalldtes",
+      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "lessonNumber": 5,
+      "startDate": "Fri, 22 Sep 2017",
+      "maxCapacity": "5",
+      "difficulty": "5",
+      "classAttend": "none",
+      "numberAttended": 0,
+      "lessons": [
+        {
+          "lessonId": "b0df2544-72e9-44aa-bc86-57ea6d46e2dc",
+          "lessonDate": "Fri, 29 Sep 2017",
+          "startTime": "09:00",
+          "duration": "01:00",
+          "currentCapacity": 0,
+          "maxCapacity": "5",
+          "userIsAttending": false,
+          "attending": []
+        },
+        {
+          "lessonId": "0e631641-e78c-448e-b22e-a6819fd2a6b6",
+          "lessonDate": "Fri, 06 Oct 2017",
+          "startTime": "09:00",
+          "duration": "01:00",
+          "currentCapacity": 0,
+          "maxCapacity": "5",
+          "userIsAttending": false,
+          "attending": []
+        },
+        {
+          "lessonId": "1dca901f-7abb-42ab-82cb-81e651a6fd73",
+          "lessonDate": "Fri, 13 Oct 2017",
+          "startTime": "09:00",
+          "duration": "01:00",
+          "currentCapacity": 0,
+          "maxCapacity": "5",
+          "userIsAttending": false,
+          "attending": []
+        },
+        {
+          "lessonId": "f71effcf-6ae1-4aed-8638-b36f1ca3033d",
+          "lessonDate": "Fri, 20 Oct 2017",
+          "startTime": "09:00",
+          "duration": "01:00",
+          "currentCapacity": 0,
+          "maxCapacity": "5",
+          "userIsAttending": false,
+          "attending": []
+        },
+        {
+          "lessonId": "952ca578-65ac-4a6b-8a60-36075ea4f2ee",
+          "lessonDate": "Fri, 27 Oct 2017",
+          "startTime": "09:00",
+          "duration": "01:00",
+          "currentCapacity": 0,
+          "maxCapacity": "5",
+          "userIsAttending": false,
           "attending": []
         }
       ]

@@ -9,6 +9,7 @@ const trainerStore = require('../models/trainer-store.js');
 const userStore = require('../models/user-store.js');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
+const dateformat = require('dateformat');
 
 const trainerdashboard = {
   index(request, response) {

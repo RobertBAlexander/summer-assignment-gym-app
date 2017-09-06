@@ -62,7 +62,11 @@
                 <tbody>
                 <div class="ui raised list">
                     <tr>
-                        <td> {{lessonDate}} </td>
+                        <td> <p></p><form action="/classescreation/{{../classId}}/updateLessonDate/{{lessonId}}" method="POST">
+                            {{lessonDate}} &nbsp; &nbsp;<input type="date" name="lessonDate" required><br><br>
+                            <button class="ui tiny orange submit button">Update Lesson Date</button>
+                        </form>
+                        </td>
                         <td> <form action="/classescreation/{{../classId}}/updateLessonStart/{{lessonId}}" method="POST">
                             {{startTime}} &nbsp; &nbsp;<input type="time" name="startTime" required><br><br>
                             <button class="ui tiny orange submit button">Update Start Time</button>

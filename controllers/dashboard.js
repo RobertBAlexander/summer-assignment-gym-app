@@ -8,6 +8,7 @@ const logger = require('../utils/logger'); //const playlistStore = require('../m
 const userStore = require('../models/user-store.js');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
+const dateformat = require('dateformat');
 
 const dashboard = {
   index(request, response) {
@@ -30,10 +31,11 @@ const dashboard = {
   addAssessment(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
     const userId = loggedInUser.id; //const user = userStore.getUserById(userId);
+    const date = new Date();
     const newAssessment =
         {
       assessmentId: uuid(), //userid: loggedInUser.id,
-      date: request.body.date,
+      date: dateformat(date, 'ddd, dd mmm yyyy'),
       weight: request.body.weight,
       chest: request.body.chest,
       thigh: request.body.thigh,

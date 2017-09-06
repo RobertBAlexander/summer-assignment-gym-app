@@ -1,61 +1,6 @@
 {
   "programs": [
     {
-      "programId": "a69036e1-2cdc-46fe-89e0-757f166fa02a",
-      "programName": "Program Name",
-      "trainersProgram": true,
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": 1,
-          "sessionType": "class",
-          "custom": false,
-          "predefined": false,
-          "classId": true,
-          "sessionName": "d76f9b4d-8602-4439-9a67-0b8cb4520aa5",
-          "description": ""
-        },
-        {
-          "sessionId": 2,
-          "sessionType": "class",
-          "custom": false,
-          "predefined": false,
-          "classId": true,
-          "sessionName": "7d9003a6-82aa-487d-ba23-66f7f80a15e9",
-          "description": ""
-        },
-        {
-          "sessionId": 3,
-          "sessionType": "class",
-          "custom": false,
-          "predefined": false,
-          "classId": true,
-          "sessionName": "d76f9b4d-8602-4439-9a67-0b8cb4520aa5",
-          "description": ""
-        },
-        {
-          "sessionId": 4,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "classId": false,
-          "sessionName": "cardio",
-          "description": "Cardio workouts are good for the cardigan"
-        },
-        {
-          "sessionId": 5,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "classId": false,
-          "sessionName": "cardio",
-          "description": "Cardio workouts are good for the cardigan"
-        }
-      ]
-    },
-    {
       "programId": "fb6073f4-16b1-42cb-a1cf-2dfd9dc6fa53",
       "programName": "Program Name",
       "trainersProgram": true,
@@ -172,6 +117,126 @@
           "classId": "",
           "sessionName": "jazz",
           "description": "Exercise to Jazzercise videos"
+        }
+      ]
+    },
+    {
+      "programId": "ffefa2ca-9878-4d87-8ab3-acd76768900b",
+      "programName": "helping exercise",
+      "trainersProgram": true,
+      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "userId": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
+      "userName": "Robert",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "sessionType": "class",
+          "custom": false,
+          "predefined": false,
+          "isClass": true,
+          "classId": "7d9003a6-82aa-487d-ba23-66f7f80a15e9",
+          "sessionName": "Boxercise",
+          "description": ""
+        },
+        {
+          "sessionId": 2,
+          "sessionType": "class",
+          "custom": false,
+          "predefined": false,
+          "isClass": true,
+          "classId": "d76f9b4d-8602-4439-9a67-0b8cb4520aa5",
+          "sessionName": "Pilates",
+          "description": ""
+        },
+        {
+          "sessionId": 3,
+          "sessionType": "custom",
+          "custom": true,
+          "predefined": false,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "sit ups",
+          "description": ""
+        },
+        {
+          "sessionId": 4,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "extreme",
+          "description": "Xtream workouts for Xtream people"
+        },
+        {
+          "sessionId": 5,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "jazz",
+          "description": "Exercise to Jazzercise videos"
+        }
+      ]
+    },
+    {
+      "programId": "5497d127-19a4-4f28-8b2d-bb9fc8fdc1ed",
+      "programName": "Program Name",
+      "trainersProgram": "",
+      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "userName": "homer",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "",
+          "description": ""
+        },
+        {
+          "sessionId": 2,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "",
+          "description": ""
+        },
+        {
+          "sessionId": 3,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "",
+          "description": ""
+        },
+        {
+          "sessionId": 4,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "",
+          "description": ""
+        },
+        {
+          "sessionId": 5,
+          "sessionType": "predefined",
+          "custom": false,
+          "predefined": true,
+          "isClass": false,
+          "classId": "",
+          "sessionName": "",
+          "description": ""
         }
       ]
     }

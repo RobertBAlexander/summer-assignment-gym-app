@@ -9,6 +9,7 @@ const trainerStore = require('../models/trainer-store.js');
 const classStore = require('../models/class-store.js');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
+const dateformat = require('dateformat');
 
 const classescreation = {
   index(request, response) {
@@ -29,13 +30,14 @@ const classescreation = {
 
   addClass(request, response) {
     const loggedInTrainer = accounts.getCurrentTrainer(request);
+    const startDate = request.body.startDate;
     const newClass =
         {
           classId: uuid(),
           className: request.body.className,
           trainerId: loggedInTrainer.trainerId,
           lessonNumber: request.body.lessonNumber,
-          startDate: request.body.startDate,
+          startDate: dateformat(startDate, 'ddd, dd mmm yyyy'),
           maxCapacity: request.body.capacity,
           difficulty: request.body.difficulty,
           classAttend: 'none',
@@ -50,7 +52,8 @@ const classescreation = {
       const lesson =
           {
             lessonId: uuid(),
-            lessonDate: lessonDate,
+
+            lessonDate: dateformat(lessonDate, 'ddd, dd mmm yyyy'),
             startTime: request.body.startTime,
             duration: request.body.duration,
             currentCapacity: 0,
@@ -120,6 +123,16 @@ const classescreation = {
     const difficulty = request.body.difficulty;
     const classToUpdate = classStore.getClassById(classId);
     classToUpdate.difficulty = difficulty;
+    classStore.save();
+    response.redirect('/classescreation/');
+  },
+
+  updateLessonDate(request, response) {
+    const classId = request.params.classId;
+    const lessonId = request.params.lessonId;
+    const lessonDate = request.body.lessonDate;
+    const lessonToUpdate = classStore.getLesson(classId, lessonId);
+    lessonToUpdate.lessonDate = dateformat(lessonDate, 'ddd, dd mmm yyyy');
     classStore.save();
     response.redirect('/classescreation/');
   },

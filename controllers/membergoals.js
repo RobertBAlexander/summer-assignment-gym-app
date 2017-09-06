@@ -9,6 +9,7 @@ const userStore = require('../models/user-store');
 const accounts = require('./accounts.js');
 const dashboard = require('./dashboard.js');
 const analytics = require('../utils/analytics.js');
+const dateformat = require('dateformat');
 
 const membergoals = {
   index(request, response) {
@@ -30,10 +31,12 @@ const membergoals = {
   {
     const loggedInUser = accounts.getCurrentUser(request);
     const userId = loggedInUser.id;
+    const user = userStore.getUserById(userId);
+    const date = request.body.goaldate;
     const newGoal =
         {
           goalId: uuid(),
-          date: request.body.goaldate,
+          date: dateformat(date, 'ddd, dd mmm yyyy'),
           weight: request.body.weight,
           aboveorWeight: request.body.aboveorWeight,
           chest: request.body.chest,

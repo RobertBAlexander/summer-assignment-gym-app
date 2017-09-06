@@ -11,6 +11,7 @@ const classStore = require('../models/class-store');
 const fitnessStore = require('../models/fitness-store');
 const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
+const dateformat = require('dateformat');
 
 const fitnesscreation = {
   index(request, response) {

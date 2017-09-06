@@ -11,6 +11,7 @@ const accounts = require('./accounts.js');
 const analytics = require('../utils/analytics.js');
 const searches = require('../utils/searches.js');
 const classStore = require('../models/class-store.js');
+const dateformat = require('dateformat');
 
 const membersbookings = {
   index(request, response) {
@@ -45,6 +46,7 @@ const membersbookings = {
     const userFirstName = loggedInUser.firstname;
     const userLastName = loggedInUser.lastname;
     const userFullName = userFirstName + ' ' + userLastName;
+    const date = request.body.date;
     logger.debug('trainer id', request);
     const newBooking =
         {
@@ -53,13 +55,37 @@ const membersbookings = {
           userFullName: userFullName,
           userId: userId,
           trainerId: request.body.trainerId,
-          date: request.body.date,
+          date: dateformat(date, 'ddd, dd mmm yyyy'),
           time: request.body.time,
-
         };
 
-    logger.debug('New Booking', newBooking);
-    userStore.addBooking(userId, newBooking);
+    const userList = userStore.getAllUsers();
+    let availableTime = true;
+    let counter = 0;
+    for (let i = 0; i < userList.length; i++)
+    {
+      let thisUserId = userList[i].id;
+      let bookingList = userStore.getAllUserBookings(thisUserId);
+      for (let j = 0; j < bookingList.length; j++)
+      {
+        if (newBooking.date === bookingList[j].date)// && (newBooking.time === bookingList[j].time)
+           // && (newBooking.trainerId === bookingList[j].trainerId))
+        {
+          availableTime = false;
+          counter += 1;
+
+        }
+      }
+    }
+
+    if (availableTime = true)
+    {
+      logger.debug('New Booking', counter);
+      userStore.addBooking(userId, newBooking);
+    } else
+    {
+      logger.debug(`A booking is already taking place at this time with this trainer.`, counter);
+    }
 
     response.redirect('/membersbookings/');
   },
@@ -84,7 +110,7 @@ const membersbookings = {
     const date = request.body.date;
     const time = request.body.time;
     bookingToUpdate.trainerId = trainerId;
-    bookingToUpdate.date = date;
+    bookingToUpdate.date = dateformat(date, 'ddd, dd mmm yyyy');
     bookingToUpdate.time = time;
     userStore.save();
     response.redirect('/membersbookings/');

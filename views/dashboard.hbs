@@ -2,8 +2,27 @@
 
 {{> memberactions}}
 <section class="ui raised segment">
-
     {{> memberstatus}}
     {{> addassessment}}
     {{> listassessments}}
+    {{#if promptGoal}}
+        <script>
+            function pGoal() {
+                alert("Please set a goal for yourself. With goals, you can achieve anything!");
+            }
+        </script>
+        <body onload="pGoal()">
+        <h1>Hello World!</h1>
+        </body>
+    {{/if}}
+    {{#if promptAssessment}}
+        <script>
+            function pAssessment() {
+                alert("Why not book an assessment with a trainer so you can see if you have achieved your goal? You're not avoiding your assessment are you?!");
+            }
+        </script>
+        <body onload="pAssessment()">
+        <h1>Hello World!</h1>
+        </body>
+    {{/if}}
 </section>

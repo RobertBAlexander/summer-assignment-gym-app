@@ -19,51 +19,58 @@ const membersclasses = {
     const calculateBMI = analytics.calculateBMI(loggedInUser);
     const userId = loggedInUser.id;
     let searchedClasses;
-   const searchClass = request.body.className;
-   const trainerId = request.body.trainerId;
-   const trainer = trainerStore.getTrainerById(trainerId);
+    const searchClass = request.body.className;
+    const trainerId = request.body.trainerId;
+    const trainer = trainerStore.getTrainerById(trainerId);
     //if (searchClass == 'none' && trainer == 'none') {
-      searchedClasses = classStore.getAllClasses();
+    searchedClasses = classStore.getAllClasses();
     //} else {
     //  searchedClasses = classStore.searchClasses(searchClass, trainerId);
     //}
-
     //const searchedClasses = classStore.getAllClasses();//need to make this a saerch function, not just get all classes!!
-
-
-
 
     const classId = request.params.classId; //const lessonList = classStore.getClassById(classId).lessons;
     const trainerClassId = searchedClasses.trainerId;
-
     //const trainer = trainerStore.getTrainerById(trainerId);
-
     const lessonId = request.params.lessonId; //const statusOfLesson = searches.statusOfLesson(lessonList, userId);
 
-    let i = 0; //let classMixAttend = false;
+    let i = 0;
 
-    while (i < searchedClasses.length)
-    {
+    while (i < searchedClasses.length) {
       searchedClasses[i].numberAttended = 0;
+      classStore.store.save();
       searchedClasses[i].lessons.forEach(function (lesson) {
-        lesson.userIsAttending = 'red minus';
-        searchedClasses[i].classAttend = 'none';//not sure if about fully attending that lesson, or ifuser is attending whole class
-
-        let j = 0;
-        while (j < lesson.attending.length)
-        {
-          if (lesson.attending[j] === userId)
-          {
-            lesson.userIsAttending = 'green check';
-            searchedClasses[i].numberAttended = Number(searchedClasses[i].numberAttended) + 1;
+            lesson.userIsAttending = 'red minus';
+            searchedClasses[i].classAttend = 'none';//not sure if about fully attending that lesson, or ifuser is attending whole class
             classStore.store.save();
+
+            let j = 0;
+            while (j < lesson.attending.length) {
+              if (lesson.attending[j] === userId) {
+                lesson.userIsAttending = 'green check';
+                searchedClasses[i].numberAttended = Number(searchedClasses[i].numberAttended) + 1;
+                classStore.store.save();
+              }
+
+              j++;
+            }
+
           }
-
-          j++;
-        }
-
+      );
+      if (searchedClasses[i].numberAttended = 0) {
+        searchedClasses[i].classAttended = 'none';
+        classStore.store.save();
+      } else if ((searchedClasses[i].numberAttended >= 0) && (searchedClasses[i].numberAttended < searchedClasses[i].lessons.length)) {
+        searchedClasses[i].classAttended = 'partial';
+        classStore.store.save();
+      } else if (searchedClasses[i].numberAttended === searchedClasses[i].lessons.length) {
+        searchedClasses[i].classAttended = 'all';
+        classStore.store.save();
+      } else {
+        searchedClasses[i].classAttended = 'indeterminate';
+        classStore.store.save();
       }
-    );
+
       i++;
     }
 

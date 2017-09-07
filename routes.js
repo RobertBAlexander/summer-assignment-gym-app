@@ -17,6 +17,7 @@ const classescreation = require('./controllers/classescreation.js');
 const goalcreation = require('./controllers/goalcreation.js');
 const fitnesscreation = require('./controllers/fitnesscreation.js');
 const membersclasses = require('./controllers/membersclasses.js');
+const memberfitness = require('./controllers/memberfitness.js');
 
 router.get('/', accounts.index);
 router.get('/login', accounts.login);
@@ -52,6 +53,9 @@ router.post('/membersbookings/:userId/updateBooking/:bookingId', membersbookings
 router.get('/membergoals', membergoals.index);
 router.post('/membergoals/addGoal', membergoals.addGoal);
 router.get('/membergoals/deleteGoal/:goalId', membergoals.deleteGoal);
+
+router.get('/memberfitness', memberfitness.index);
+router.get('/memberfitness/classAttend/:classId', memberfitness.classAttend);
 
 router.get('/trainerdashboard', trainerdashboard.index);
 router.get('/trainerdashboard/deleteuser/:id', trainerdashboard.deleteuser);

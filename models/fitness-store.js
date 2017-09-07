@@ -23,6 +23,11 @@ const fitnessStore = {
     return this.store.findOneBy(this.collection, { programId: programId });
   },
 
+  getProgramByUser(userId) {
+    const programs = this.getAllPrograms();
+    return _.filter(programs, { userId: userId });;
+  },
+
   getSession(programId, sessionId) {
     const currentProgram = this.getProgramById(programId);
     for (let i = 0; i < currentProgram.sessions.length; i++)
@@ -51,13 +56,6 @@ const fitnessStore = {
     this.store.remove(this.collection, currentProgram);
     this.store.save();
   },
-
-/*  deleteSession(programId, sessionId)
-  {
-    const currentProgram = this.getProgramById(programId);
-    _.remove(currentProgram.sessions, { sessionId: sessionId });
-    this.store.save();
-  },*/
 
   save() {
     this.store.save(); //Method used by controllers which saves the JSON object after they have altered data

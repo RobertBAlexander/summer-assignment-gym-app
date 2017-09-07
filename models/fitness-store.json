@@ -1,7 +1,7 @@
 {
   "programs": [
     {
-      "programId": "fb6073f4-16b1-42cb-a1cf-2dfd9dc6fa53",
+      "programId": "c08dfbd5-6e8e-4759-9cfd-e7bce271f382",
       "programName": "Program Name",
       "trainersProgram": true,
       "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
@@ -14,72 +14,22 @@
           "custom": false,
           "predefined": false,
           "isClass": true,
-          "classId": "7d9003a6-82aa-487d-ba23-66f7f80a15e9",
-          "sessionName": "Boxercise",
+          "classId": "83f0b520-fa7a-4c04-995b-51050057a659",
+          "sessionName": "tesetdate",
           "description": ""
         },
         {
           "sessionId": 2,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "cardio",
-          "description": "Cardio workouts are good for the cardigan"
-        },
-        {
-          "sessionId": 3,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "cardio",
-          "description": "Cardio workouts are good for the cardigan"
-        },
-        {
-          "sessionId": 4,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "cardio",
-          "description": "Cardio workouts are good for the cardigan"
-        },
-        {
-          "sessionId": 5,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "cardio",
-          "description": "Cardio workouts are good for the cardigan"
-        }
-      ]
-    },
-    {
-      "programId": "6acd020f-9b7c-4177-8aa5-acb9fa1ffd3e",
-      "programName": "sdfsdf",
-      "trainersProgram": true,
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": 1,
           "sessionType": "class",
           "custom": false,
           "predefined": false,
           "isClass": true,
-          "classId": "7d9003a6-82aa-487d-ba23-66f7f80a15e9",
-          "sessionName": "Boxercise",
+          "classId": "ae89c5a4-c083-4a57-a482-a61ce9a9cf64",
+          "sessionName": "testalldtes",
           "description": ""
         },
         {
-          "sessionId": 2,
+          "sessionId": 3,
           "sessionType": "predefined",
           "custom": false,
           "predefined": true,
@@ -89,27 +39,7 @@
           "description": "Xtream workouts for Xtream people"
         },
         {
-          "sessionId": 3,
-          "sessionType": "class",
-          "custom": false,
-          "predefined": false,
-          "isClass": true,
-          "classId": "d76f9b4d-8602-4439-9a67-0b8cb4520aa5",
-          "sessionName": "Pilates",
-          "description": ""
-        },
-        {
           "sessionId": 4,
-          "sessionType": "custom",
-          "custom": true,
-          "predefined": false,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "test4",
-          "description": ""
-        },
-        {
-          "sessionId": 5,
           "sessionType": "predefined",
           "custom": false,
           "predefined": true,
@@ -117,56 +47,6 @@
           "classId": "",
           "sessionName": "jazz",
           "description": "Exercise to Jazzercise videos"
-        }
-      ]
-    },
-    {
-      "programId": "ffefa2ca-9878-4d87-8ab3-acd76768900b",
-      "programName": "helping exercise",
-      "trainersProgram": true,
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "a88fb1ce-fe10-4f2a-9164-9109701fd240",
-      "userName": "Robert",
-      "sessions": [
-        {
-          "sessionId": 1,
-          "sessionType": "class",
-          "custom": false,
-          "predefined": false,
-          "isClass": true,
-          "classId": "7d9003a6-82aa-487d-ba23-66f7f80a15e9",
-          "sessionName": "Boxercise",
-          "description": ""
-        },
-        {
-          "sessionId": 2,
-          "sessionType": "class",
-          "custom": false,
-          "predefined": false,
-          "isClass": true,
-          "classId": "d76f9b4d-8602-4439-9a67-0b8cb4520aa5",
-          "sessionName": "Pilates",
-          "description": ""
-        },
-        {
-          "sessionId": 3,
-          "sessionType": "custom",
-          "custom": true,
-          "predefined": false,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "sit ups",
-          "description": ""
-        },
-        {
-          "sessionId": 4,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "extreme",
-          "description": "Xtream workouts for Xtream people"
         },
         {
           "sessionId": 5,
@@ -175,68 +55,8 @@
           "predefined": true,
           "isClass": false,
           "classId": "",
-          "sessionName": "jazz",
-          "description": "Exercise to Jazzercise videos"
-        }
-      ]
-    },
-    {
-      "programId": "5497d127-19a4-4f28-8b2d-bb9fc8fdc1ed",
-      "programName": "Program Name",
-      "trainersProgram": true,
-      "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "userName": "homer",
-      "sessions": [
-        {
-          "sessionId": 1,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "",
-          "description": ""
-        },
-        {
-          "sessionId": 2,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "",
-          "description": ""
-        },
-        {
-          "sessionId": 3,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "",
-          "description": ""
-        },
-        {
-          "sessionId": 4,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "",
-          "description": ""
-        },
-        {
-          "sessionId": 5,
-          "sessionType": "predefined",
-          "custom": false,
-          "predefined": true,
-          "isClass": false,
-          "classId": "",
-          "sessionName": "",
-          "description": ""
+          "sessionName": "cardio",
+          "description": "Cardio workouts are good for the cardigan"
         }
       ]
     }

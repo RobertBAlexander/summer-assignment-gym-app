@@ -20,17 +20,110 @@ const dashboard = {
     let promptGoal = true;
     let promptAssessment = false;
 
-    for (let i = 0; i < listGoals.length; i++)
-    {
-      if ((listGoals[i].goalStatus === 'open') || (listGoals[i].goalStatus === 'awaiting processing'))
-      {
-        logger.debug('lstGoals',  listGoals[i].goalStatus);
+    for (let i = 0; i < listGoals.length; i++) {
+      logger.debug('in loop');
+      if ((listGoals[i].goalStatus === 'open') || (listGoals[i].goalStatus === 'awaiting processing')) {
         promptGoal = false;
-        listGoals[i].goalStatus = analytics.statusOfGoal(loggedInUser, listGoals[i]);
+        const timeRemaining = (new Date(listGoals[i].date) - new Date);
+        const daysTillGoalIsDue = ((((timeRemaining / 1000) / 60) / 60) / 24);
+        logger.debug('days Till', daysTillGoalIsDue);
+        if (daysTillGoalIsDue <= 0) {
+          let gotWeight = false;
+          let gotChest = false;
+          let gotThigh = false;
+          let gotUpperArm = false;
+          let gotWaist = false;
+          let gotHips = false;
+          //const area = goalList[i].targetArea;
+          //const target = goalList[i].targetGoal;
+          if (loggedInUser.assessments.length > 0) {
+            const latestAssessment = loggedInUser.assessments[0];
+            const assessmentCheck = (new Date(latestAssessment.date) - new Date);
+            const daysSinceLastAssessment = ((((assessmentCheck / 1000) / 60) / 60) / 24);
+            logger.info(assessmentCheck);
+            if ((daysSinceLastAssessment <= 0) && (daysSinceLastAssessment >= (-3))) {
+              if ((listGoals[i].weight > latestAssessment.weight) && (listGoals[i].aboveorWeight = 'above')) {
+                gotWeight = true;
+              }
 
-        if (listGoals[i].goalStatus === 'awaiting processing')
+              if ((listGoals[i].weight < latestAssessment.weight) && (listGoals[i].aboveorWeight = 'below')) {
+
+                gotWeight = true;
+              }
+
+              if ((listGoals[i].chest > latestAssessment.chest) && (listGoals[i].aboveorChest = 'above')) {
+                gotChest = true;
+              }
+
+              if ((listGoals[i].chest < latestAssessment.chest) && (listGoals[i].aboveorChest = 'below')) {
+
+                gotChest = true;
+              }
+
+              if ((listGoals[i].thigh > latestAssessment.thigh) && (listGoals[i].aboveorThigh = 'above')) {
+                gotThigh = true;
+              }
+
+              if ((listGoals[i].thigh < latestAssessment.thigh) && (listGoals[i].aboveorThigh = 'below')) {
+
+                gotThigh = true;
+              }
+
+              if ((listGoals[i].upperArm > latestAssessment.upperArm) && (listGoals[i].aboveorArm = 'above')) {
+                gotWeight = true;
+              }
+
+              if ((listGoals[i].upperArm < latestAssessment.upperArm) && (listGoals[i].aboveorArm = 'below')) {
+
+                gotUpperArm = true;
+              }
+
+              if ((listGoals[i].waist > latestAssessment.waist) && (listGoals[i].aboveorWaist = 'above')) {
+                gotWaist = true;
+              }
+
+              if ((listGoals[i].waist < latestAssessment.waist) && (listGoals[i].aboveorWaist = 'below')) {
+
+                gotWaist = true;
+              }
+
+              if ((listGoals[i].hips > latestAssessment.hips) && (listGoals[i].aboveorHips = 'above')) {
+                gotHips = true;
+              }
+
+              if ((listGoals[i].hips < latestAssessment.hips) && (listGoals[i].aboveorHips = 'below')) {
+
+                gotHips = true;
+              }
+
+              if ((gotWeight === true) && (gotChest === true) && (gotThigh === true)
+                  && (gotUpperArm === true) && (gotWaist === true) && (gotHips === true)) {
+                logger.debug('goal1', listGoals[i]);
+                listGoals[i].goalStatus = 'achieved';
+                userStore.save();
+              } else {
+                logger.debug('goal2', listGoals[i]);
+                listGoals[i].goalStatus = 'missed';
+                userStore.save();
+              }
+            } else {
+              logger.debug('goal3', listGoals[i]);
+              listGoals[i].goalStatus = 'awaiting processing';
+              userStore.save();
+              promptAssessment = true;
+            }
+          } else {
+            logger.debug('goal4', listGoals[i]);
+            listGoals[i].goalStatus = 'awaiting processing';
+            userStore.save();
+            promptAssessment = true;
+
+          }
+        } else
         {
-          promptAssessment = true;
+          logger.debug('goal5', listGoals[i]);
+          listGoals[i].goalStatus = 'open';
+          userStore.save();
         }
       }
     }

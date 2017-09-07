@@ -76,9 +76,17 @@ const membersbookings = {
           logger.debug('available time SHOULD BE FALSE');
           break;
         }
+
+        if ((newBooking.date.toString() === bookingList[j].date) && (newBooking.time === bookingList[j].time)
+            && (newBooking.userId === bookingList[j].userId))
+        {
+          availableTime = false;
+          logger.debug('available time SHOULD BE FALSE');
+          break;
+        }
       }
     }
-//this is not functioning! Not sure why.
+    //this is not functioning! Not sure why.
     let noClasses = true;
     const classList = classStore.getAllClasses();
     for (let k = 0; k < classList.length; k++)

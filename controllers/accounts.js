@@ -39,6 +39,7 @@ const accounts = {
   register(request, response) {
     const user = request.body;
     user.id = uuid();
+    user.img = '';
     user.assessments = [];
     user.bookings = [];
     user.goals = [];

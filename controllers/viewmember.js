@@ -173,6 +173,7 @@ const viewmember = {
 
     };
     logger.debug(`View ${user.firstname} assessments`);
+    analytics.trend(user);
 
     response.render('performBookedAssessment', viewData);
   },
@@ -202,7 +203,8 @@ const viewmember = {
     logger.debug('New Assessment', newAssessment);
     userStore.addAssessment(userId, newAssessment);
     userStore.deleteBooking(userId, bookingId);
-    analytics.trend(user); //analytics.trend(user);
+    analytics.trend(user);
+    userStore.save();
     response.redirect('/viewmember/' + userId);
   },
 

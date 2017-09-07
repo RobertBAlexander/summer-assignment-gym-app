@@ -15,7 +15,26 @@ const dashboard = {
     logger.info('dashboard rendering');
     const loggedInUser = accounts.getCurrentUser(request);
     const calculateBMI = analytics.calculateBMI(loggedInUser);
-    const isTrainer = false; //const determineBMICategory = analytics.determineBMICategory(loggedInUser.calculateBMI)
+    const isTrainer = false; //am I actually using this anymore?
+    const listGoals = loggedInUser.goals;
+    let promptGoal = true;
+    let promptAssessment = false;
+
+    for (let i = 0; i < listGoals.length; i++)
+    {
+      if ((listGoals[i].goalStatus === 'open') || (listGoals[i].goalStatus === 'awaiting processing'))
+      {
+        logger.debug('lstGoals',  listGoals[i].goalStatus);
+        promptGoal = false;
+        listGoals[i].goalStatus = analytics.statusOfGoal(loggedInUser, listGoals[i]);
+
+        if (listGoals[i].goalStatus === 'awaiting processing')
+        {
+          promptAssessment = true;
+        }
+      }
+    }
+
     const viewData = {
       title: 'Users Gym App Dashboard', //user: userStore.getUserById(loggedInUser.id),
       user: loggedInUser,
@@ -23,6 +42,8 @@ const dashboard = {
       determineBMICategory: analytics.determineBMICategory(calculateBMI),
       idealBodyWeight: analytics.isIdealBodyWeight(loggedInUser),
       isTrainer: isTrainer, //profilepic: analytics.profilepic(loggedInUser), //playlists: playlistStore.getUserPlaylists(loggedInUser.id),
+      promptGoal: promptGoal,
+      promptAssessment: promptAssessment,
     };
     logger.info('about to render'); //, playlistStore.getAllPlaylists() --goes in above next to 'about to render'
     response.render('dashboard', viewData);

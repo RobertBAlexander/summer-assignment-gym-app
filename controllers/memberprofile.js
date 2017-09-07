@@ -59,12 +59,16 @@ const memberprofile = {
 
   updatepicture(request, response)
   {
-    logger.info('rendering update of profile picture');
+    logger.info('updating profile picture rendering');
     const loggedInUser = accounts.getCurrentUser(request);
-    pictureStore.addPicture(loggedInUser.id, request.body.title, request.files.picture, function () {
-      response.redirect('/memberprofile');
-    });
+    const picture = request.files.picture;
 
+    userStore.addPicture(loggedInUser, picture, function () {
+          logger.debug(`updating ${loggedInUser.firstname}'s picture`);
+          userStore.store.save();
+          response.redirect('/memberprofile');
+        }
+    );
   },
 
   updategender(request, response)

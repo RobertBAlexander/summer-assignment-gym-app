@@ -4,16 +4,18 @@
         <div class="field">
         <label>Class Name </label>
         <select name="className">
+                <option name="choose..." value="none">choose...</option><br>
             {{#each searchedClasses}}
-                <option name="{{className}}" value="unspecified"> {{className}}</option><br>
+                <option name="{{className}}" value="{{className}}"> {{className}}</option><br>
             {{/each}}
         </select>
         </div>
         <div class="field">
         <label>Trainer </label>
-        <select name="trainer">
+        <select name="trainerId">
+                <option name="choose..." value="none">choose...</option><br>
             {{#each searchedClasses}}
-                <option name="{{../trainer.firstname}}" value="unspecified"> {{../trainer.firstname}}</option><br>
+                <option name="{{../trainer.firstname}}" value="{{../trainer.trainerId}}"> {{../trainer.firstname}}</option><br>
             {{/each}}
         </select>
     </div>

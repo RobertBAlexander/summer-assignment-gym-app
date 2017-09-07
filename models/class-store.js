@@ -14,6 +14,28 @@ const classStore = {
     return this.store.findAll(this.collection);
   },
 
+ /* searchClasses(searchClass, trainerId) {
+    const allClasses = this.getAllClasses();
+    let foundTrainersClasses = [];
+    for (let i = 0; i < allClasses.length; i++) {
+      foundTrainersClasses.push({
+        trainerId: allClasses[i].trainerId,
+        classes: [],
+      });
+      let oldTrainersClasses = allClasses[i].classes;
+      let newTrainersClasses = _.find(foundTrainersClasses, { trainerId: allClasses[i].trainerId });
+      for (let j = 0; j < oldTrainersClasses.length; j++) {
+        if (searchClass == '' || searchClass == oldTrainersClasses[j].searchClass) {
+          if (trainerId == '' || trainerId == oldTrainersClasses[j].trainerId) {
+            newTrainersClasses.classes.push(oldTrainersClasses[j]);
+          }
+        }
+      }
+    }
+
+    return foundTrainersClasses;
+  },*/
+
   addClass(newClass) {
     this.store.add(this.collection, newClass);
     this.store.save();

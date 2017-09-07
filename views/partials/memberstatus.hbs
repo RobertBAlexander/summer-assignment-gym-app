@@ -2,7 +2,12 @@
         <div class="ui column">
             <p class="ui user icon header">
 
-                <i class="ui yellow user icon"></i>
+                {{#if user.img}}
+                    <img class="ui middle aligned circular image" src="{{user.img}}"/><br><br>
+                {{else}}
+                    <i class="ui yellow user icon"></i>
+                {{/if}}
+
                 {{user.firstname}} {{user.lastname}}   <!-- <i class="ui yellow user icon"></i>-->
             </p>
         </div>

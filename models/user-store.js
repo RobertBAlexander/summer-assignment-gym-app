@@ -6,6 +6,8 @@
 const _ = require('lodash');
 const JsonStore = require('./json-store');
 const analytics = require('../utils/analytics');
+const cloudinary = require('cloudinary');
+const path = require('path');
 
 const userStore = {
 
@@ -120,6 +122,26 @@ const userStore = {
     const user = this.getUserById(userId);
     _.remove(user.goals, { goalId: goalId });
     this.store.save();
+  },
+
+  addPicture(user, imageFile, response) {
+    if (user.img != null) {
+      const id = path.parse(user.img);
+      cloudinary.api.delete_resources([id.name], function (result) {
+            console.log(result);
+          }
+      );
+    }
+    imageFile.mv('tempimage', err => {
+      if (!err) {
+        cloudinary.uploader.upload('tempimage', result => {
+          console.log(result);
+          user.img = result.url;
+          this.store.save();
+          response();
+        });
+      }
+    });
   },
 
   deleteUser(id)

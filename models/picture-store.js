@@ -41,14 +41,21 @@ const pictureStore = {
 
   addPicture(userId, title, imageFile, response) {
     let album = this.getAlbum(userId);
-    if (!album) {
-      album = {
-        userid: userId,
-        photos: [],
-      }; //if there is no photos, do below, otherwise replace last image with this new image.
-      this.store.add(this.collection, album);
-      this.store.save();
+    if (album != null) {
+      cloudinary.api.delete_resources([pictureStore.pictures.photos[0].img], function (result) {
+            console.log(result);
+          }
+      );
     }
+
+    this.deleteAllPictures(userId);
+
+    album = {
+      userid: userId,
+      photos: [],
+    }; //if there is no photos, do below, otherwise replace last image with this new image.
+    this.store.add(this.collection, album);
+    this.store.save();
 
     imageFile.mv('tempimage', err => {
       if (!err) {

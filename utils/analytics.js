@@ -5,6 +5,8 @@
 
 const pictureStore = require('../models/picture-store');
 const userStore = require('../models/user-store');
+const logger = require('../utils/logger');
+const dateformat = require('dateformat');
 const analytics = {
   calculateBMI(user)
   {
@@ -161,6 +163,99 @@ const analytics = {
 
     photoList[0].profilepic = profilepic;
   },
+
+  statusOfGoal(user, goal)
+  {
+    logger.debug('user',  user.id);
+    let today = new Date();
+    let threeDays = today.setDate(today.getDate() - 3);
+    const timeLeft = new Date(goal.date) - (dateformat(today, 'ddd, dd mmm yyyy'));//Calculates goal date
+    const dueDate = timeLeft;
+    let status = '';
+
+    if ((new Date(goal.date) <= threeDays) || (new Date(goal.date) <= threeDays)) {//Checks if the goal is due
+
+      // !!!This is not being read as a number!!
+
+      let gotWeight = false;
+      let gotChest = false;
+      let gotThigh = false;
+      let gotUpperArm = false;
+      let gotWaist = false;
+      let gotHips = false;//const area = goal.targetArea; //const target = goal.targetGoal;
+      logger.debug('gotHips', gotHips);
+      if (user.assessments.length > 0) {
+
+        const latestAssessment = user.assessments[0];
+        const assessmentCheck = (dateformat(today, 'ddd, dd mmm yyyy')) - (dateformat(latestAssessment.date, 'ddd, dd mmm yyyy'));
+        logger.info(assessmentCheck);
+        if ((assessmentCheck >= 0) && (assessmentCheck <= 3)) {//Will perform check if assessment was done recently
+
+          if ((goal.weight > latestAssessment.weight) && (goal.aboveorWeight = 'above')) {
+            gotWeight = true;
+          }if ((goal.weight < latestAssessment.weight) && (goal.aboveorWeight = 'below')) {
+
+            gotWeight = true;
+          }
+
+          if ((goal.chest > latestAssessment.chest) && (goal.aboveorChest = 'above')) {
+            gotChest = true;
+          }if ((goal.chest < latestAssessment.chest) && (goal.aboveorChest = 'below')) {
+
+            gotChest = true;
+          }
+
+          if ((goal.thigh > latestAssessment.thigh) && (goal.aboveorThigh = 'above')) {
+            gotThigh = true;
+          }if ((goal.thigh < latestAssessment.thigh) && (goal.aboveorThigh = 'below')) {
+
+            gotThigh = true;
+          }
+
+          if ((goal.upperArm > latestAssessment.upperArm) && (goal.aboveorArm = 'above')) {
+            gotWeight = true;
+          }if ((goal.upperArm < latestAssessment.upperArm) && (goal.aboveorArm = 'below')) {
+
+            gotUpperArm = true;
+          }
+
+          if ((goal.waist > latestAssessment.waist) && (goal.aboveorWaist = 'above')) {
+            gotWaist = true;
+          }if ((goal.waist < latestAssessment.waist) && (goal.aboveorWaist = 'below')) {
+
+            gotWaist = true;
+          }
+
+          if ((goal.hips > latestAssessment.hips) && (goal.aboveorHips = 'above')) {
+            gotHips = true;
+          }if ((goal.hips < latestAssessment.hips) && (goal.aboveorHips = 'below')) {
+
+            gotHips = true;
+          }
+
+          if ((gotWeight === true) && (gotChest === true) && (gotThigh === true)
+          && (gotUpperArm === true) && (gotWaist === true) && (gotHips === true)) {
+            logger.debug('goal1',  goal);
+            status = 'achieved';
+          } else {
+            logger.debug('goal2',  goal);
+            status = 'missed';
+          }
+
+        } else {
+          logger.debug('goal3',  goal);
+          status = 'awaiting processing';
+        }
+      } else {
+        logger.debug('goal4',  goal);
+        status = 'awaiting processing';
+      }
+    }
+
+    goal.goalStatus = status;
+    logger.debug('goal5',  goal);
+  },
+
 };
 
 module.exports = analytics;

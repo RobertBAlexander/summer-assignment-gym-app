@@ -18,11 +18,25 @@ const membersclasses = {
     const loggedInUser = accounts.getCurrentUser(request);
     const calculateBMI = analytics.calculateBMI(loggedInUser);
     const userId = loggedInUser.id;
-    const searchedClasses = classStore.getAllClasses();
+    let searchedClasses;
+   const searchClass = request.body.className;
+   const trainerId = request.body.trainerId;
+   const trainer = trainerStore.getTrainerById(trainerId);
+    //if (searchClass == 'none' && trainer == 'none') {
+      searchedClasses = classStore.getAllClasses();
+    //} else {
+    //  searchedClasses = classStore.searchClasses(searchClass, trainerId);
+    //}
+
+    //const searchedClasses = classStore.getAllClasses();//need to make this a saerch function, not just get all classes!!
+
+
+
+
     const classId = request.params.classId; //const lessonList = classStore.getClassById(classId).lessons;
     const trainerClassId = searchedClasses.trainerId;
 
-    const trainer = trainerStore.getTrainerById(trainerClassId);
+    //const trainer = trainerStore.getTrainerById(trainerId);
 
     const lessonId = request.params.lessonId; //const statusOfLesson = searches.statusOfLesson(lessonList, userId);
 

@@ -12,6 +12,54 @@
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "assessments": [
         {
+          "assessmentId": "b2b679d2-6215-4b1c-bcbd-f1c6de202571",
+          "date": "Thu, 07 Sep 2017",
+          "weight": "111",
+          "chest": "35",
+          "thigh": "35",
+          "upperArm": "35",
+          "waist": "35",
+          "hips": "35",
+          "trend": "",
+          "comment": ""
+        },
+        {
+          "assessmentId": "94112a94-fa70-4664-afa0-06345b7bb7ab",
+          "date": "Fri, 15 Sep 2017",
+          "weight": "111",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg",
+          "comment": "r"
+        },
+        {
+          "assessmentId": "2caf9777-03ca-43a6-9439-40fb78b6a886",
+          "date": "Wed, 20 Sep 2017",
+          "weight": "111",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/c_scale,w_49/v1502489737/nochange_xhsp47.jpg",
+          "comment": "good job"
+        },
+        {
+          "assessmentId": "442a72d2-ea3f-42ba-b716-4b4d5fe9b6f5",
+          "date": "Thu, 07 Sep 2017",
+          "weight": "111",
+          "chest": "34",
+          "thigh": "34",
+          "upperArm": "34",
+          "waist": "34",
+          "hips": "34",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
+          "comment": ""
+        },
+        {
           "assessmentId": "1c38a6e2-30ad-4012-8e26-4e9d7841d3f0",
           "date": "Wed, 06 Sep 2017",
           "weight": "101",
@@ -20,7 +68,7 @@
           "upperArm": "34",
           "waist": "34",
           "hips": "34",
-          "trend": "",
+          "trend": "http://res.cloudinary.com/scealfada/image/upload/v1502489737/happyhealth_pika_ny6rsz.png",
           "comment": ""
         },
         {
@@ -210,70 +258,55 @@
           "trainersBooking": false
         },
         {
-          "bookingId": "2caf9777-03ca-43a6-9439-40fb78b6a886",
+          "bookingId": "0fc1202e-44b7-4573-9952-ce59c84b2ecc",
           "trainerName": "Marge Simpson",
           "userFullName": "homer simpson",
           "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
           "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-          "date": "Wed, 20 Sep 2017",
-          "time": "09:00",
-          "trainersBooking": true
-        },
-        {
-          "bookingId": "94112a94-fa70-4664-afa0-06345b7bb7ab",
-          "userFullName": "homer simpson",
-          "trainerFullName": "Marge Simpson",
-          "trainerId": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-          "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-          "date": "Fri, 15 Sep 2017",
-          "time": "09:00",
-          "trainersBooking": true
+          "date": "Thu, 07 Sep 2017",
+          "time": "09:00"
         }
       ],
       "goals": [
         {
-          "goalId": "dd418910-ca5c-44bb-9834-afbe5a29610a",
-          "date": "2010-09-09",
+          "goalId": "d37e29da-ae4a-4b88-92cb-bad183f663cb",
+          "date": "Fri, 25 Aug 2017",
           "weight": "111",
           "aboveorWeight": "below",
           "chest": "34",
-          "aboveorChest": "below",
+          "aboveorChest": "above",
           "thigh": "34",
           "aboveorThigh": "below",
-          "upperArm": "32",
-          "aboveorArm": "below",
+          "upperArm": "34",
+          "aboveorArm": "above",
           "waist": "34",
           "aboveorWaist": "below",
           "hips": "34",
           "aboveorHips": "below",
-          "description": "I am",
-          "goalStatus": "open"
+          "goalStatus": "awaiting processing"
         },
         {
-          "goalId": "0246a942-03a9-40c1-b999-5a267354e849",
-          "date": "0909-09-09",
-          "weight": [
-            "45",
-            "45"
-          ],
-          "aboveorWeight": "unspecified",
-          "chest": "432",
-          "aboveorChest": "unspecified",
-          "thigh": "45",
-          "aboveorThigh": "unspecified",
-          "upperArm": "45",
-          "aboveorArm": "unspecified",
-          "waist": "45",
-          "aboveorWaist": "unspecified",
-          "aboveorHips": "unspecified",
-          "description": "ghfgh",
+          "goalId": "c33b95ae-4204-41d4-832e-505c09c3c145",
+          "date": "Thu, 07 Sep 2017",
+          "weight": "111",
+          "aboveorWeight": "below",
+          "chest": "34",
+          "aboveorChest": "above",
+          "thigh": "34",
+          "aboveorThigh": "below",
+          "upperArm": "34",
+          "aboveorArm": "above",
+          "waist": "34",
+          "aboveorWaist": "below",
+          "hips": "34",
+          "aboveorHips": "below",
           "goalStatus": "open"
         }
       ]
     },
     {
       "firstname": "tim",
-      "lastname": "tom",
+      "lastname": "tommeney",
       "email": "tim@mail.com",
       "password": "secret",
       "address": "addressofhome",
@@ -322,7 +355,8 @@
           "trainersBooking": false
         }
       ],
-      "goals": []
+      "goals": [],
+      "img": "http://res.cloudinary.com/scealfada/image/upload/v1504789152/brn0osbnjlgx1tcryhq9.png"
     },
     {
       "firstname": "Robert",

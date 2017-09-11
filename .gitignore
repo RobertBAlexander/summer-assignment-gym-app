@@ -51,3 +51,4 @@ jspm_packages
 
 #cloudinary
 .env.json.idea
+.env.json
